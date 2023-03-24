@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Cv</title>
-  <!-- ============ BOX ICONS ============ -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>My Web Cv</title>
 
-  <!-- ============ CSS ============ -->
-  <link rel="stylesheet" href="sources/css/styles.css">
-</head>
-<body>
-  <!-- ============ HEADER ============ -->
-  <header class="header" id="header">
+    <!-- ============ BOX ICONS ============ -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-  </header>
+    <!-- ============ CSS ============ -->
+    <link rel="stylesheet" href="sources/css/styles.css" />
 
-  <!-- ============ MAIN ============ -->
-  <main class="main body_container">
+  </head>
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header class="l-header" id="header">
+      
+      <nav class="nav bd-container"> <!-- ============ NAV (style: show-menu) ============ -->
+        <a href="#" class="nav_logo">Smith</a>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="bx bx-home nav_icon"></i>Home</a></li>
+            <li class="nav_item"><a href="#profile" class="nav_link"><i class="bx bx-user nav_icon"></i>Profile</a></li>
+            <li class="nav_item"><a href="#education" class="nav_link"><i class="bx bx-book nav_icon"></i>Education</a></li>
+            <li class="nav_item"><a href="#skills" class="nav_link"><i class="bx bx-receipt nav_icon"></i>Skills</a></li>
+            <li class="nav_item"><a href="#experience" class="nav_link"><i class="bx bx-briefcase nav_icon"></i>Experience</a></li>
+            <li class="nav_item"><a href="#certificates" class="nav_link"><i class="bx bx-award nav_icon"></i>Certificates</a></li>
+            <li class="nav_item"><a href="#references" class="nav_link"><i class="bx bx-link-external nav_icon"></i>refetrences</a></li>
+          </ul>
+        </div>
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </nav> 
 
-  </main>
+    </header>
 
-  <!-- ============ SCROLL UP ============ -->
-  <script src=""></script>
+    <!-- ============ MAIN ============ -->
+    <main class="l-main bd-container">
+      <!-- Todos los ele]mentos que componen este div, se generan en PDF -->
+      <div class="resume">
+        <!-- LEFT -->
+        <div class="resume_left">
+          <!-- ============ HOME ============ -->
+          <section class="home" id="home">
+            <div class="home_container section bd-grid">
+              <div class="home_data bd-grid">
+                <img src="sources/img/profile.jpg" alt="" class="home_img">
+                <h1 class="home_title">JON <b>SMITH</b></h1>
+                <h3 class="home_profession">Web Developer</h3>
 
-  <!-- ============ MAIN JS ============ -->
-  <script src="sources/js/main.js"></script>
-</body>
+                <!-- Button para descargar tu cv guardado en la carpeta pdf -->
+                <div><a download="" href="sources/pdf/ResumeCv.pdf" class="home_button-movil"></a></div>
+              </div>
+
+              22:29
+            </div>
+          </section>
+          
+          <!-- Theme change button -->
+          
+          <!-- Button para generar y descargar el pdf -->
+          
+          <!-- ============ SOCIAL ============ -->
+
+
+          <!-- ============ PROFILE ============ -->
+
+
+          <!-- ============ EDUCATION ============ -->
+
+
+          <!-- ============ SKILLS ============ -->
+
+
+        </div>
+        <!-- RIGHT -->
+        <div class="resume_right">
+          <!-- ============ EXPERIENCE ============ -->
+
+
+          <!-- ============ CERTIFICATES ============ -->
+
+
+          <!-- ============ REFERENCES ============ -->
+
+
+          <!-- ============ LANGUAJES ============ -->
+
+
+          <!-- ============ INTERESTS ============ -->
+
+
+        </div>
+      </div>
+
+
+    </main>
+
+    <!-- ============ SCROLL UP ============ -->
+    <script src=""></script>
+
+    <!-- ============ MAIN JS ============ -->
+    <script src="sources/js/main.js"></script>
+  </body>
 </html>
