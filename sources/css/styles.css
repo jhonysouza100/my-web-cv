@@ -286,19 +286,111 @@ img {
 }
 
 /*========== PROFILE ==========*/
-
+.profle .profile_description {
+  text-align: center;
+}
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
+.education_content,
+.experience_content {
+  display: flex;
+}
 
+  /* Graphic Time Line */
+  .education_time,
+  .experience_time {
+    padding-right: 1rem;
+  }
+  .education_rounder,
+  .experience_rounder {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-top: .25rem;
+  }
+  .education_line,
+  .experience_line {
+    display: block;
+    background-color: var(--text-color);
+    width: 2px;
+    height: 110%;
+    transform: translate(7px, 0 );
+  }
+
+.education_data,
+.experience_data {
+  gap: .5rem
+}
+
+.education_title,
+.experience_title {
+  font-size: var(--h3-font-size);
+}
+
+.education_studies,
+.experience_company {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.education_year {
+  font-size: var(--smaller-font-size);
+}
 
 /*========== SKILLS AND LANGUAGES ==========*/
+.skills_content,
+.languajes_content {
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.skills_data,
+.languajes_content {
+  gap: 0;
+}
+
+.skills_name,
+.languajes_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills_circle,
+.languajes_circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: .75rem;
+}
 
 /*========== CERTIFICATES ==========*/
-
+.certificate_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
 
 /*========== REFERENCES ==========*/
+.references_content {
+  gap: .25rem;
+}
 
+.references_subtitle {
+  color: var(--text-color-light);
+}
+
+.references_subtitle,
+.references_contact {
+  font-size: var(--smaller-font-size);
+}
+
+.references_title {
+  font-size: var(--h3-font-size);
+}
 
 /*========== INTERESTS ==========*/
 
