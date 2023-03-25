@@ -3,7 +3,7 @@
 const $navToggle = document.getElementById('nav-toggle'),
       $navMenu = document.getElementById('nav-menu'),
       $navLinks = document.querySelectorAll('.nav_link'),
-      $sections = document.getElementById('section[id]')
+      $sections = document.querySelectorAll('section[id]')
 
 // ======================== SHOW MENU ========================
 const showMenu = (toggleId, navId) => {
@@ -25,7 +25,7 @@ function linkAction() {
 $navLinks.forEach( nav => nav.addEventListener('click', linkAction))
 
 // ======================== SECTION ACTIVE LINK ======================== 
-function scrollAction() {
+function scrollActive() {
   const scrollY = window.pageYOffset
   $sections.forEach( current => {
     const sectionHeight = current.offsetHeight
@@ -38,6 +38,7 @@ function scrollAction() {
     }
   })
 }
+window.addEventListener('scroll', scrollActive)
 // ======================== SHOW SCROLL TOP ========================
 
 
