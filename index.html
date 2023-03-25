@@ -2,108 +2,87 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>My Web Cv</title>
 
-    <!-- ============ BOX ICONS ============ -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
-    <!-- ============ CSS ============ -->
+    <!--========== CSS ==========-->
     <link rel="stylesheet" href="sources/css/styles.css" />
 
+    <title>My Web Cv</title>
   </head>
   <body>
-    <!-- ============ HEADER ============ -->
+    <!--========== HEADER ==========-->
     <header class="l-header" id="header">
-      
-      <nav class="nav bd-container"> <!-- ============ NAV (style: show-menu) ============ -->
-        <a href="#" class="nav_logo">Smith</a>
-        <div class="nav_menu" id="nav-menu">
+      <!-- NAV -->
+      <nav class="nav bd-container">
+        <a href="#" class="nav_logo">JON</a>
+        <div class="nav_menu" id="nav-menu"> <!-- Menu intems -->
           <ul class="nav_list">
-            <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="bx bx-home nav_icon"></i>Home</a></li>
-            <li class="nav_item"><a href="#profile" class="nav_link"><i class="bx bx-user nav_icon"></i>Profile</a></li>
-            <li class="nav_item"><a href="#education" class="nav_link"><i class="bx bx-book nav_icon"></i>Education</a></li>
-            <li class="nav_item"><a href="#skills" class="nav_link"><i class="bx bx-receipt nav_icon"></i>Skills</a></li>
-            <li class="nav_item"><a href="#experience" class="nav_link"><i class="bx bx-briefcase nav_icon"></i>Experience</a></li>
-            <li class="nav_item"><a href="#certificates" class="nav_link"><i class="bx bx-award nav_icon"></i>Certificates</a></li>
-            <li class="nav_item"><a href="#references" class="nav_link"><i class="bx bx-link-external nav_icon"></i>refetrences</a></li>
+            <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="nav_icon bx bx-home"></i> Home</a></li>
+            <li class="nav_item"><a href="#profile" class="nav_link"><i class="nav_icon bx bx-user"></i> Profile</a></li>
+            <li class="nav_item"><a href="#education" class="nav_link"><i class="nav_icon bx bx-book"></i> Education</a></li>
+            <li class="nav_item"><a href="#skills" class="nav_link"><i class="nav_icon bx bx-receipt"></i> Skills</a></li>
+            <li class="nav_item"><a href="#Experience" class="nav_link"><i class="nav_icon bx bx-briefcase-alt"></i> Experience</a></li>
+            <li class="nav_item"><a href="#certificates" class="nav_link"><i class="nav_icon bx bx-award"></i> Certificates</a></li>
+            <li class="nav_item"><a href="#references" class="nav_link"><i class="nav_icon bx bx-link-external"></i> References</a></li>
           </ul>
         </div>
-        <div class="nav_toggle" id="nav-toggle">
-          <i class="bx bx-grid-alt"></i>
-        </div>
-      </nav> 
+        <div class="nav_toggle" id="nav-toggle"><i class="bx bx-grid-alt"></i></div>
+      </nav>
 
     </header>
 
-    <!-- ============ MAIN ============ -->
     <main class="l-main bd-container">
-      <!-- Todos los ele]mentos que componen este div, se generan en PDF -->
-      <div class="resume">
-        <!-- LEFT -->
-        <div class="resume_left">
-          <!-- ============ HOME ============ -->
+      <!-- All elements within this div, is generated in PDF -->
+      <div class="resume" id="area-cv">
+        <div class="resume__left">
+          <!--========== HOME ==========-->
           <section class="home" id="home">
-            <div class="home_container section bd-grid">
-              <div class="home_data bd-grid">
-                <img src="sources/img/profile.jpg" alt="" class="home_img">
-                <h1 class="home_title">JON <b>SMITH</b></h1>
-                <h3 class="home_profession">Web Developer</h3>
+            <!-- Theme change button -->
 
-                <!-- Button para descargar tu cv guardado en la carpeta pdf -->
-                <div><a download="" href="sources/pdf/ResumeCv.pdf" class="home_button-movil"></a></div>
-              </div>
-
-              22:29
-            </div>
+            <!-- Button to generate and download the pdf. Available for desktop. -->
           </section>
-          
-          <!-- Theme change button -->
-          
-          <!-- Button para generar y descargar el pdf -->
-          
-          <!-- ============ SOCIAL ============ -->
 
+          <!--========== SOCIAL ==========-->
+          <section class="social section"></section>
 
-          <!-- ============ PROFILE ============ -->
+          <!--========== PROFILE ==========-->
+          <section class="profile section" id="profile"></section>
 
+          <!--========== EDUCATION ==========-->
+          <section class="education section" id="education"></section>
 
-          <!-- ============ EDUCATION ============ -->
-
-
-          <!-- ============ SKILLS ============ -->
-
-
+          <!--========== SKILLS  ==========-->
+          <section class="skills section" id="skills"></section>
         </div>
-        <!-- RIGHT -->
-        <div class="resume_right">
-          <!-- ============ EXPERIENCE ============ -->
 
+        <div class="resume__right">
+          <!--========== EXPERIENCE ==========-->
+          <section class="experience section" id="experience"></section>
 
-          <!-- ============ CERTIFICATES ============ -->
+          <!--========== CERTIFICATES ==========-->
+          <section class="certificate section" id="certificates"></section>
 
+          <!--========== REFERENCES ==========-->
+          <section class="references section" id="references"></section>
 
-          <!-- ============ REFERENCES ============ -->
+          <!--========== LANGUAGES ==========-->
+          <section class="languages section"></section>
 
-
-          <!-- ============ LANGUAJES ============ -->
-
-
-          <!-- ============ INTERESTS ============ -->
-
-
+          <!--========== INTERESTS ==========-->
+          <section class="interests section"></section>
         </div>
       </div>
-
-
     </main>
 
-    <!-- ============ SCROLL UP ============ -->
-    <script src=""></script>
+    <!--========== SCROLL TOP ==========-->
 
-    <!-- ============ MAIN JS ============ -->
+    <!--========== HTML2PDF ==========-->
+    <script src="sources/js/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
     <script src="sources/js/main.js"></script>
   </body>
 </html>

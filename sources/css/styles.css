@@ -1,11 +1,11 @@
-/* ============ GOOGLE FONTS ============ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* ============ VARIABLES CSS ============ */
+/*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
-
-  /* ============ COLORS ============ */
+  
+  /*========== Colors ==========*/
   --title-color: #0B0A0A;
   --text-color: #403A3A;
   --text-color-light: #707070;
@@ -13,7 +13,7 @@
   --container-color-alt: #F0EFEF;
   --body-color: #FCFCFC;
 
-  /* ============ Font and Typography ================= */
+  /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -22,22 +22,21 @@
   --small-font-size: .875rem;
   --smaller-font-size: .813rem;
 
-  /* ============ Font Ewight ============ */
+  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-  --font-bold: 700;
 
-  /* ============ Margenes ============ */
+  /*========== Margenes ==========*/
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
 
-  /* ============ Z Index ============ */
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/* ============ BASE ============ */
+/*========== BASE ==========*/
 *,::before,::after {
   box-sizing: border-box;
 }
@@ -46,23 +45,23 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ============ Variables Dark Theme ============ */
+/*========== Variables Dark theme ==========*/
 
 
-/* ============ Button Dark/Light ============ */
+/*========== Button Dark/Light ==========*/
 
 
-/* ============ Font Size Variables to Scale CV ============ */
+/*========== Font size variables to scale cv ==========*/
 
 
-/* ============ Generate PDF Button ============ */
+/*========== Generate PDF button ==========*/
 
 
-/* ============ Classes modified to reduce size and print an A4 sheet ============ */
+/*========== Classes modified to reduce size and print on A4 sheet ==========*/
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
-  font-family: var(--body-color);
+  font-size: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
@@ -73,8 +72,8 @@ h1, h2, h3, ul, p {
 }
 
 h1, h2, h3 {
-  color:var(--title-color);
-  font-weight: var(--font-medium);
+   color: var(--title-color);
+   font-weight: var(--font-medium);
 }
 
 ul {
@@ -82,7 +81,7 @@ ul {
   list-style: none;
 }
 
-a {
+a  {
   text-decoration: none;
 }
 
@@ -91,12 +90,12 @@ img {
   height: auto;
 }
 
-/* ============ CLASS CSS ============ */
+/*========== CLASS CSS ==========*/
 .section {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0; 
 }
 
-.section_title {
+.section-title {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
@@ -106,12 +105,12 @@ img {
   margin-bottom: var(--mb-3);
 }
 
-/* ============ LAYOUT ============ */
+/*========== LAYOUT ==========*/
 .bd-container {
   max-width: 968px;
-  width: calc(100% -3rem);
-  margin-right: var(--mb-3);
+  width: calc(100% - 3rem);
   margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
 }
 
 .bd-grid {
@@ -126,12 +125,11 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
   transition: .3s;
 }
 
-
-/* ============ NAV ============ */
+/*========== NAV ==========*/
 .nav {
   height: var(--header-height);
   display: flex;
@@ -139,23 +137,22 @@ img {
   align-items: center;
 }
 
-@media  screen and (max-width: 968px) {
+@media screen and (max-width: 968px) {
   .nav_menu {
     position: fixed;
-    bottom: -100%; /* oculta el; nav_menu */
+    bottom: -100%;
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
     background-color: var(--body-color);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
     transition: .3s;
   }
 }
 
-.nav_logo,
-.nav_toggle {
+.nav_logo, .nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -165,7 +162,6 @@ img {
   cursor: pointer;
 }
 
-  /* ====== Items del munu nav ====== */
 .nav_item {
   text-align: center;
 }
@@ -176,35 +172,64 @@ img {
   gap: 2rem;
 }
 
-  /* ====== Disposicion de los iconos ====== */
-  .nav_link {
-    display: flex;
-    flex-direction: column;
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
-    font-weight: var(--font-medium);
-  }
-  
-  .nav_link:hover {
-    color: var(--title-color);
-  }
-  .nav_icon {
-    font-size: 1.2rem;
-    margin-bottom: var(--mb-1);
-  }
-  /* ====== Disposicion de los iconos ====== */
-    
-/* Show menu (script: .classList.toggle('show-menu) */
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color-light);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+}
+
+.nav_link:hover {
+  color: var(--text-color);
+}
+
+.nav_icon {
+  font-size: 1.2rem;
+  margin: var(--mb-1);
+}
+
+/* Show menu (script: .classList.toggle('show-menu') */
 .show-menu {
   bottom: var(--header-height);
 }
+
 
 /* Active menu link (script: .classList.add('active-link') */
 .active-link {
   color: var(--title-color);
 }
 
-/* ============ HOME ============ */
+/*========== HOME ==========*/
 
 
-/* ============ SOCIAL ============ */
+/*========== SOCIAL ==========*/
+
+
+/*========== PROFILE ==========*/
+
+
+/*========== EDUCATION AND EXPERIENCE ==========*/
+
+
+/*========== SKILLS AND LANGUAGES ==========*/
+
+
+/*========== CERTIFICATES ==========*/
+
+
+/*========== REFERENCES ==========*/
+
+
+/*========== INTERESTS ==========*/
+
+
+/* Scroll top */
+
+
+/*========== MEDIA QUERIES ==========*/
+/* For small devices, menu two columns */
+
+
+/* Classes modified for large screen size */
+
