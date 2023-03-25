@@ -37,16 +37,41 @@
     <main class="l-main bd-container">
       <!-- All elements within this div, is generated in PDF -->
       <div class="resume" id="area-cv">
-        <div class="resume__left">
+        
+        <div class="resume_left"><!-- LEFT -->
           <!--========== HOME ==========-->
           <section class="home" id="home">
-            <!-- Theme change button -->
-
-            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <div class="home_container section bd-grid">
+              <!-- Home Data -->
+              <div class="home_data bd-grid">
+                <img src="sources/img/profile.jpg" alt="profile image" class="home_img">
+                <h1 class="home_title">Jonatan <b>Souza Meza</b></h1>
+                <h3 class="home_profession">Web Developer</h3>
+                <!-- Button to generate and download the pdf. Available for desktop. -->
+                <div><a download="" href="sources/pdf/ResumeCv.pdf" class="home_button-movil">Download</a></div>
+              </div>
+              <!-- Home Contact -->
+              <div class="home_address bd-grid">
+                <span class="home_information"><i class="home_icon bx bx-map"></i> Misiones - Argentina</span>
+                <span class="home_information"><i class="home_icon bx bx-envelope"></i> jhonatansouzameza100@gmail.com</span>
+                <span class="home_information"><i class="home_icon bx bx-phone"></i> +54 3757-501633</span>
+              </div>
+            </div>
+            
           </section>
+          
+
+          <!-- Theme change button -->
 
           <!--========== SOCIAL ==========-->
-          <section class="social section"></section>
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
+            <div class="social_container bd-grid">
+              <a href="https://linkedin.com/in/jhonatan-leon-souza-meza/" class="social_link" target="_blank"><i class="social_icon bx bxl-linkedin-square"></i> @jhonatan</a>
+              <a href="https://www.facebook.com/jhon.souza.7547/" class="social_link" target="_blank"><i class="social_icon bx bxl-facebook"></i> Jhony Souza</a>
+              <a href="https://www.instagram.com/el.jhony.oficial/" class="social_link" target="_blank"><i class="social_icon bx bxl-instagram"></i> @el.jhony.oficial</a>
+            </div>
+          </section>
 
           <!--========== PROFILE ==========-->
           <section class="profile section" id="profile"></section>
@@ -58,7 +83,7 @@
           <section class="skills section" id="skills"></section>
         </div>
 
-        <div class="resume__right">
+        <div class="resume_right">
           <!--========== EXPERIENCE ==========-->
           <section class="experience section" id="experience"></section>
 

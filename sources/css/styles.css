@@ -201,10 +201,89 @@ img {
 }
 
 /*========== HOME ==========*/
+.home {
+  position: relative;
+}
 
+.home_container {
+  gap: 3rem;
+}
+
+.home_data {
+  gap: .5rem;
+  text-align: center;
+}
+
+.home_data .home_img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  justify-self: center;
+  margin-bottom: var(--mb-1);
+}
+
+.home_data .home_title {
+  font-size: var(--h1-font-size);
+}
+
+.home_data .home_profession {
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.home_button-movil {
+  display: inline-block;
+  border: 2px solid var(--text-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  transition: .3s;
+  font-weight: var(--font-medium);
+  margin-top: var(--mb-3);
+}
+
+.home_button-movil:hover {
+  background-color: var(--text-color);
+  color: var(--container-color);
+}
+
+  /* Contactos */
+  .home_address {
+    gap: 1rem;
+  }
+  
+  .home_information {
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+  }
+  
+  .home_icon {
+    font-size: 1.2rem;
+    margin-right: .25rem;
+  }
 
 /*========== SOCIAL ==========*/
+.social_container {
+  grid-template-columns: max-content;
+  gap: 1rem;
+}
 
+.social_link {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.social_link:hover {
+  color: var(--title-color);
+}
+
+.social_icon {
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
 
 /*========== PROFILE ==========*/
 
@@ -232,4 +311,5 @@ img {
 
 
 /* Classes modified for large screen size */
+
 
