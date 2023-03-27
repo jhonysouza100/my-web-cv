@@ -3,7 +3,8 @@
 const $navToggle = document.getElementById('nav-toggle'),
       $navMenu = document.getElementById('nav-menu'),
       $navLinks = document.querySelectorAll('.nav_link'),
-      $sections = document.querySelectorAll('section[id]')
+      $sections = document.querySelectorAll('section[id]'),
+      $scrollTop = document.getElementById('scroll-top')
 
 // ======================== SHOW MENU ========================
 const showMenu = (toggleId, navId) => {
@@ -25,7 +26,7 @@ function linkAction() {
 $navLinks.forEach( nav => nav.addEventListener('click', linkAction))
 
 // ======================== SECTION ACTIVE LINK ======================== 
-function scrollActive() {
+function linkActive() {
   const scrollY = window.pageYOffset
   $sections.forEach( current => {
     const sectionHeight = current.offsetHeight
@@ -38,9 +39,16 @@ function scrollActive() {
     }
   })
 }
-window.addEventListener('scroll', scrollActive)
-// ======================== SHOW SCROLL TOP ========================
+window.addEventListener('scroll', linkActive)
 
+// ======================== SHOW SCROLL TOP ========================
+function showScrollTop() {
+  // Cuando el desplazamiento es superior a la altura de la ventana gráfica 200, agrega la clase show-scroll al elemento $scrollTop
+  (this.scrollY >= 200)
+  ? $scrollTop.classList.add('show-scroll')
+  : $scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', showScrollTop)
 
 // ======================== DARK LIGHT THEME ========================
 
