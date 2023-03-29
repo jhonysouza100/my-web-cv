@@ -105,11 +105,11 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  padding: 1.35rem 0 .80rem;
+  padding: 1.25rem 0 .5rem;
 }
 
 .scale-cv .section-title {
-  margin-bottom: .5rem;
+  margin-bottom: .25rem;
 }
 .scale-cv .resume_left,
 .scale-cv .resume_right {
@@ -339,7 +339,7 @@ img {
   text-align: center;
 }
 
-.home_data .home_img {
+.home_img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -348,11 +348,11 @@ img {
   user-select: none;
 }
 
-.home_data .home_title {
+.home_title {
   font-size: var(--h1-font-size);
 }
 
-.home_data .home_profession {
+.home_profession {
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
 }
@@ -475,24 +475,24 @@ img {
 
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills_content,
-.languajes_content {
+.languages_content {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.skills_data,
-.languajes_content {
+/* .skills_data, */
+.languages_content {
   gap: 0;
 }
 
 .skills_name,
-.languajes_name {
+.languages_name {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-3);
 }
 
 .skills_circle,
-.languajes_circle {
+.languages_circle {
   display: inline-block;
   width: 5px;
   height: 5px;
