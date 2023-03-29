@@ -14,15 +14,16 @@
     <title>My Web Cv</title>
   </head>
   <body>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-      <!-- NAV -->
-      <nav class="nav bd-container">
-        <a href="#" class="nav_logo">JON</a>
-        <div class="nav_menu" id="nav-menu"> <!-- Menu intems -->
-          <ul class="nav_list">
-            <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="nav_icon bx bx-home"></i> Home</a></li>
-            <li class="nav_item"><a href="#profile" class="nav_link"><i class="nav_icon bx bx-user"></i> Profile</a></li>
+
+  <!--========== HEADER ==========-->
+  <header class="l-header" id="header">
+    <!-- NAV -->
+    <nav class="nav bd-container">
+      <a href="#home" class="nav_logo">JHON</a>
+      <div class="nav_menu" id="nav-menu"> <!-- Menu intems -->
+        <ul class="nav_list">
+          <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="nav_icon bx bx-home"></i> Home</a></li>
+          <li class="nav_item"><a href="#profile" class="nav_link"><i class="nav_icon bx bx-user"></i> Profile</a></li>
             <li class="nav_item"><a href="#education" class="nav_link"><i class="nav_icon bx bx-book"></i> Education</a></li>
             <li class="nav_item"><a href="#skills" class="nav_link"><i class="nav_icon bx bx-receipt"></i> Skills</a></li>
             <li class="nav_item"><a href="#experience" class="nav_link"><i class="nav_icon bx bx-briefcase-alt"></i> Experience</a></li>
@@ -35,10 +36,12 @@
 
     </header>
 
+    <!--========== MAIN ==========-->
     <main class="l-main bd-container">
+
       <!-- All elements within this div, is generated in PDF -->
       <div class="resume" id="area-cv">
-        
+
         <!-- LEFT -->
         <div class="resume_left"><!-- LEFT -->
           <!--========== HOME ==========-->
@@ -47,24 +50,25 @@
               <!-- Home Data -->
               <div class="home_data bd-grid">
                 <img src="sources/img/profile.jpg" alt="profile image" class="home_img">
-                <h1 class="home_title">Jon <b>Smith</b></h1>
+                <h1 class="home_title">Jhon <b>Smith</b></h1>
                 <h3 class="home_profession">Web Developer</h3>
-                <!-- Button to generate and download the pdf. Available for desktop. -->
-                <div><a download="" href="sources/pdf/ResumeCv.pdf" class="home_button-movil">Download</a></div>
+                <!-- Button to generate and download the pdf. Available for movil. -->
+                <div><a download="" href="sources/pdf/Jhon Smith Cv.pdf" class="home_button-movil">Download</a></div>
               </div>
               <!-- Home Contact -->
               <div class="home_address bd-grid">
                 <span class="home_information"><i class="home_icon bx bx-map"></i> Miami - California</span>
-                <span class="home_information"><i class="home_icon bx bx-envelope"></i> jhonsmith100@gmail.com</span>
-                <span class="home_information"><i class="home_icon bx bx-phone"></i> +54 999-000-111</span>
+                <a class="home_information link-me" href="mailto:jhonatansouzameza100@gmail.com.com" target="_blank"><i class="home_icon bx bx-envelope"></i> jhonsmith100@gmail.com</a>
+                <a class="home_information link-me" href="https://api.whatsapp.com/send?phone=54999111000&text=Hello, let's go to work" target="_blank"><i class="home_icon bx bx-phone"></i> +54 999-000-111</a>
               </div>
             </div>
             
+            <!-- Theme change button -->
+            <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
+            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>          
           </section>
-          
-
-          <!-- Theme change button -->
-
+      
           <!--========== SOCIAL ==========-->
           <section class="social section">
             <h2 class="section-title">Social</h2>
@@ -202,7 +206,7 @@
               </div>
               <div class="certificate_content">
                 <h3 class="certificate_title">Certificate of attendance on computer technology.</h3>
-                <p class="certificate_description">Achievement medal for productivity excellence during the year (2019)</p>
+                <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
               </div>
               <div class="certificate_content">
                 <h3 class="certificate_title">Achievement medal for productivity excellence during the year (2019)</h3>
@@ -273,11 +277,13 @@
             </div>
           </section>
         </div>
+
       </div>
+
     </main>
 
     <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
+    <a href="#home" class="scrolltop" id="scroll-top">
       <i class="scrolltop_icon bx bx-up-arrow-alt"></i>
     </a>
 

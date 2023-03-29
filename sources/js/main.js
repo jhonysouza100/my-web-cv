@@ -4,7 +4,9 @@ const $navToggle = document.getElementById('nav-toggle'),
       $navMenu = document.getElementById('nav-menu'),
       $navLinks = document.querySelectorAll('.nav_link'),
       $sections = document.querySelectorAll('section[id]'),
-      $scrollTop = document.getElementById('scroll-top')
+      $scrollTop = document.getElementById('scroll-top'),
+      $themeButton = document.getElementById('theme-button'),
+      $resumeButton = document.getElementById('resume-button')
 
 // ======================== SHOW MENU ========================
 const showMenu = (toggleId, navId) => {
@@ -51,10 +53,70 @@ function showScrollTop() {
 window.addEventListener('scroll', showScrollTop)
 
 // ======================== DARK LIGHT THEME ========================
+const darkTheme = 'dark-theme',
+      iconTheme = 'bx-sun'
 
+// Tema previamente seleccionado (si el usuario lo seleccionó)
+const selectedTheme = localStorage.getItem('selected-theme'),
+      selectedIcon = localStorage.getItem('selected-icon')
+
+// Validamos si el usuario eligió previamente un tema
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => $themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+// Validamos si el fulfield, preguntamos que el problema era saber si activamos el tema oscuro
+if(selectedTheme) {
+  // si se cumple la validacion le preguntamos al tema si activamos o desactivamos el tema oscuro
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  document.body.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](darkTheme)
+}
+
+// Activar/Desactivar el tema manualmente con el botón
+$themeButton.addEventListener('click', () => {
+  // Agregar o eliminar el tema oscuro /icono
+  document.body.classList.toggle(darkTheme)
+  $themeButton.classList.toggle(iconTheme)
+  // Guardamos el tema y el icono actual que eligió el usuario
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 // ======================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ========================
-
+function scaleCv() {
+  document.body.classList.add('scale-cv')
+}
 
 // ======================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ========================
+function removeScaleCv() {
+  document.body.classList.remove('scale-cv')
+}
 
+/*==================== GENERATE PDF ====================*/ 
+// Area generada en PDF
+const $areaCv = document.getElementById('area-cv')
+
+// Html2pdf options
+let opt = {
+  margin: 0,
+  filename: 'Jhon Smith CV.pdf',
+  image: { type: 'jpeg', quality: 1 },
+  html2canvas: { scale: 4 },
+  jsPDF: { format: 'a4', orientation: 'portrait' }
+}
+
+// Función para llamar a las opciones areaCv y Html2Pdf
+function generateResume() {
+  html2pdf($areaCv, opt)
+}
+
+// Cuando se hace clic en el botón, ejecuta las tres funciones
+$resumeButton.addEventListener('click', () => {
+  // 1. Se agrega la clase .scale-cv al cuerpo, donde reduce el tamaño de los elementos
+  scaleCv()
+  
+  // 2. Se genera el PDF
+  generateResume()
+  
+  // 3. La clase .scale-cv se elimina del cuerpo después de 5 segundos para volver al tamaño normal.
+  setTimeout(removeScaleCv, 5000)
+})

@@ -26,7 +26,7 @@
   .resume {
     display: grid;
     grid-template-columns: .5fr 1fr;
-    background-color: var(--container-colo);
+    background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13, 12, 12, .15);
   }
 
@@ -37,6 +37,10 @@
   .resume_left,
   .resume_right {
     padding: 0 1.5rem;
+  }
+
+  .generate-pdf {
+    display: inline-block;
   }
 
   .section-title,
