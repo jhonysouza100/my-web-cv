@@ -64,7 +64,7 @@ const selectedTheme = localStorage.getItem('selected-theme'),
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => $themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
 
-// Validamos si el fulfield, preguntamos que el problema era saber si activamos el tema oscuro
+// Validamos, preguntamos el tema para saber si activamos el tema oscuro
 if(selectedTheme) {
   // si se cumple la validacion le preguntamos al tema si activamos o desactivamos el tema oscuro
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
