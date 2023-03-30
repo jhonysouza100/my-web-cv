@@ -68,7 +68,7 @@ const getCurrentIcon = () => $themeButton.classList.contains(iconTheme) ? 'bx-mo
 if(selectedTheme) {
   // si se cumple la validacion le preguntamos al tema si activamos o desactivamos el tema oscuro
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  document.body.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](darkTheme)
+  $themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activar/Desactivar el tema manualmente con el botón
