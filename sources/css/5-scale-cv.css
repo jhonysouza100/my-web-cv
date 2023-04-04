@@ -30,7 +30,7 @@ body.scale-cv {
   padding: 0 1rem;
 }
 
-.scale-cv .home_img {
+.scale-cv .user-image {
   width: 90px;
   height: 90px;
 }
@@ -43,7 +43,7 @@ body.scale-cv {
   gap: .25rem;
 }
 
-.scale-cv .home_address,
+.scale-cv .contacts,
 .scale-cv .social_container {
   gap: .75rem;
 }

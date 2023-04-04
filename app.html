@@ -52,19 +52,22 @@
             <div class="home_container section bd-grid">
               <!-- Home Data -->
               <div class="home_data bd-grid">
-                <img src="sources/img/profile.jpg" alt="profile image" class="home_img user-foto">
-                <input type="file" id="input-foto" style="display: none;">
+                <img src="sources/img/profile.jpg" alt="profile image" class="user-image">
+                <input type="file" id="input-image" style="display: none;">
                 <h1 class="home_title user-nombre">Jhon<space>&nbsp</space><b class="user-apellido">Smith</b></h1>
                 <input id="input-nombre" type="text" style="display: none;">
                 <h3 class="home_profession user-profesion">Web Developer</h3>
                 <!-- Button to generate and download the pdf. Available for movil. -->
                 <div><a download="" href="sources/pdf/Jhon Smith Cv.pdf" class="home_button-movil">Download</a></div>
               </div>
-              <!-- Home Contact -->
-              <div class="home_address bd-grid">
+
+              <!--========== CONTACT ==========-->
+              <div class="contacts bd-grid">
                 <span class="home_information user-direccion"><i class="home_icon bx bx-map"></i><space>&nbsp</space>Miami - California</span>
                 <a class="home_information link-me user-email" href="mailto:jhonatansouzameza100@gmail.com.com" target="_blank"><i class="home_icon bx bx-envelope"></i><space>&nbsp</space>jhonsmith100@gmail.com</a>
                 <a class="home_information link-me user-telefono" href="https://api.whatsapp.com/send?phone=54999111000&text=Hello, let's go to work" target="_blank"><i class="home_icon bx bx-phone"></i><space>&nbsp</space>+54 999-000-111</a>
+                <a class="home_information link-me user-linkedin" href="https://linkedin.com/in/jhonatan-leon-souza-meza/" target="_blank"><i class="social_icon bx bxl-linkedin-square"></i><space>&nbsp</space>@jhonsmith</a>
+                <a class="home_information link-me user-github" href="https://github.com/WarDog1000" target="_blank"><i class="social_icon bx bxl-github"></i><space>&nbsp</space>jhonsmith100</a>
                 <a class="home_information link-me user-web" href="https://jhony-souza-portfolio.netlify.app/" target="_blank"><i class="home_icon bx bxs-folder-open"></i><space>&nbsp</space>My Portfolio</a>
               </div>
             </div>
@@ -75,15 +78,13 @@
             <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>          
           </section>
       
-          <!--========== SOCIAL ==========-->
+          <!--========== SOCIAL (script.display: none)==========-->
           <section class="social section">
             <h2 class="section-title">Social</h2>
             <div class="social_container bd-grid">
-              <a href="https://linkedin.com/in/jhonatan-leon-souza-meza/" class="social_link user-linkedin" target="_blank"><i class="social_icon bx bxl-linkedin-square"></i><space>&nbsp</space>@jhonsmith</a>
-              <a href="https://github.com/WarDog1000" class="social_link user-github" target="_blank"><i class="social_icon bx bxl-github"></i><space>&nbsp</space>jhonsmith100</a>
-              <a href="https://www.facebook.com/jhon.souza.7547/" class="social_link user-facebook" target="_blank"><i class="social_icon bx bxl-facebook"></i><space>&nbsp</space>Jhon Smith</a>
-              <a href="https://www.instagram.com/el.jhony.oficial/" class="social_link user-instagram" target="_blank"><i class="social_icon bx bxl-instagram"></i><space>&nbsp</space>@Jhonsmith.oficial</a>
-              <a href="https://twitter.com/JhonySouza1000" class="social_link user-twitter" target="_blank"><i class="social_icon bx bxl-twitter"></i><space>&nbsp</space>@Jhonsmith.oficial</a>
+              <a class="social_link user-facebook" href="https://www.facebook.com/jhon.souza.7547/" target="_blank"><i class="social_icon bx bxl-facebook"></i><space>&nbsp</space>Jhon Smith</a>
+              <a class="social_link user-instagram" href="https://www.instagram.com/el.jhony.oficial/" target="_blank"><i class="social_icon bx bxl-instagram"></i><space>&nbsp</space>@Jhonsmith.oficial</a>
+              <a class="social_link user-twitter" href="https://twitter.com/JhonySouza1000" target="_blank"><i class="social_icon bx bxl-twitter"></i><space>&nbsp</space>@Jhonsmith.oficial</a>
             </div>
           </section>
 
@@ -289,6 +290,9 @@
       </div>
 
     </main>
+    
+    <!--========== APP JS ==========-->
+    <script src="app.js" type="module"></script>
 
     <!--========== SCROLL TOP ==========-->
     <a href="#" class="scrolltop" id="scroll-top">
@@ -302,6 +306,6 @@
     <script src="sources/js/main.js"></script>
     
     <!--========== USER DATA JS ==========-->
-    <script src="sources/js/user-data.js"></script>
+    <!-- <script src="sources/js/user-data.js"></script> -->
   </body>
 </html>
