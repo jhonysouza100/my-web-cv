@@ -1,12 +1,8 @@
 // Funcion para Cambiar la foto de perfil a eleccion del usuario
 function setImage(img, inputImg, doc) {
-  console.log('Dentro de la funcion setImage')
-  console.log(doc)
-  console.log(img)
   doc.addEventListener('click', e => {
-     if(e.target.matches('.user-image')) {
+     if(e.target.matches(`.${img.classList.value}`)) {
       inputImg.click();
-      console.log('Cice click')
      }
   })
 
