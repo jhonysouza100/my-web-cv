@@ -1,5 +1,8 @@
-import hiddenItems from "./sources/js/hidden-sections.js";
+import hiddenSections from "./sources/js/hidden-sections.js";
 import setImage from "./sources/js/set-image.js";
+import showMenu  from "./sources/js/show-menu.js";
+import removeMenu from "./sources/js/remove-menu.js";
+import linkActive from "./sources/js/link-active.js";
 
 const $nombre = document.querySelectorAll('.user-nombre'),
       $apellido = document.querySelector('.user-apellido').firstChild,
@@ -41,10 +44,33 @@ const $nombre = document.querySelectorAll('.user-nombre'),
       $foto = document.querySelector('.user-image'),
       $inputFoto = document.querySelector('#input-image')
 
-const doc = document
-doc.addEventListener("DOMContentLoaded", e => {
-  console.log('Carga DOM content loaded');
-  setImage($foto, $inputFoto, doc)
-} )
+      // ======================== SECTIONS ========================
+      const $contacts = document.querySelectorAll('.contacts'),
+      $social = document.querySelectorAll('.social'),
+      $profile = document.querySelectorAll('.profile'),
+      $education = document.querySelectorAll('.education'),
+      $skills = document.querySelectorAll('.skills'),
+      $experience = document.querySelectorAll('.experience'),
+      $certificates = document.querySelectorAll('.certificates'),
+      $references = document.querySelectorAll('.references'),
+      $languages = document.querySelectorAll('.languages'),
+      $interests = document.querySelectorAll('.interests')
 
-hiddenItems()
+      // ======================== ELEMENTS ========================
+      const $toggleNav = document.getElementById('nav-toggle'),
+      $navMenu = document.getElementById('nav-menu'),
+      $navLinks = document.querySelectorAll('.nav_link'),
+      $sections = document.querySelectorAll('section[id]'),
+      $scrollTop = document.getElementById('scroll-top'),
+      $themeButton = document.getElementById('theme-button'),
+      $resumeButton = document.getElementById('resume-button')
+
+const $doc = document
+$doc.addEventListener("DOMContentLoaded", e => {
+  console.log('Carga DOM content loaded');
+  showMenu($toggleNav, $navMenu)
+  linkActive($sections)
+  removeMenu($navMenu, $navLinks)
+  setImage($foto, $inputFoto, $doc)
+  hiddenSections(...$social, ...$references)
+} )
