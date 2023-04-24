@@ -88,6 +88,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  user-select: none;
 }
 
 /*========== CLASS CSS ==========*/
@@ -127,6 +128,7 @@ img {
   background-color: var(--body-color);
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
   transition: .3s;
+  user-select: none;
 }
 
 /*========== NAV ==========*/
@@ -148,7 +150,6 @@ img {
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
     transition: .3s;
-    
   }
 }
 

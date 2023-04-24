@@ -1,15 +1,10 @@
 const D = document
-export default function showMenu(navMenu, toggleBtn, navLinks) {
-  if(toggleBtn && navMenu) {
+export default function showMenu(navMenu, toggleBtn) {
     D.addEventListener('click', e => { 
+      // corta el comportamiento por defecto del elemento
       e.preventDefault()
+      // si el evento se origino en toggleBtn, entonces...
       if(e.target === toggleBtn) navMenu.classList.toggle('show-menu') 
+      // toogle() se utiliza para alternar una clase en un elemento HTML. Si la clase ya está presente en el elemento, entonces se elimina, de lo contrario se agrega al elemento.
     })
-  }
-  /*==================== REMOVE MENU MOBILE ====================*/
-  const hiddeMenu = () => {
-    navMenu.classList.remove('show-menu')
-  }
-  // recorre el nodelist de links del menu y agrega un evento de click con una callbak encargada de ocultar el nav-menu
-  navLinks.forEach( el => el.addEventListener('click', hiddeMenu()))
 }

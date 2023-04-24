@@ -1,14 +1,17 @@
+import hideMenu from "./components/hide-menu/hide-menu.js";
 import showMenu from "./components/show-menu/show-menu.js";
 
 const D = document,
 $nav = D.querySelector('[data-nav-menu]'),
-$toggle = D.querySelector('[data-toggle-btn]'),
-$navLinks = D.querySelectorAll('[data-nav-link]')
+$toggle = D.querySelector(`[data-toggle-btn] *`),
+$navLinks = D.querySelectorAll(`[data-nav-link] *`)
 
 D.addEventListener("DOMContentLoaded", (e) => {
-
+  console.log('hola desde el DOMcontentLoaded');
   /*==================== SHOW MENU ====================*/
-  showMenu($nav, $toggle, $navLinks)
+  showMenu($nav, $toggle)
+  /*==================== REMOVE MENU MOBILE ====================*/
+  hideMenu($nav, $navLinks)
   /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
   /*==================== SHOW SCROLL TOP ====================*/
   /*==================== DARK LIGHT THEME ====================*/
