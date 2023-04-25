@@ -8,9 +8,12 @@ const D = document,
 $nav = D.querySelector('[data-nav-menu]'),
 $toggle = D.querySelector(`[data-toggle-btn] *`),
 $navLinks = D.querySelectorAll(`[data-nav-link] *`),
-$sections = D.querySelectorAll(`[data-section-id][id] *`),
+$sections = D.querySelectorAll(`[data-section-id][id]`),
 $profileImg = D.querySelector(`[data-profile-img]`)
 
+console.log($profileImg.tagName)
+console.log($profileImg.className)
+console.log($profileImg.classList)
 console.log($profileImg.classList.value)
 
 D.addEventListener("DOMContentLoaded", (e) => {
