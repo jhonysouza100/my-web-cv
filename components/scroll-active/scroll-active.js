@@ -9,13 +9,13 @@ export default function scrollActive(sections, navMenu) {
       const sectionHeight = section.offsetHeight,
         sectionTop = section.offsetTop - 50,
         sectionId = section.getAttribute("id")
-        // const testId = D.querySelector(`.${navMenu.className} a[href*="${sectionId}"]`)
-        // console.log(navMenu.querySelector(`a[href*="${sectionId}"]`))
+        // const testId = document.querySelector(`${navMenu.classList.value}`)
+        console.log(document.querySelector(`.${navMenu.classList.value} a[href*="${sectionId}"]`)) // retorna null
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navMenu.querySelector(`a[href*="${sectionId}"]`).classList.add('active-link')
+        // navMenu.querySelector(`a[href*="${sectionId}"]`).classList.add('active-link')
       } else {
-        navMenu.querySelector(`a[href*="${sectionId}"]`).classList.remove('active-link')
+        // navMenu.querySelector(`a[href*="${sectionId}"]`).classList.remove('active-link')
       }
     })
   }

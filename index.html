@@ -38,15 +38,35 @@
         <main class="l-main bd-container">
             <!-- All elements within this div, is generated in PDF -->
             <div class="resume" id="area-cv">
-                <div class="resume__left">
+                <div class="resume_left">
                     <!--========== HOME ==========-->
                     <section class="home" id="home" data-section-id>
-                        
-                        <!-- Theme change button -->
-                        
-    
-                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <div class="home_container section bd-grid">
 
+                          <div class="home_data bd-grid">
+                            <img src="assets/img/profile.jpg" alt="profile image" class="home_img" data-profile-img>
+                            <h1 class="home_title">JHON<space>&nbsp</space><b>SMITH</b></h1>
+                            <h3 class="home_profession">Web Developer</h3>
+                            <!-- Button to generate and download the pdf. Available for desktop. -->
+                            <div>
+                              <a download="" href="assets/pdf/ResumeCv.pdf" class="home_button-movil">Download</a>
+                            </div>
+                          </div>
+
+                          <div class="home_contact bd-grid">
+                            <span class="home_information">
+                              <i class="bx bx-map home_icon"><space>&nbsp</space>California</i>
+                            </span>
+                            <span class="home_information">
+                              <i class="bx bx-envelope home_icon"><space>&nbsp</space>user@gmail.com</i>
+                            </span>
+                            <span class="home_information">
+                              <i class="bx bx-phone home_icon"><space>&nbsp</space>999-0001-0001</i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- Theme change button -->                      
+ 
                     </section>          
                     
                     <!--========== SOCIAL ==========-->
@@ -72,7 +92,7 @@
 
                 </div>
 
-                <div class="resume__right">
+                <div class="resume_right">
                     <!--========== EXPERIENCE ==========-->
                     <section class="experience section" id="experience" data-section-id>
                         
