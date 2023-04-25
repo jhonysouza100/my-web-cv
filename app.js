@@ -1,10 +1,12 @@
 import hideMenu from "./components/hide-menu/hide-menu.js";
+import scrollActive from "./components/scroll-active/scroll-active.js";
 import showMenu from "./components/show-menu/show-menu.js";
 
 const D = document,
 $nav = D.querySelector('[data-nav-menu]'),
 $toggle = D.querySelector(`[data-toggle-btn] *`),
-$navLinks = D.querySelectorAll(`[data-nav-link] *`)
+$navLinks = D.querySelectorAll(`[data-nav-link] *`),
+$sections = D.querySelectorAll(`[data-section-id][id] *`)
 
 D.addEventListener("DOMContentLoaded", (e) => {
   console.log('hola desde el DOMcontentLoaded');
@@ -13,6 +15,7 @@ D.addEventListener("DOMContentLoaded", (e) => {
   /*==================== REMOVE MENU MOBILE ====================*/
   hideMenu($nav, $navLinks)
   /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+  scrollActive($sections, $nav)
   /*==================== SHOW SCROLL TOP ====================*/
   /*==================== DARK LIGHT THEME ====================*/
   /*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
