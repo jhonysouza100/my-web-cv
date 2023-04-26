@@ -292,15 +292,18 @@ img {
 }
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
-.education_content {
+.education_content,
+.experience_content {
   display: flex;
 }
 
-.education_time {
+.education_time,
+.experience_time {
   padding-right: 1rem;
 }
 
-.education_rounder {
+.education_rounder,
+.experience_rounder {
   position: relative;
   display: block;
   width: 16px;
@@ -310,7 +313,8 @@ img {
   margin-top: .25rem;
 }
 
-.education_line {
+.education_line,
+.experience_line {
   display: block;
   width: 2px;
   height: 110%;
@@ -318,33 +322,120 @@ img {
   transform: translate(7px, 0);
 }
 
-.education_data {
+.education_data,
+.experience_data {
   gap: .5rem;
 }
 
-.education_title {
+.education_title,
+.experience_title {
   font-size: var(--h3-font-size);
 }
 
-.education_studies {
+.education_studies,
+.experience_company {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
 
-/*========== SKILLS AND LANGUAGES ==========*/
+.education_year {
+  font-size: var(--smaller-font-size);
+}
 
+/*========== SKILLS AND LANGUAGES ==========*/
+.skills_content,
+.languages_content {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.languages_content {
+  gap: 0;
+}
+
+.skills_name,
+.languages_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills_circle,
+.languages_circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: .75rem;
+}
 
 /*========== CERTIFICATES ==========*/
-
+.certificate_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
 
 /*========== REFERENCES ==========*/
+.references_content {
+  gap: .25rem
+}
 
+.references_subtitle {
+  color: var(--title-color-light);
+}
+
+.references_subtitle,
+.references_contact {
+  font-size: var(--smaller-font-size);
+}
+
+.references_title {
+  font-size: var(--h3-font-size);
+}
 
 /*========== INTERESTS ==========*/
+.interests_container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
 
+.interests_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interest_icon {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: .25rem;
+}
 
 /* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%; /* 5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background-color: var(--container-color-alt);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  visibility: hidden;
+}
 
+.scrolltop_icon {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 5rem;
+}
 
 /*========== MEDIA QUERIES ==========*/
 /* For small devices, menu two columns */

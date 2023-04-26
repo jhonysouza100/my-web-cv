@@ -1,6 +1,7 @@
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
 import scrollActive from "./components/scroll-active/scroll-active.js";
+import scrollTop from "./components/scroll-top/scroll-top.js";
 import setImage from "./components/set-image/set-image.js";
 import showMenu from "./components/show-menu/show-menu.js";
 
@@ -9,7 +10,8 @@ $nav = D.querySelector('[data-nav-menu]'),
 $toggle = D.querySelector(`[data-toggle-btn] *`),
 $navLinks = D.querySelectorAll(`[data-nav-link] *`),
 $sections = D.querySelectorAll(`[data-section-id][id]`),
-$profileImg = D.querySelector(`[data-profile-img]`)
+$profileImg = D.querySelector(`[data-profile-img]`),
+$scrolltop = D.querySelector(`[data-scrolltop-btn]`)
 
 console.log($profileImg.tagName)
 console.log($profileImg.className)
@@ -26,13 +28,14 @@ D.addEventListener("DOMContentLoaded", (e) => {
   scrollActive($sections, $nav)
   /*==================== SET PROFILE IMAGE ====================*/
   setImage($profileImg)
-  /*==================== HIDE SECTIONS ====================*/
-  hideSections()
   /*==================== SHOW SCROLL TOP ====================*/
+  scrollTop($scrolltop)
   /*==================== DARK LIGHT THEME ====================*/
   /*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
   /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
   /*==================== GENERATE PDF ====================*/
+  /*==================== HIDE SECTIONS ====================*/
+  hideSections()
   // PDF generated area
   // Html2pdf options
   // Function to call areaCv and Html2Pdf options
