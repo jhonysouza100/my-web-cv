@@ -1,3 +1,5 @@
+import darkTheme from "./components/dark-theme/dark-theme.js";
+import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
 import scrollActive from "./components/scroll-active/scroll-active.js";
@@ -11,12 +13,23 @@ $toggle = D.querySelector(`[data-toggle-btn] *`),
 $navLinks = D.querySelectorAll(`[data-nav-link] *`),
 $sections = D.querySelectorAll(`[data-section-id][id]`),
 $profileImg = D.querySelector(`[data-profile-img]`),
-$scrolltop = D.querySelector(`[data-scrolltop-btn]`)
+$scrolltop = D.querySelector(`[data-scrolltop-btn]`),
+$themeBtn = D.querySelector('[data-theme-btn]'),
+$resumeBtn = D.querySelector('[data-resume-btn]'),
+$areaCv = D.querySelector('[data-area-cv]'),
 
-console.log($profileImg.tagName)
-console.log($profileImg.className)
-console.log($profileImg.classList)
-console.log($profileImg.classList.value)
+// ============ USER DATA =============
+$userName = D.querySelector('.home_title').firstChild.textContent.trim(),
+$userLastName = D.querySelector('.home_title').lastChild.textContent.trim(),
+$userProfession = D.querySelector('.home_profession').textContent.trim()
+
+// console.log($profileImg.tagName)
+// console.log($profileImg.className)
+// console.log($profileImg.classList)
+// console.log($profileImg.classList.value)
+console.log($userName)
+console.log($userLastName)
+console.log($userProfession)
 
 D.addEventListener("DOMContentLoaded", (e) => {
   console.log('hola desde el DOMcontentLoaded');
@@ -31,16 +44,9 @@ D.addEventListener("DOMContentLoaded", (e) => {
   /*==================== SHOW SCROLL TOP ====================*/
   scrollTop($scrolltop)
   /*==================== DARK LIGHT THEME ====================*/
-  /*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
-  /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
-  /*==================== GENERATE PDF ====================*/
+  darkTheme($themeBtn)
   /*==================== HIDE SECTIONS ====================*/
   hideSections()
-  // PDF generated area
-  // Html2pdf options
-  // Function to call areaCv and Html2Pdf options
-  // When the button is clicked, it executes the three functions
-  // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-  // 2. The PDF is generated
-  // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+  /*==================== GENERATE PDF ====================*/
+  generatePdf($resumeBtn, $areaCv)
 });

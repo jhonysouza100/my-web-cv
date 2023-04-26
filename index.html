@@ -37,7 +37,7 @@
 
         <main class="l-main bd-container">
             <!-- All elements within this div, is generated in PDF -->
-            <div class="resume" id="area-cv">
+            <div class="resume" id="area-cv" data-area-cv>
                 <div class="resume_left">
                     <!--========== HOME ==========-->
                     <section class="home" id="home" data-section-id>
@@ -45,9 +45,8 @@
 
                           <div class="home_data bd-grid">
                             <img src="assets/img/profile.jpg" alt="profile image" class="home_img" data-profile-img>
-                            <h1 class="home_title">JHON<space>&nbsp</space><b>SMITH</b></h1>
+                            <h1 class="home_title"><span>JHON</span><space>&nbsp</space><b>SMITH</b></h1>
                             <h3 class="home_profession">Web Developer</h3>
-                            <!-- Button to generate and download the pdf. Available for desktop. -->
                             <div>
                               <a download="" href="assets/pdf/ResumeCv.pdf" class="home_button-movil">Download</a>
                             </div>
@@ -66,7 +65,10 @@
                           </div>
                         </div>
                         <!-- Theme change button -->                      
- 
+                        <i class="bx bx-moon change-theme" title="Theme" id="theme-button" data-theme-btn></i>
+
+                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button" data-resume-btn></i>
                     </section>          
                     
                     <!--========== SOCIAL ==========-->

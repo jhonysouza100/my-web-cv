@@ -1,6 +1,6 @@
 ## setImage()
 
-Esta función toma un argumento "img", que es un elemento del DOM que representa una imagen. La función agrega un evento de clic al documento utilizando el método "addEventListener()" de "D" (que se refiere al objeto "document").
+Esta función toma un argumento "img", que es un elemento del DOM que representa una imagen. La función agrega un evento de clic al documento utilizando el método "addEventListener()".
 
 La función verifica si el objetivo del evento de clic coincide con el elemento de la imagen, utilizando el método "matches()" de "e.target" y comparando la clase del elemento con la clase del argumento "img". Si el objetivo del evento es la imagen, se crea un nuevo elemento "input" que se utiliza para seleccionar una imagen del sistema de archivos local. Se establece el tipo de entrada en "file" y el atributo "accept" en "image/*". También se agrega un evento "change" que se activa cuando el usuario selecciona una imagen.
 

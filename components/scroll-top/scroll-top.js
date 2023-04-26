@@ -1,4 +1,3 @@
-const W = window
 export default function scrollTop(scrolltop) {
   function cb() {
     if(this.scrollY >= 200) {
@@ -7,6 +6,5 @@ export default function scrollTop(scrolltop) {
       scrolltop.classList.remove('show-scroll')
    } 
   }
-  
-  W.addEventListener('scroll', cb)
+  window.addEventListener('scroll', cb)
 }

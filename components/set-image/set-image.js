@@ -1,9 +1,8 @@
-const D = document
 export default function setImage(img) {
-  D.addEventListener('click', e => {
+  document.addEventListener('click', e => {
 
     if(e.target.matches(`.${img.classList.value}`)) {
-      const input = D.createElement('input')
+      const input = document.createElement('input')
       input.type = 'file'
       input.accept = 'image/*'
       input.addEventListener('change', (event) => {
