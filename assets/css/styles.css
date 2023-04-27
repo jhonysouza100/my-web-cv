@@ -17,6 +17,7 @@
   --body-font: 'Poppins', sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
+  --font-icon: 1.2rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .875rem;
@@ -61,7 +62,7 @@ body.dark-theme {
   top: 2.2rem;
   display: flex;
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   cursor: pointer;
 }
 
@@ -86,7 +87,7 @@ body.scale-cv {
   position: absolute;
   top: 2.2rem;
   left: 0;
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   color: var(--text-color);
   cursor: pointer;
 }
@@ -244,7 +245,7 @@ img {
   gap: 1.5rem;
 }
 
-.l-header {
+.header {
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -285,7 +286,7 @@ img {
 
 }
 .nav_toggle {
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   cursor: pointer;
 }
 
@@ -312,7 +313,7 @@ img {
 }
 
 .nav_icon {
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   margin-bottom: var(--mb-1);
 }
 
@@ -369,7 +370,7 @@ img {
 }
 
 .home_icon {
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   margin-right: .25rem;
 }
 
@@ -407,7 +408,7 @@ img {
 }
 
 .social_icon {
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   margin-right: .25rem;
 }
 
@@ -553,7 +554,7 @@ img {
 }
 
 .scrolltop_icon {
-  font-size: 1.2rem;
+  font-size: var(--font-icon);;
   color: var(--text-color);
 }
 
@@ -583,7 +584,7 @@ img {
     margin-right: auto;
   }
 
-  .l-header,
+  .header,
   .scrolltop {
     display: none;
   }

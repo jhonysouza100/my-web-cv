@@ -1,4 +1,5 @@
 import darkTheme from "./components/dark-theme/dark-theme.js";
+import formBtn from "./components/form-button/form-button.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -17,6 +18,8 @@ $scrolltop = D.querySelector(`[data-scrolltop-btn]`),
 $themeBtn = D.querySelector('[data-theme-btn]'),
 $resumeBtn = D.querySelector('[data-resume-btn]'),
 $areaCv = D.querySelector('[data-area-cv]'),
+$formBtn = D.querySelector('[data-form-btn]'),
+$formPanel = D.querySelector('[data-form-panel]'),
 
 // ============ USER DATA =============
 $userName = D.querySelector('.home_title').firstChild.textContent.trim(),
@@ -49,4 +52,6 @@ D.addEventListener("DOMContentLoaded", (e) => {
   hideSections()
   /*==================== GENERATE PDF ====================*/
   generatePdf($resumeBtn, $areaCv)
+  /*==================== FORM BUTTON ====================*/
+  formBtn($formBtn, $formPanel)
 });

@@ -1,301 +1,296 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/panel-form.css">
+    <title>My Web CV</title>
+  </head>
+  <body>
+    <!--========== HEADER ==========-->
+    <header class="header" id="header">
+      <!-- NAV -->
+      <nav class="nav bd-container">
+        <a href="#" class="nav_logo">Smith</a>
+        <!-- Nav Menu -->
+        <div class="nav_menu" id="nav-menu" data-nav-menu>
+          <ul class="nav_list">
+            <li class="nav_item"><a href="#home" class="nav_link" data-nav-link><i class="nav_icon bx bx-home"></i><space>&nbsp</space>Home</a></li><li class="nav_item"><a href="#profile" class="nav_link" data-nav-link><i class="nav_icon bx bx-user"></i><space>&nbsp</space>Profile</a></li>
+            <li class="nav_item"><a href="#education" class="nav_link" data-nav-link><i class="nav_icon bx bx-book"></i><space>&nbsp</space>Education</a></li>
+            <li class="nav_item"><a href="#skills" class="nav_link" data-nav-link><i class="nav_icon bx bx-receipt"></i><space>&nbsp</space>Skills</a></li>
+            <li class="nav_item"><a href="#experience" class="nav_link" data-nav-link><i class="nav_icon bx bx-briefcase-alt"></i><space>&nbsp</space>Experience</a></li>
+            <li class="nav_item"><a href="#certificates" class="nav_link" data-nav-link><i class="nav_icon bx bx-award"></i><space>&nbsp</space>Certificates</a></li>
+            <li class="nav_item"><a href="#references" class="nav_link" data-nav-link><i class="nav_icon bx bx-link-external"></i><space>&nbsp</space>References</a></li>
+          </ul>
+        </div>
+        <div class="nav_toggle" id="nav-toggle" data-toggle-btn><i class="bx bx-grid-alt"></i></div>
+      </nav>
+    </header>
+    <main class="main bd-container">
+      <!-- All elements within this div, is generated in PDF -->
+      <div class="resume" id="area-cv" data-area-cv>
+        <div class="resume_left">
+          <!--========== HOME ==========-->
+          <section class="home" id="home" data-section-id>
+            <div class="home_container section bd-grid">
+              <div class="home_data bd-grid">
+                <img src="assets/img/profile.jpg" alt="profile image" class="home_img" data-profile-img/>
+                <h1 class="home_title"><span>JHON</span><space>&nbsp</space><b>SMITH</b></h1>
+                <h3 class="home_profession">Web Developer</h3>
+                <div>
+                  <a download="" href="assets/pdf/ResumeCv.pdf" class="home_button-movil">Download</a>
+                </div>
+              </div>
+              <div class="home_contact bd-grid">
+                <span class="home_information"><i class="bx bx-map home_icon"><space>&nbsp</space>California</i></span>
+                <span class="home_information"><i class="bx bx-envelope home_icon"><space>&nbsp</space>user@gmail.com</i></span>
+                <span class="home_information"><i class="bx bx-phone home_icon"><space>&nbsp</space>999-0001-0001</i></span>
+              </div>
+            </div>
+            <!-- Theme change button -->
+            <i class="bx bx-moon change-theme" title="Theme" id="theme-button" data-theme-btn></i>
+            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button" data-resume-btn></i>
+          </section>
+          <!-- Form menu button -->
+          <i class="bx bx-chevron-left form-button" data-form-btn></i>
+           <!-- Panel -->
+          <aside class="panel" data-form-panel>
+            <section class="section_panel" data-section-panel>
+              <!-- BACKGROUND BLUR -->
+              <div class="color_panel"></div>
+              <div class="color_panel"></div>
+              <div class="color_panel"></div>
+              <!-- FORM CONTAINER -->
+              <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:1;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="form_container">
+                  <div class="form">
+                    <h2>Login Form</h2>
+                    <form action="">
+                      <div class="inputBox">
+                        <input type="text" placeholder="Username">
+                      </div>
+                      <div class="inputBox">
+                        <input type="password" placeholder="Password">
+                      </div>
+                      <div class="inputBox">
+                        <input type="submit" value="Login">
+                      </div>
+                      <p class="forget">Forgot Password ? <a href="#">Click Here</a></p>
+                      <p class="forget">Don't have an account ? <a href="#">Sign Up</a></p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </aside>
 
-        <!--========== BOX ICONS ==========-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+          <!--========== SOCIAL ==========-->
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
+            <div class="social_container bd-grid">
+              <a href="https://linkedin.com/" class="social_link" target="_blank"><i class="bx bxl-linkedin-square social_icon"></i><space>&nbsp</space>@jhonsmith</a>
+              <a href="https://www.facebook.com/" class="social_link" target="_blank"><i class="bx bxl-facebook social_icon"></i><space>&nbsp</space>@jhonsmith</a>
+              <a href="https://www.instagram.com/" class="social_link" target="_blank"><i class="bx bxl-instagram social_icon"></i><space>&nbsp</space>@jhonsmith</a>
+            </div>
+          </section>
+          <!--========== PROFILE ==========-->
+          <section class="profile section" id="profile" data-section-id>
+            <h2 class="section-title">Profile</h2>
+            <p class="profile_description">I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.</p>
+          </section>
 
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <title>My Web CV</title>
-    </head>
-    <body>
-        <!--========== HEADER ==========-->
-        <header class="l-header" id="header">
-          <!-- NAV -->
-          <nav class="nav bd-container">
-            <a href="#" class="nav_logo">Smith</a>
-            <!-- Nav Menu -->
-            <div class="nav_menu" id="nav-menu" data-nav-menu>
-              <ul class="nav_list">
-                <li class="nav_item"><a href="#home" class="nav_link" data-nav-link><i class="nav_icon bx bx-home"></i><space>&nbsp</space>Home</a></li>
-                <li class="nav_item"><a href="#profile" class="nav_link" data-nav-link><i class="nav_icon bx bx-user"></i><space>&nbsp</space>Profile</a></li>
-                <li class="nav_item"><a href="#education" class="nav_link" data-nav-link><i class="nav_icon bx bx-book"></i><space>&nbsp</space>Education</a></li>
-                <li class="nav_item"><a href="#skills" class="nav_link" data-nav-link><i class="nav_icon bx bx-receipt"></i><space>&nbsp</space>Skills</a></li>
-                <li class="nav_item"><a href="#experience" class="nav_link" data-nav-link><i class="nav_icon bx bx-briefcase-alt"></i><space>&nbsp</space>Experience</a></li>
-                <li class="nav_item"><a href="#certificates" class="nav_link" data-nav-link><i class="nav_icon bx bx-award"></i><space>&nbsp</space>Certificates</a></li>
-                <li class="nav_item"><a href="#references" class="nav_link" data-nav-link><i class="nav_icon bx bx-link-external"></i><space>&nbsp</space>References</a></li>
+          <!--========== EDUCATION ==========-->
+          <section class="education section" id="education" data-section-id>
+            <h2 class="section-title">Education</h2>
+            <div class="education_container bd-grid">
+              <div class="education_content">
+                <div class="education_time">
+                  <span class="education_rounder"></span>
+                  <span class="education_line"></span>
+                </div>
+                <div class="education_data bd-grid">
+                  <h3 class="education_title">MASTER OF DESIGN</h3>
+                  <span class="education_studies">University od Studies</span>
+                  <span class="education_year">2010 - 2015</span>
+                </div>
+              </div>
+              <div class="education_content">
+                <div class="education_time">
+                  <span class="education_rounder"></span>
+                  <span class="education_line"></span>
+                </div>
+                <div class="education_data bd-grid">
+                  <h3 class="education_title">WEB DEVELOPER</h3>
+                  <span class="education_studies">Institute Studies</span>
+                  <span class="education_year">2016 - 2019</span>
+                </div>
+              </div>
+              <div class="education_content">
+                <div class="education_time">
+                  <span class="education_rounder"></span>
+                  <!-- <span class="education_line"></span> -->
+                </div>
+                <div class="education_data bd-grid">
+                  <h3 class="education_title">MASTER IN UI/UX</h3>
+                  <span class="education_studies">Institute Studies</span>
+                  <span class="education_year">2019 - 2021</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--========== SKILLS  ==========-->
+          <section class="skills section" id="skills" data-section-id>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills_content bd-grid">
+              <ul class="skills_data">
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>HTML</li>
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>CSS</li>
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Sass</li>
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>JavaScript</li>
+              </ul>
+              <ul class="skills_data">
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Angular</li>
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Firebase</li>
+                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>React</li>
               </ul>
             </div>
-            <div class="nav_toggle" id="nav-toggle" data-toggle-btn><i class="bx bx-grid-alt"></i></div>
-          </nav>
-
-        </header>
-
-        <main class="l-main bd-container">
-            <!-- All elements within this div, is generated in PDF -->
-            <div class="resume" id="area-cv" data-area-cv>
-                <div class="resume_left">
-                    <!--========== HOME ==========-->
-                    <section class="home" id="home" data-section-id>
-                        <div class="home_container section bd-grid">
-
-                          <div class="home_data bd-grid">
-                            <img src="assets/img/profile.jpg" alt="profile image" class="home_img" data-profile-img>
-                            <h1 class="home_title"><span>JHON</span><space>&nbsp</space><b>SMITH</b></h1>
-                            <h3 class="home_profession">Web Developer</h3>
-                            <div>
-                              <a download="" href="assets/pdf/ResumeCv.pdf" class="home_button-movil">Download</a>
-                            </div>
-                          </div>
-
-                          <div class="home_contact bd-grid">
-                            <span class="home_information">
-                              <i class="bx bx-map home_icon"><space>&nbsp</space>California</i>
-                            </span>
-                            <span class="home_information">
-                              <i class="bx bx-envelope home_icon"><space>&nbsp</space>user@gmail.com</i>
-                            </span>
-                            <span class="home_information">
-                              <i class="bx bx-phone home_icon"><space>&nbsp</space>999-0001-0001</i>
-                            </span>
-                          </div>
-                        </div>
-                        <!-- Theme change button -->                      
-                        <i class="bx bx-moon change-theme" title="Theme" id="theme-button" data-theme-btn></i>
-
-                        <!-- Button to generate and download the pdf. Available for desktop. -->
-                        <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button" data-resume-btn></i>
-                    </section>          
-                    
-                    <!--========== SOCIAL ==========-->
-                    <section class="social section">
-                        <h2 class="section-title">SOCIAL</h2>
-                        <div class="social_container bd-grid">
-                          <a href="https://linkedin.com/" class="social_link" target="_blank"><i class="bx bxl-linkedin-square social_icon"></i><space>&nbsp</space>@jhonsmith</a>
-                          <a href="https://www.facebook.com/" class="social_link" target="_blank"><i class="bx bxl-facebook social_icon"></i><space>&nbsp</space>@jhonsmith</a>
-                          <a href="https://www.instagram.com/" class="social_link" target="_blank"><i class="bx bxl-instagram social_icon"></i><space>&nbsp</space>@jhonsmith</a>
-                        </div>
-                    </section>
-
-                    <!--========== PROFILE ==========-->
-                    <section class="profile section" id="profile" data-section-id>
-                        <h2 class="section-title">Profile</h2>
-                        <p class="profile_description">I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.</p>
-                    </section>
-                    
-                    <!--========== EDUCATION ==========-->
-                    <section class="education section" id="education" data-section-id>
-                        <h2 class="section-title">Education</h2>
-                        <div class="education_container bd-grid">
-                          
-                          <div class="education_content">
-                            <div class="education_time">
-                              <span class="education_rounder"></span>
-                              <span class="education_line"></span>
-                            </div>
-                            <div class="education_data bd-grid">
-                                <h3 class="education_title">MASTER OF DESIGN</h3>
-                                <span class="education_studies">University od Studies</span>
-                                <span class="education_year">2010 - 2015</span>
-                            </div>
-                          </div>
-
-                          <div class="education_content">
-                            <div class="education_time">
-                              <span class="education_rounder"></span>
-                              <span class="education_line"></span>
-                            </div>
-                            <div class="education_data bd-grid">
-                                <h3 class="education_title">WEB DEVELOPER</h3>
-                                <span class="education_studies">Institute Studies</span>
-                                <span class="education_year">2016 - 2019</span>
-                            </div>
-                          </div>
-
-                          <div class="education_content">
-                            <div class="education_time">
-                              <span class="education_rounder"></span>
-                              <!-- <span class="education_line"></span> -->
-                            </div>
-                            <div class="education_data bd-grid">
-                                <h3 class="education_title">MASTER IN UI/UX</h3>
-                                <span class="education_studies">Institute Studies</span>
-                                <span class="education_year">2019 - 2021</span>
-                            </div>
-                          </div>
-
-                        </div>
-                    </section>
-
-
-                    <!--========== SKILLS  ==========-->
-                    <section class="skills section" id="skills" data-section-id>
-                        <h2 class="section-title">Skills</h2>
-                        <div class="skills_content bd-grid">
-                          <ul class="skills_data">
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>HTML</li>
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>CSS</li>
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Sass</li>
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>JavaScript</li>
-                          </ul>
-
-                          <ul class="skills_data">
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Angular</li>
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Firebase</li>
-                            <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>React</li>
-                          </ul>
-                        </div>
-                    </section>
-
+          </section>
+        </div>
+        <div class="resume_right">
+          <!--========== EXPERIENCE ==========-->
+          <section class="experience section" id="experience" data-section-id>
+            <h2 class="section-title">Experience</h2>
+            <div class="experience_container bd-grid">
+              <div class="experience_content">
+                <div class="experience_time">
+                  <span class="experience_rounder"></span>
+                  <span class="experience_line"></span>
                 </div>
-
-                <div class="resume_right">
-                    <!--========== EXPERIENCE ==========-->
-                    <section class="experience section" id="experience" data-section-id>
-                      <h2 class="section-title">Experience</h2>
-                      <div class="experience_container bd-grid">
-                        <div class="experience_content">
-                            <div class="experience_time">
-                              <span class="experience_rounder"></span>
-                              <span class="experience_line"></span>
-                            </div>
-                            <div class="experience_data bd-grid">
-                              <h3 class="experience_title">MASTER OF DESIGN</h3>
-                              <span class="experience_company">From 2013 to 2015 | Tech Soft</span>
-                              <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
-                            </div>
-                          </div>
-                          <div class="experience_content">
-                            <div class="experience_time">
-                              <span class="experience_rounder"></span>
-                              <span class="experience_line"></span>
-                            </div>
-                            <div class="experience_data bd-grid">
-                              <h3 class="experience_title">UI/UX DESIGN AREA</h3>
-                              <span class="experience_company">From 2017 to 2019 | Adobe Inc</span>
-                              <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
-                            </div>
-                          </div>
-                          <div class="experience_content">
-                            <div class="experience_time">
-                              <span class="experience_rounder"></span>
-                              <!-- <span class="experience_line"></span> -->
-                            </div>
-                            <div class="experience_data bd-grid">
-                              <h3 class="experience_title">MOBILE APPLICATION DEVELOPER</h3>
-                              <span class="experience_company">From 2019 to 20121 | App Tech</span>
-                              <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
-                            </div>
-                          </div>
-                        </div>
-                    </section>
-
-                    <!--========== CERTIFICATES ==========-->
-                    <section class="certificate section" id="certificates" data-section-id>
-                        <h2 class="section-title">Certificates</h2>
-                        <div class="certificate_container bd-grid">
-                          <div class="certificate_content">
-                            <h3 class="certificate_title">Certified for compliance in the work area (2012)</h3>
-                            <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
-                          </div>
-
-                          <div class="certificate_content">
-                            <h3 class="certificate_title">Certificate of attendance on computer technology.</h3>
-                            <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
-                          </div>
-
-                          <div class="certificate_content">
-                            <h3 class="certificate_title">Achievement medal for productivity excellence during the year (2019)</h3>
-                            <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
-                          </div>
-                        </div>
-                    </section>
-
-                    <!--========== REFERENCES ==========-->
-                    <section class="references section" id="references" data-section-id>
-                        <h2 class="section-title">REferences</h2>
-                        <div class="references_container bd-grid">
-                          <div class="references_content bd-grid">
-                            <span class="references_subtitle">Sr. Director</span>
-                            <h3 class="references_title">Mr. Clay Doe</h3>
-                            <ul class="references_contact">
-                              <li>Phone:<space>&nbsp</space>999-777-666</li>
-                              <li>Email:<space>&nbsp</space>user@email.com</li>
-                            </ul>
-                          </div>
-                          
-                          <div class="references_content bd-grid">
-                            <span class="references_subtitle">Mag. Developer</span>
-                            <h3 class="references_title">Mr. Robbinson Bass</h3>
-                            <ul class="references_contact">
-                              <li>Phone:<space>&nbsp</space>999-777-666</li>
-                              <li>Email:<space>&nbsp</space>user@email.com</li>
-                            </ul>
-                          </div>
-                        </div>
-                    </section>
-
-                    <!--========== LANGUAGES ==========-->
-                    <section class="languages section" data-section-id>
-                        <h2 class="section-title">Languages</h2>
-                        <div class="languages_container">
-                          <ul class="languages_content bd-grid">
-                            <li class="languages_name">
-                              <span class="languages_circle"></span>
-                              <space>&nbsp</space>Spanish
-                            </li>
-                            <li class="languages_name">
-                              <span class="languages_circle"></span>
-                              <space>&nbsp</space>English
-                            </li>
-                            <li class="languages_name">
-                              <span class="languages_circle"></span>
-                              <space>&nbsp</space>French
-                            </li>
-                          </ul>
-                        </div>
-                    </section>
-                    
-                    <!--========== INTERESTS ==========-->
-                    <section class="interests section" data-section-id>
-                        <h2 class="section-title">interests</h2>
-                        <div class="interests_container bd-grid">
-                          <div class="interests_content">
-                            <i class="bx bx-headphone interests_icon"></i>
-                            <span class="interests_name">Music</span>
-                          </div>
-                          <div class="interests_content">
-                            <i class="bx bxs-plane-alt interests_icon"></i>
-                            <span class="interests_name">Travel</span>
-                          </div>
-                          <div class="interests_content">
-                            <i class="bx bx-book interests_icon"></i>
-                            <span class="interests_name">Read</span>
-                          </div>
-                          <div class="interests_content">
-                            <i class="bx bx-dumbbell interests_icon"></i>
-                            <span class="interests_name">Firness</span>
-                          </div>
-                        </div>
-                    </section>
+                <div class="experience_data bd-grid">
+                  <h3 class="experience_title">MASTER OF DESIGN</h3>
+                  <span class="experience_company">From 2013 to 2015 | Tech Soft</span>
+                  <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
                 </div>
-            </div>        
-        </main>
+              </div>
+              <div class="experience_content">
+                <div class="experience_time">
+                  <span class="experience_rounder"></span>
+                  <span class="experience_line"></span>
+                </div>
+                <div class="experience_data bd-grid">
+                  <h3 class="experience_title">UI/UX DESIGN AREA</h3>
+                  <span class="experience_company">From 2017 to 2019 | Adobe Inc</span>
+                  <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
+                </div>
+              </div>
+              <div class="experience_content">
+                <div class="experience_time">
+                  <span class="experience_rounder"></span>
+                  <!-- <span class="experience_line"></span> -->
+                </div>
+                <div class="experience_data bd-grid">
+                  <h3 class="experience_title">MOBILE APPLICATION DEVELOPER</h3>
+                  <span class="experience_company">From 2019 to 20121 | App Tech</span>
+                  <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--========== CERTIFICATES ==========-->
+          <section class="certificate section"id="certificates" data-section-id>
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificate_container bd-grid">
+              <div class="certificate_content">
+                <h3 class="certificate_title">Certified for compliance in the work area (2012)</h3>
+                <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
+              </div>
+              <div class="certificate_content">
+                <h3 class="certificate_title">Certificate of attendance on computer technology.</h3>
+                <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
+              </div>
+              <div class="certificate_content">
+                <h3 class="certificate_title">Achievement medal for productivity excellence during the year(2019)</h3>
+                <p class="certificate_description">For meeting the expectations of leading the team to work the specified tasks in the labor field.</p>
+              </div>
+            </div>
+          </section>
+          <!--========== REFERENCES ==========-->
+          <section class="references section" id="references" data-section-id>
+            <h2 class="section-title">REferences</h2>
+            <div class="references_container bd-grid">
+              <div class="references_content bd-grid">
+                <span class="references_subtitle">Sr. Director</span>
+                <h3 class="references_title">Mr. Clay Doe</h3>
+                <ul class="references_contact">
+                  <li>Phone:<space>&nbsp</space>999-777-666</li>
+                  <li>Email:<space>&nbsp</space>user@email.com</li>
+                </ul>
+              </div>
 
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrolltop" id="scroll-top" data-scrolltop-btn>
-          <i class="bx bx-up-arrow-alt scrolltop_icon"></i>
-        </a>
+              <div class="references_content bd-grid">
+                <span class="references_subtitle">Mag. Developer</span>
+                <h3 class="references_title">Mr. Robbinson Bass</h3>
+                <ul class="references_contact">
+                  <li>Phone:<space>&nbsp</space>999-777-666</li>
+                  <li>Email:<space>&nbsp</space>user@email.com</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--========== LANGUAGES ==========-->
+          <section class="languages section" data-section-id>
+            <h2 class="section-title">Languages</h2>
+            <div class="languages_container">
+              <ul class="languages_content bd-grid">
+                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>Spanish</li>
+                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>English</li>
+                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>French</li>
+              </ul>
+            </div>
+          </section>
 
-        <!--========== HTML2PDF ==========-->
-        <script src="assets/js/html2pdf.bundle.min.js"></script>
-
-        <!--========== MAIN JS ==========-->
-        <script src="app.js" type="module"></script>
-
-    </body>
+          <!--========== INTERESTS ==========-->
+          <section class="interests section" data-section-id>
+            <h2 class="section-title">interests</h2>
+            <div class="interests_container bd-grid">
+              <div class="interests_content">
+                <i class="bx bx-headphone interests_icon"></i>
+                <span class="interests_name">Music</span>
+              </div>
+              <div class="interests_content">
+                <i class="bx bxs-plane-alt interests_icon"></i>
+                <span class="interests_name">Travel</span>
+              </div>
+              <div class="interests_content">
+                <i class="bx bx-book interests_icon"></i>
+                <span class="interests_name">Read</span>
+              </div>
+              <div class="interests_content">
+                <i class="bx bx-dumbbell interests_icon"></i>
+                <span class="interests_name">Firness</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top" data-scrolltop-btn>
+      <i class="bx bx-up-arrow-alt scrolltop_icon"></i>
+    </a>
+    <!--========== HTML2PDF ==========-->
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <!--========== MAIN JS ==========-->
+    <script src="app.js" type="module"></script>
+  </body>
 </html>
