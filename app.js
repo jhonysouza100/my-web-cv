@@ -20,6 +20,7 @@ $resumeBtn = D.querySelector('[data-resume-btn]'),
 $areaCv = D.querySelector('[data-area-cv]'),
 $formBtn = D.querySelector('[data-form-btn]'),
 $formPanel = D.querySelector('[data-form-panel]'),
+$bgPanel = D.querySelector('[data-bg-panel]'),
 
 // ============ USER DATA =============
 $userName = D.querySelector('.home_title').firstChild.textContent.trim(),
@@ -53,5 +54,5 @@ D.addEventListener("DOMContentLoaded", (e) => {
   /*==================== GENERATE PDF ====================*/
   generatePdf($resumeBtn, $areaCv)
   /*==================== FORM BUTTON ====================*/
-  formBtn($formBtn, $formPanel)
+  formBtn($formBtn, $formPanel, $bgPanel)
 });
