@@ -6,7 +6,8 @@
   right: 0;
   display: flex;
   color: var(--text-color);
-  font-size: var(--font-icon);;
+  font-size: var(--font-icon);
+  font-weight: var(--font-semi-bold);
   cursor: pointer;
   background-color: var(--container-color-alt);
   padding: 25px 0 25px 0;
@@ -202,7 +203,8 @@
   letter-spacing: 1px;
 }
 
-form {
+form,
+.form .input_box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,11 +238,9 @@ form {
 .form .input_box input[type="submit"] {
   background: #fff;
   color: #666;
-  max-width: 100px;
+  width: 100px;
   cursor: pointer;
-  margin-bottom: 20px;
   font-weight: 600;
-  justify-self: center;
 }
 
 

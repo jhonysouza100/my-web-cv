@@ -1,5 +1,6 @@
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
+import formValidations from "./components/form-panel/form-panel.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -21,19 +22,25 @@ $areaCv = D.querySelector('[data-area-cv]'),
 $formBtn = D.querySelector('[data-form-btn]'),
 $formPanel = D.querySelector('[data-form-panel]'),
 $bgPanel = D.querySelector('[data-bg-panel]'),
+// ============ PROFILE DATA =============
+$profileName = D.querySelector('[data-profile-name]'),
+$profileProfession = D.querySelector('[data-profile-profession]'),
+// ============ FORM DATA =============
+$formUserName = D.querySelector('[form-user-name]'),
+$formUserLastname = D.querySelector('[form-user-lastname]'),
+$formUserProfession = D.querySelector('[form-user-profession]'),
+
+
 
 // ============ USER DATA =============
 $userName = D.querySelector('.home_title').firstChild.textContent.trim(),
-$userLastName = D.querySelector('.home_title').lastChild.textContent.trim(),
-$userProfession = D.querySelector('.home_profession').textContent.trim()
-
+$userLastName = D.querySelector('.home_title').lastChild.textContent.trim()
+// $userProfession = D.querySelector('.home_profession').textContent.trim()
 // console.log($profileImg.tagName)
 // console.log($profileImg.className)
 // console.log($profileImg.classList)
 // console.log($profileImg.classList.value)
-console.log($userName)
-console.log($userLastName)
-console.log($userProfession)
+// console.log($userProfession)
 
 D.addEventListener("DOMContentLoaded", (e) => {
   console.log('hola desde el DOMcontentLoaded');
@@ -55,4 +62,7 @@ D.addEventListener("DOMContentLoaded", (e) => {
   generatePdf($resumeBtn, $areaCv)
   /*==================== FORM BUTTON ====================*/
   formBtn($formBtn, $formPanel, $bgPanel)
+  /*==================== FORM VALIDATIONS ====================*/
 });
+
+formValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession)
