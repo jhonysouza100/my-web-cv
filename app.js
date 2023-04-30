@@ -1,3 +1,4 @@
+import contactSection from "./components/contact-section/contact-section.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
 import formValidations from "./components/form-panel/form-panel.js";
@@ -29,6 +30,10 @@ $profileProfession = D.querySelector('[data-profile-profession]'),
 $formUserName = D.querySelector('[form-user-name]'),
 $formUserLastname = D.querySelector('[form-user-lastname]'),
 $formUserProfession = D.querySelector('[form-user-profession]'),
+// ============ SECTIONS =============
+$socialSection = D.querySelector('.social'),
+$referencesSection = D.querySelector('.references'),
+$contactSection = D.querySelector('.home_contact'),
 
 
 
@@ -57,12 +62,14 @@ D.addEventListener("DOMContentLoaded", (e) => {
   /*==================== DARK LIGHT THEME ====================*/
   darkTheme($themeBtn)
   /*==================== HIDE SECTIONS ====================*/
-  hideSections()
+  hideSections($socialSection, $referencesSection)
   /*==================== GENERATE PDF ====================*/
   generatePdf($resumeBtn, $areaCv)
   /*==================== FORM BUTTON ====================*/
   formBtn($formBtn, $formPanel, $bgPanel)
-  /*==================== FORM VALIDATIONS ====================*/
+  /*==================== CONTACTS SECTION ====================*/
+  contactSection($contactSection)
 });
 
+/*==================== FORM VALIDATIONS ====================*/
 formValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession)

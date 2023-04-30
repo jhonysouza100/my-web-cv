@@ -7,17 +7,22 @@ export default function formValidations(profName, profProfession, formName, form
   console.log(formLastname)
   console.log(formProfession)
   d.addEventListener('keyup', e => {
+    let $ = e.target.value
     if(e.target === formName) {
-      profName.firstChild.textContent = e.target.value.toUpperCase()
-      localStorage.setItem('name', e.target.value.toUpperCase())
+      profName.firstChild.textContent = $.toUpperCase().trim()
+      localStorage.setItem('name', $.toUpperCase().trim())
     }
     if(e.target === formLastname) {
-      profName.lastChild.textContent = e.target.value.toUpperCase()
-      localStorage.setItem('lastname', e.target.value.toUpperCase())
+      profName.lastChild.textContent = $.toUpperCase().trim()
+      localStorage.setItem('lastname', $.toUpperCase().trim())
     }
     if(e.target === formProfession) {
-      profProfession.textContent = e.target.value
-      localStorage.setItem('profession', e.target.value)
+      let profession = $.toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+      profProfession.textContent = profession.trim()
+      localStorage.setItem('profession', profession.trim())
     }
   })
   

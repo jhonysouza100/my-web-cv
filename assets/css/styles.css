@@ -98,8 +98,17 @@ body.scale-cv {
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
 .scale-cv .change-theme,
-.scale-cv .generate-pdf {
+.scale-cv .generate-pdf,
+.scale-cv .form-button,
+.scale-cv .background_panel,
+.scale-cv .panel_container {
   display: none;
+}
+
+.scale-cv .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scale-cv .bd-container {
@@ -116,9 +125,16 @@ body.scale-cv {
   /* margin-bottom: .75rem; */
 }
 
+.scale-cv .resume {
+  width: 795px;
+  height: 1122px;
+  overflow: hidden;
+}
+
 .scale-cv .resume_left,
 .scale-cv .resume_right {
   padding: 0 1rem;
+  height: 100%;
 }
 
 .scale_cv .home_img {
@@ -347,6 +363,7 @@ img {
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
+  cursor: pointer;
 }
 
 .home_title {
