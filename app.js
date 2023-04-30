@@ -67,9 +67,9 @@ D.addEventListener("DOMContentLoaded", (e) => {
   generatePdf($resumeBtn, $areaCv)
   /*==================== FORM BUTTON ====================*/
   formBtn($formBtn, $formPanel, $bgPanel)
-  /*==================== CONTACTS SECTION ====================*/
-  contactSection($contactSection)
 });
 
+/*==================== CONTACTS SECTION ====================*/
+contactSection($contactSection)
 /*==================== FORM VALIDATIONS ====================*/
 formValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession)
