@@ -238,6 +238,7 @@ form,
   width: 100px;
   cursor: pointer;
   font-weight: 600;
+  display: none;
 }
 
 
@@ -296,4 +297,13 @@ form,
     width: 400px;
     min-height: 400px;
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, .5);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
 }

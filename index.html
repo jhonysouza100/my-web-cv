@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--========== BOX ICONS ==========-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!--========== FORM PANEL ==========-->
@@ -68,6 +70,7 @@
             <div class="color_panel"></div> -->
           </div>
           <aside class="panel_container" data-form-panel>
+
             <div class="panel" data-section-panel>
               <div class="square" style="--i:0;"></div>
               <div class="square" style="--i:1;"></div>
@@ -75,16 +78,47 @@
               <div class="square" style="--i:3;"></div>
               <div class="square" style="--i:4;"></div>
               <!-- FORM CONTAINER -->
-              <div class="form_container">
-                <div class="form">
-                  <h2>My Web CV</h2>
-                  <form action="">
-                    <div class="input_box"><input type="text" placeholder="Your name" form-user-name></div>
-                    <div class="input_box"><input type="text" placeholder="Your last name" form-user-lastname></div>
-                    <div class="input_box"><input type="text" placeholder="Your profession" form-user-profession></div>
-                    <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                  </form>
+              <div class="form_container swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="form swiper-slide">
+                    <h2>My Web CV</h2>
+                    <form action="">
+                      <div class="input_box"><input type="text" placeholder="Your name" form-user-name></div>
+                      <div class="input_box"><input type="text" placeholder="Your last name" form-user-lastname></div>
+                      <div class="input_box"><input type="text" placeholder="Your profession" form-user-profession></div>
+                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
+                    </form>
+                  </div>
+                  <div class="form swiper-slide">
+                    <h2>My Web CV</h2>
+                    <form action="">
+                      <div class="input_box"><input type="text" placeholder="Your name" form-user-name></div>
+                      <div class="input_box"><input type="text" placeholder="Your last name" form-user-lastname></div>
+                      <div class="input_box"><input type="text" placeholder="Your profession" form-user-profession></div>
+                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
+                    </form>
+                  </div>
+                  <div class="form swiper-slide">
+                    <h2>My Web CV</h2>
+                    <form action="">
+                      <div class="input_box"><input type="text" placeholder="Your name" form-user-name></div>
+                      <div class="input_box"><input type="text" placeholder="Your last name" form-user-lastname></div>
+                      <div class="input_box"><input type="text" placeholder="Your profession" form-user-profession></div>
+                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
+                    </form>
+                  </div>
+                  <div class="form swiper-slide">
+                    <h2>My Web CV</h2>
+                    <form action="">
+                      <div class="input_box"><input type="text" placeholder="Your name" form-user-name></div>
+                      <div class="input_box"><input type="text" placeholder="Your last name" form-user-lastname></div>
+                      <div class="input_box"><input type="text" placeholder="Your profession" form-user-profession></div>
+                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
+                    </form>
+                  </div>
+                  
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </aside>
@@ -285,6 +319,8 @@
     </a>
     <!--========== HTML2PDF ==========-->
     <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <!--========== SWIPER JS ==========-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!--========== MAIN JS ==========-->
     <script src="app.js" type="module"></script>
   </body>
