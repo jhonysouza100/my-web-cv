@@ -9,6 +9,7 @@ import scrollActive from "./components/scroll-active/scroll-active.js";
 import scrollTop from "./components/scroll-top/scroll-top.js";
 import setImage from "./components/set-image/set-image.js";
 import showMenu from "./components/show-menu/show-menu.js";
+import swiper from "./components/swiper-js/swiper.js";
 
 const D = document,
 $nav = D.querySelector('[data-nav-menu]'),
@@ -51,6 +52,8 @@ D.addEventListener("DOMContentLoaded", (e) => {
   darkTheme($themeBtn)
   /*==================== GENERATE PDF ====================*/
   generatePdf($resumeBtn, $areaCv)
+  /*==================== GENERATE PDF ====================*/
+  swiper()
   /*==================== FORM BUTTON ====================*/
   formBtn($formBtn, $formPanel, $bgPanel)
   /*==================== HIDE SECTIONS ====================*/
