@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/panel-form.css">
+    <!--========== FORM PANEL ==========-->
+    <link rel="stylesheet" href="assets/css/form-panel.css">
     <title>My Web CV</title>
   </head>
   <body>
@@ -15,16 +16,16 @@
     <header class="header" id="header">
       <!-- NAV -->
       <nav class="nav bd-container">
-        <a href="#" class="nav_logo">Smith</a>
+        <a href="#" class="nav_logo" data-menu-name>Smith</a>
         <!-- Nav Menu -->
         <div class="nav_menu" id="nav-menu" data-nav-menu>
           <ul class="nav_list">
-            <li class="nav_item"><a href="#home" class="nav_link" data-nav-link><i class="nav_icon bx bx-home"></i><space>&nbsp</space>Home</a></li><li class="nav_item"><a href="#profile" class="nav_link" data-nav-link><i class="nav_icon bx bx-user"></i><space>&nbsp</space>Profile</a></li>
-            <li class="nav_item"><a href="#education" class="nav_link" data-nav-link><i class="nav_icon bx bx-book"></i><space>&nbsp</space>Education</a></li>
-            <li class="nav_item"><a href="#skills" class="nav_link" data-nav-link><i class="nav_icon bx bx-receipt"></i><space>&nbsp</space>Skills</a></li>
-            <li class="nav_item"><a href="#experience" class="nav_link" data-nav-link><i class="nav_icon bx bx-briefcase-alt"></i><space>&nbsp</space>Experience</a></li>
-            <li class="nav_item"><a href="#certificates" class="nav_link" data-nav-link><i class="nav_icon bx bx-award"></i><space>&nbsp</space>Certificates</a></li>
-            <li class="nav_item"><a href="#references" class="nav_link" data-nav-link><i class="nav_icon bx bx-link-external"></i><space>&nbsp</space>References</a></li>
+            <li class="nav_item" home><a href="#home" class="nav_link" data-nav-link><i class="nav_icon bx bx-home"></i><space>&nbsp</space>Home</a></li><li class="nav_item"><a href="#profile" class="nav_link" data-nav-link><i class="nav_icon bx bx-user"></i><space>&nbsp</space>Profile</a></li>
+            <li class="nav_item" education><a href="#education" class="nav_link" data-nav-link><i class="nav_icon bx bx-book"></i><space>&nbsp</space>Education</a></li>
+            <li class="nav_item" skills><a href="#skills" class="nav_link" data-nav-link><i class="nav_icon bx bx-receipt"></i><space>&nbsp</space>Skills</a></li>
+            <li class="nav_item" experience><a href="#experience" class="nav_link" data-nav-link><i class="nav_icon bx bx-briefcase-alt"></i><space>&nbsp</space>Experience</a></li>
+            <li class="nav_item" certificates><a href="#certificates" class="nav_link" data-nav-link><i class="nav_icon bx bx-award"></i><space>&nbsp</space>Certificates</a></li>
+            <li class="nav_item" references><a href="#references" class="nav_link" data-nav-link><i class="nav_icon bx bx-link-external"></i><space>&nbsp</space>References</a></li>
           </ul>
         </div>
         <div class="nav_toggle" id="nav-toggle" data-toggle-btn><i class="bx bx-grid-alt"></i></div>
@@ -35,7 +36,7 @@
       <div class="resume" id="area-cv" data-area-cv>
         <div class="resume_left">
           <!--========== HOME ==========-->
-          <section class="home" id="home" data-section-id>
+          <section class="home" id="home" data-section-id home>
             <div class="home_container section bd-grid">
               <div class="home_data bd-grid">
                 <img src="assets/img/profile.jpg" alt="profile image" class="home_img" title="Profile Image" data-profile-img/>
@@ -58,7 +59,8 @@
           </section>
           <!-- Form menu button -->
           <i class="bx bx-chevron-left form-button" data-form-btn></i>
-           <!-- Panel -->
+
+           <!-- ============ PANEL ============ -->
           <div class="background_panel" data-bg-panel></div>
           <aside class="panel_container" data-form-panel>
             <div class="panel" data-section-panel>
@@ -89,7 +91,7 @@
           </aside>
 
           <!--========== SOCIAL ==========-->
-          <section class="social section">
+          <section class="social section" social>
             <h2 class="section-title">SOCIAL</h2>
             <div class="social_container bd-grid">
               <a href="https://linkedin.com/" class="social_link" target="_blank"><i class="bx bxl-linkedin-square social_icon"></i><space>&nbsp</space>@jhonsmith</a>
@@ -98,13 +100,13 @@
             </div>
           </section>
           <!--========== PROFILE ==========-->
-          <section class="profile section" id="profile" data-section-id>
+          <section class="profile section" id="profile" data-section-id profile>
             <h2 class="section-title">Profile</h2>
             <p class="profile_description">I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.</p>
           </section>
 
           <!--========== EDUCATION ==========-->
-          <section class="education section" id="education" data-section-id>
+          <section class="education section" id="education" data-section-id education>
             <h2 class="section-title">Education</h2>
             <div class="education_container bd-grid">
               <div class="education_content">
@@ -143,7 +145,7 @@
             </div>
           </section>
           <!--========== SKILLS  ==========-->
-          <section class="skills section" id="skills" data-section-id>
+          <section class="skills section" id="skills" data-section-id skills>
             <h2 class="section-title">Skills</h2>
             <div class="skills_content bd-grid">
               <ul class="skills_data">
@@ -162,7 +164,7 @@
         </div>
         <div class="resume_right">
           <!--========== EXPERIENCE ==========-->
-          <section class="experience section" id="experience" data-section-id>
+          <section class="experience section" id="experience" data-section-id experience>
             <h2 class="section-title">Experience</h2>
             <div class="experience_container bd-grid">
               <div class="experience_content">
@@ -201,7 +203,7 @@
             </div>
           </section>
           <!--========== CERTIFICATES ==========-->
-          <section class="certificate section"id="certificates" data-section-id>
+          <section class="certificate section"id="certificates" data-section-id certificates>
             <h2 class="section-title">Certificates</h2>
             <div class="certificate_container bd-grid">
               <div class="certificate_content">
@@ -219,7 +221,7 @@
             </div>
           </section>
           <!--========== REFERENCES ==========-->
-          <section class="references section" id="references" data-section-id>
+          <section class="references section" id="references" data-section-id references>
             <h2 class="section-title">REferences</h2>
             <div class="references_container bd-grid">
               <div class="references_content bd-grid">
@@ -242,7 +244,7 @@
             </div>
           </section>
           <!--========== LANGUAGES ==========-->
-          <section class="languages section" data-section-id>
+          <section class="languages section" data-section-id languages>
             <h2 class="section-title">Languages</h2>
             <div class="languages_container">
               <ul class="languages_content bd-grid">
@@ -254,7 +256,7 @@
           </section>
 
           <!--========== INTERESTS ==========-->
-          <section class="interests section" data-section-id>
+          <section class="interests section" data-section-id interests>
             <h2 class="section-title">interests</h2>
             <div class="interests_container bd-grid">
               <div class="interests_content">

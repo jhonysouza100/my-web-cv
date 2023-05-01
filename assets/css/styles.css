@@ -386,6 +386,16 @@ img {
   font-size: var(--small-font-size);
 }
 
+.home_contact a.home_information {
+  flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+.home_contact a.home_information:hover {
+  color: var(--title-color);  
+}
+
 .home_icon {
   font-size: var(--font-icon);;
   margin-right: .25rem;

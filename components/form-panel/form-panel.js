@@ -1,11 +1,6 @@
 const d = document
-export default function formValidations(profName, profProfession, formName, formLastname, formProfession) {
+export default function formValidations(profName, profProfession, formName, formLastname, formProfession, menuName) {
 
-  console.log(profName.firstChild.textContent)
-  console.log(profProfession.textContent)
-  console.log(formName)
-  console.log(formLastname)
-  console.log(formProfession)
   d.addEventListener('keyup', e => {
     let $ = e.target.value
     if(e.target === formName) {
@@ -14,6 +9,7 @@ export default function formValidations(profName, profProfession, formName, form
     }
     if(e.target === formLastname) {
       profName.lastChild.textContent = $.toUpperCase().trim()
+      menuName.textContent = $.toUpperCase().trim()
       localStorage.setItem('lastname', $.toUpperCase().trim())
     }
     if(e.target === formProfession) {
@@ -36,6 +32,7 @@ export default function formValidations(profName, profProfession, formName, form
     }
     if(savedLastname) {
       profName.lastChild.textContent = savedLastname
+      menuName.textContent = savedLastname
       formLastname.placeholder = savedLastname
     }
     if(savedProfession) {
@@ -45,4 +42,5 @@ export default function formValidations(profName, profProfession, formName, form
   })
   
   // if(e.key === 'Escape') {} // restaura cundo se presiona esc
+  // Falta agregar validaciones de length y demas campos del documento...
 }
