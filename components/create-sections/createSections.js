@@ -9,7 +9,7 @@ export default function createSections(section) {
       text: 'jhonatansouzameza@gmail.com'   
     },
     phone: {
-      href: `https://api.whatsapp.com/send?phone=54999111000&text=Hello, let's go to work`,
+      href: `https://api.whatsapp.com/send?phone=541133604606&text=Hello, let's go to work`,
       type: 'phone',
       icon: 'bx-phone',
       text: '+54 1133604606'      

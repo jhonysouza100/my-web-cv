@@ -225,6 +225,7 @@ ul {
 
 a {
   text-decoration: none;
+  user-select: none;
 }
 
 img {
@@ -387,7 +388,7 @@ img {
 }
 
 .home_contact a.home_information {
-  flex;
+  display: inline-flex;
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--text-color);
