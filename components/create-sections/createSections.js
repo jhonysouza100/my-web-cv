@@ -28,7 +28,7 @@ export default function createSections(section) {
     },
     web: {
       href: 'https://jhony-souza-portfolio.netlify.app/',
-      type: 'web',
+      type: 'website',
       icon: 'bxs-folder-open',
       text: 'My portfolio'
     }
@@ -36,28 +36,29 @@ export default function createSections(section) {
   const createContacts = () => {
     for(let el in contacts) {
       // Crea un nuevo elemento <a>
-      const newLink = document.createElement("a");
+      const newLink = document.createElement("a")
       
       // Establece las propiedades del elemento <a>
-      newLink.classList.add("home_information", `user_${contacts[el].type}`);
-      newLink.href = `${contacts[el].href}`;
-      newLink.target = "_blank";
+      newLink.classList.add("home_information")
+      newLink.href = `${contacts[el].href}`
+      newLink.target = "_blank"
+      newLink.setAttribute(`user-${contacts[el].type}`, '')    
       
       // Crea el elemento <i> y establecer sus clases
-      const newIcon = document.createElement("i");
-      newIcon.classList.add("home_icon", "bx", `${contacts[el].icon}`);
+      const newIcon = document.createElement("i")
+      newIcon.classList.add("home_icon", "bx", `${contacts[el].icon}`)
       
       // Crea un elemento para el espacio
       const space = document.createElement('space')
       space.innerHTML = '&nbsp;'
       
       // Crea el nodo de texto con el correo electrónico
-      const newText = document.createTextNode(`${contacts[el].text}`);
+      const newText = document.createTextNode(`${contacts[el].text}`)
       
       // Agregar el icono y el correo electrónico como hijos del elemento <a>
-      newLink.appendChild(newIcon);
-      newLink.appendChild(space);
-      newLink.appendChild(newText);
+      newLink.appendChild(newIcon)
+      newLink.appendChild(space)
+      newLink.appendChild(newText)
       
       // Agrega el nuevo <a> al section
       section.appendChild(newLink)

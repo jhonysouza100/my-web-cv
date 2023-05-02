@@ -1,7 +1,7 @@
 import createSections from "./components/create-sections/createSections.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
-import formValidations from "./components/form-panel/form-panel.js";
+import profileValidations from "./components/form-panel/form-panel.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -16,7 +16,7 @@ $nav = D.querySelector('[data-nav-menu]'),
 $toggle = D.querySelector(`[data-toggle-btn] *`),
 $navLinks = D.querySelectorAll(`[data-nav-link] *`),
 $sections = D.querySelectorAll(`[data-section-id][id]`),
-$profileImg = D.querySelector(`[data-profile-img]`),
+$profileImg = D.querySelector(`[user-img]`),
 $scrolltop = D.querySelector(`[data-scrolltop-btn]`),
 $themeBtn = D.querySelector('[data-theme-btn]'),
 $resumeBtn = D.querySelector('[data-resume-btn]'),
@@ -24,18 +24,11 @@ $areaCv = D.querySelector('[data-area-cv]'),
 $formBtn = D.querySelector('[data-form-btn]'),
 $formPanel = D.querySelector('[data-form-panel]'),
 $bgPanel = D.querySelector('[data-bg-panel]'),
-// ============ PROFILE DATA =============
-$profileName = D.querySelector('[data-profile-name]'),
-$profileProfession = D.querySelector('[data-profile-profession]'),
-$menuName = D.querySelector('[data-menu-name]'),
-// ============ FORM DATA =============
-$formUserName = D.querySelector('[form-user-name]'),
-$formUserLastname = D.querySelector('[form-user-lastname]'),
-$formUserProfession = D.querySelector('[form-user-profession]'),
 // ============ SECTIONS =============
 $socialSection = D.querySelector('[social]'),
 $referencesSection = D.querySelectorAll('[references]'),
-$contactSection = D.querySelector('.home_contact')
+$contactSection = D.querySelector('[contact]')
+
 
 D.addEventListener("DOMContentLoaded", (e) => {
   /*==================== SHOW MENU ON CLICK ====================*/
@@ -58,9 +51,46 @@ D.addEventListener("DOMContentLoaded", (e) => {
   formBtn($formBtn, $formPanel, $bgPanel)
   /*==================== HIDE SECTIONS ====================*/
   hideSections($socialSection, ...$referencesSection)
-  /*==================== CREATE SECTIONS ====================*/
-  createSections($contactSection)
 });
 
-/*==================== FORM VALIDATIONS ====================*/
-formValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession, $menuName)
+/*==================== CREATE SECTIONS ====================*/
+createSections($contactSection)
+
+// ============ PROFILE USER DATA =============
+const $profileName = D.querySelector('[user-name]'),
+$profileProfession = D.querySelector('[user-profession]'),
+$menuName = D.querySelector('[menu-name]'),
+// ============ PROFILE FORM DATA =============
+$formUserName = D.querySelector('[form-name]'),
+$formUserLastname = D.querySelector('[form-lastname]'),
+$formUserProfession = D.querySelector('[form-profession]'),
+// ============ USER CONTACTS =============
+$profileEmail = D.querySelector('[user-email]'),
+$profilePhone = D.querySelector('[user-phone]'),
+$profileLinkedin = D.querySelector('[user-linkedin]'),
+$profileGithub = D.querySelector('[user-github]'),
+$profileWebsite = D.querySelector('[user-website]'),
+// ============ FORM CONTACTS =============
+$formEmail = D.querySelector('[form-email]'),
+$formPhone = D.querySelector('[form-phone]'),
+$formLinkedin = D.querySelector('[form-linkedin]'),
+$formGithub = D.querySelector('[form-github]'),
+$formWebsite = D.querySelector('[form-website]')
+
+/*==================== PROFILE VALIDATIONS ====================*/
+profileValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession, $menuName)
+
+async function asincroFunction() {
+  // Espera a que el documento se cargue completamente
+  await new Promise(resolve => {
+    if (document.readyState === 'complete') {
+      resolve();
+    } else {
+      window.addEventListener('load', resolve);
+    }
+  });
+
+  console.log('El documento se ha cargado completamente.')
+}
+// Llama a la función
+asincroFunction();

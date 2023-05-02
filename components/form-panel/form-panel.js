@@ -1,5 +1,5 @@
 const d = document
-export default function formValidations(profName, profProfession, formName, formLastname, formProfession, menuName) {
+export default function profileValidations(profName, profProfession, formName, formLastname, formProfession, menuName) {
 
   d.addEventListener('keyup', e => {
     let $ = e.target.value
