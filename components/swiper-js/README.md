@@ -1,15 +1,23 @@
 # swiper()
 
-Esta función inicializa un objeto `Swiper` que crea un carrusel de diapositivas con efecto de `cubo`. La función toma los siguientes parámetros:
+La función swiper() crea una instancia de la clase Swiper y la asigna a la variable "swiper". La instancia de Swiper se configura con varias opciones, que incluyen:
 
-`effect`: establece el efecto de transición del carrusel. En este caso, el valor es "cube".
+- effect: "cube": establece el efecto de transición de cubo.
+- loop: true: habilita el modo de bucle.
+- centerSlide: 'true': habilita el centrado de la diapositiva activa.
+- fade: 'true': establece el efecto de transición de fundido.
+- grabCursor: 'true': habilita el cursor de agarre.
+- cubeEffect: define los siguientes sub-parámetros del efecto de cubo:
+    - shadow: false: desactiva las sombras.
+    - slideShadows: false: desactiva las sombras de las diapositivas.
+    - shadowOffset: 20: establece el desplazamiento de la sombra.
+    - shadowScale: 0.95: establece la escala de la sombra.
+- pagination: habilita la paginación:
+    - el: ".swiper-pagination": establece el selector del elemento paginador.
+    - clickable: true: habilita la paginación clickeable.
+    - dynamicBullets: true: habilita la creación dinámica de balas de paginación.
+- navigation: habilita la navegación:
+    - nextEl: ".swiper-button-next": establece el selector del botón siguiente.
+    - prevEl: ".swiper-button-prev": establece el selector del botón anterior.
 
-`loop`: establece si el carrusel debe continuar después de llegar a la última diapositiva. En este caso, el valor es "true", lo que significa que el carrusel volverá a comenzar desde el principio después de la última diapositiva.
-
-`grabCursor`: establece si el cursor debe cambiar a una mano cuando el usuario pasa el mouse sobre el carrusel. En este caso, el valor es "true".
-
-`cubeEffect`: establece las propiedades específicas del efecto de cubo, como sombras y escalas.
-
-`pagination`: agrega una paginación al carrusel para que el usuario pueda navegar entre las diapositivas. En este caso, el elemento HTML con la clase "swiper-pagination" se usa como contenedor para la paginación. La propiedad `clickable` permite que el usuario haga clic en las viñetas de la paginación para navegar entre las diapositivas. La propiedad `dynamicBullets` permite agregar o eliminar dinámicamente viñetas de la paginación a medida que cambian las diapositivas.
-
-`navigation`: agrega botones de navegación al carrusel para que el usuario pueda ir a la diapositiva anterior o siguiente. En este caso, los elementos HTML con las clases "swiper-button-next" y "swiper-button-prev" se usan como los botones de navegación.
+La instancia de Swiper se crea para el elemento con la clase "mySwiper". 

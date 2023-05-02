@@ -1,7 +1,8 @@
 import createSections from "./components/create-sections/createSections.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
-import profileValidations from "./components/form-panel/form-panel.js";
+import contactsValidations from "./components/form-panel/form-contacts.js";
+import homeValidations from "./components/form-panel/form-home.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -77,8 +78,10 @@ $formLinkedin = D.querySelector('[form-linkedin]'),
 $formGithub = D.querySelector('[form-github]'),
 $formWebsite = D.querySelector('[form-website]')
 
-/*==================== PROFILE VALIDATIONS ====================*/
-profileValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession, $menuName)
+/*==================== HOME VALIDATIONS ====================*/
+homeValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession, $menuName)
+/*==================== CONTACTS VALIDATIONS ====================*/
+contactsValidations($profileEmail, $profilePhone, $profileLinkedin, $profileGithub, $profileWebsite, $formEmail, $formPhone, $formLinkedin, $formGithub, $formWebsite)
 
 async function asincroFunction() {
   // Espera a que el documento se cargue completamente

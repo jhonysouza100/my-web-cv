@@ -3,8 +3,8 @@ export default function swiper() {
     effect: "cube",
     // slidesPerView: 2,
     loop: true,
-    // centerSlide: 'true',
-    // fade: 'true',
+    centerSlide: 'true',
+    fade: 'true',
     grabCursor: 'true',
     cubeEffect: {
       shadow: false,

@@ -63,13 +63,13 @@
           <i class="bx bx-chevron-left form-button" data-form-btn></i>
 
            <!-- ============ FORM PANEL ============ -->
-          <div class="background_panel is-active" data-bg-panel>
+          <div class="background_panel" data-bg-panel>
             <!-- BACKGROUND BLUR -->
             <!-- <div class="color_panel"></div>
             <div class="color_panel"></div>
             <div class="color_panel"></div> -->
           </div>
-          <aside class="panel_container is-active" data-form-panel>
+          <aside class="panel_container" data-form-panel>
 
             <div class="panel" data-section-panel>
               <div class="square" style="--i:0;"></div>
@@ -81,8 +81,8 @@
               <div class="form_container swiper mySwiper">
                 <div class="wrapper swiper-wrapper">
                   <div class="form swiper-slide">
-                    <h2>My Web CV</h2>
-                    <form action="">
+                    <h2>MY WEB CV</h2>
+                    <form action="" form-home>
                       <div class="input_box"><input type="text" placeholder="Your name" form-name></div>
                       <div class="input_box"><input type="text" placeholder="Your last name" form-lastname></div>
                       <div class="input_box"><input type="text" placeholder="Your profession" form-profession></div>
@@ -90,29 +90,39 @@
                     </form>
                   </div>
                   <div class="form swiper-slide">
-                    <h2>Contacts</h2>
-                    <form action="">
+                    <h2>CONTACTS</h2>
+                    <form action="" form-contacts>
                       <div class="input_box"><input type="text" placeholder="Your email" form-email></div>
-                      <div class="input_box"><input type="text" placeholder="Your phone" form-phone></div>
-                      <div class="input_box"><input type="text" placeholder="Your Linkedin" form-linkedin></div>
-                      <div class="input_box"><input type="text" placeholder="Your GitHub" form-github></div>
+                      <!-- <label for="form-phone" class="input-label">+</label> -->
+                      <div class="input_box"><div class="input_label">+</div><input type="text" placeholder="Your phone" form-phone></div>
+                      <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your Linkedin" form-linkedin></div>
+                      <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your GitHub" form-github></div>
                       <div class="input_box"><input type="text" placeholder="Your website" form-website></div>
                       <div class="input_box"><input type="submit" value="OK" form-submit></div>
                     </form>
                   </div>
                   <div class="form swiper-slide">
-                    <h2>Profile</h2>
-                    <form action="">
-                      <div class="input_box"><input type="text" placeholder="Add a description of yourself" form-profile></div>
+                    <h2>PROFILE</h2>
+                    <form action="" form-profile>
+                      <div class="input_box"><textarea type="text" placeholder="Add a description of yourself" form-profile></textarea></div>
                       <div class="input_box"><input type="submit" value="OK" form-submit></div>
                     </form>
                   </div>
                   <div class="form swiper-slide">
-                    <h2>Education</h2>
-                    <form action="">
+                    <h2>EDUCATION</h2>
+                    <form action="" form-education>
                       <div class="input_box"><input type="text" placeholder="Your title" form-name></div>
                       <div class="input_box"><input type="text" placeholder="Institute studies" form-lastname></div>
                       <div class="input_box"><input type="text" placeholder="year" form-profession></div>
+                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
+                    </form>
+                  </div>
+                  <div class="form swiper-slide">
+                    <h2>SKILLS</h2>
+                    <form action="" form-skills>
+                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
+                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
+                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
                       <div class="input_box"><input type="submit" value="OK" form-submit></div>
                     </form>
                   </div>
