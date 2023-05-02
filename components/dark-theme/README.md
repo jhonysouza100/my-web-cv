@@ -1,5 +1,4 @@
-
-## darkTheme()
+# darkTheme()
 
 La función darkTheme implementa un mecanismo para alternar entre un tema claro y oscuro en una página web. El argumento themeBtn es un botón que se utiliza para cambiar el tema.
 

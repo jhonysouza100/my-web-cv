@@ -1,4 +1,4 @@
-## hideMenu()
+# hideMenu()
 
 Esta función toma dos argumentos: "navMenu" y "navLinks". "navMenu" es un elemento del DOM que contiene el menú de navegación, mientras que "navLinks" es una colección de elementos del DOM que representan los enlaces del menú de navegación.
 

@@ -1,4 +1,4 @@
-## showMenu()
+# showMenu()
 
 Esta función toma dos argumentos: "navMenu" y "toggleBtn". "navMenu" es un elemento del DOM que contiene el menú de navegación y "toggleBtn" es un elemento del DOM que, cuando se hace clic en él, muestra o oculta el menú de navegación.
 

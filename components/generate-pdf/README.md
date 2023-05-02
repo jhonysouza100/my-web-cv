@@ -1,4 +1,4 @@
-## generatePdf()
+# generatePdf()
 
 Esta función se encarga de generar un archivo PDF a partir del contenido de un área específica del HTML, cuando se hace clic en un botón específico (resumeBtn).
 

@@ -1,4 +1,4 @@
-## scrollActive()
+# scrollActive()
 
 Esta función toma dos argumentos: "sections" y "navMenu". "sections" es una colección de elementos del DOM, mientras que "navMenu" es un elemento del DOM que contiene enlaces de navegación.
 

@@ -1,4 +1,4 @@
-## hideSections()
+# hideSections()
 
 Esta función toma un número variable de argumentos utilizando el operador de propagación "..." y los almacena en un array llamado "el". Estos argumentos deben ser elementos del DOM que representan secciones que se desean ocultar.
 

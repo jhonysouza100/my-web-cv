@@ -1,4 +1,4 @@
-## setImage()
+# setImage()
 
 Esta función toma un argumento "img", que es un elemento del DOM que representa una imagen. La función agrega un evento de clic al documento utilizando el método "addEventListener()".
 

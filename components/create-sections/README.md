@@ -1,5 +1,4 @@
-## createSections()
-
+# createSections()
 
 Esta función crea un conjunto de elementos con información de contacto, tales como correo electrónico, número de teléfono, perfiles de LinkedIn y GitHub, y un enlace al sitio web personal del autor.
 
