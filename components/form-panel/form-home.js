@@ -1,6 +1,6 @@
 const d = document
 export default function homeValidations(obj) {
-
+  
   d.addEventListener('keyup', e => {
     let $ = e.target.value
     if(e.target === obj.formName) {

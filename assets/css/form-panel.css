@@ -366,6 +366,7 @@ input[form-github] {
   }
 }
 
+/*========== Swiper Pagination ==========*/
 .swiper-pagination-bullet {
   background-color: rgba(255, 255, 255, .5);
   opacity: 1;
@@ -377,18 +378,26 @@ input[form-github] {
   background-color: #fff;
 }
 
+
+/*========== input Error Span ==========*/
 .span_error {
   display: none;
-  margin-top: -1rem;
+  position: absolute;
+  bottom: -20%;
+  right: 5%;
+  width: 40%;
   font-size: 80%;
-  background-color: red;
-  color: #fff;
+  background-color: rgba(255, 0, 0, .5);
+  color: var(--body-color);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border-radius: 35px;
   transition: all 800ms ease;
 }
 
 .span_error.is-active {
   display: block;
-  animation: show-message 1s normal 0s ease-out both;
+  animation: show-message 1.5s normal 0s ease-out both;
 }
 
 @keyframes show-message {

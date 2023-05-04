@@ -3,6 +3,8 @@ import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
 import contactsValidations from "./components/form-panel/form-contacts.js";
 import homeValidations from "./components/form-panel/form-home.js";
+import formInputMaxLenght from "./components/form-panel/form-input-max-lenght.js";
+import formInputSpan from "./components/form-panel/form-input-span.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -70,8 +72,8 @@ const profile = {
 
 const contacts = {
 // ============ USER CONTACTS =============
-  profEmail: D.querySelector('[user-email]'),
-  profPhone: D.querySelector('[user-phone]'),
+profEmail: D.querySelector('[user-email]'),
+profPhone: D.querySelector('[user-phone]'),
   profLinkedin: D.querySelector('[user-linkedin]'),
   profGithub: D.querySelector('[user-github]'),
   profWebsite: D.querySelector('[user-website]'),
@@ -83,10 +85,14 @@ const contacts = {
   formWebsite: D.querySelector('[form-website]')
 }
 
+/*==================== FORM INPUT MAX-LENGHT ====================*/
+const $inputs = D.querySelectorAll('input')
+formInputMaxLenght($inputs)
+/*==================== FORM INPUT SPAN ====================*/
+formInputSpan(contacts)
 /*==================== HOME VALIDATIONS ====================*/
 homeValidations(profile)
 /*==================== CONTACTS VALIDATIONS ====================*/
-// contactsValidations($profileEmail, $profilePhone, $profileLinkedin, $profileGithub, $profileWebsite, $formEmail, $formPhone, $formLinkedin, $formGithub, $formWebsite)
 contactsValidations(contacts)
 
 async function asincroFunction() {
