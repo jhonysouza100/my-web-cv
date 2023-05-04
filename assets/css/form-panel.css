@@ -376,3 +376,28 @@ input[form-github] {
 .swiper-pagination-bullet-active {
   background-color: #fff;
 }
+
+.span_error {
+  display: none;
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: red;
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.span_error.is-active {
+  display: block;
+  animation: show-message 1s normal 0s ease-out both;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
