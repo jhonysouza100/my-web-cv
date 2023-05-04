@@ -1,23 +1,23 @@
 const d = document
-export default function homeValidations(profName, profProfession, formName, formLastname, formProfession, menuName) {
+export default function homeValidations(obj) {
 
   d.addEventListener('keyup', e => {
     let $ = e.target.value
-    if(e.target === formName) {
-      profName.firstChild.textContent = $.toUpperCase().trim()
+    if(e.target === obj.formName) {
+      obj.profName.firstChild.textContent = $.toUpperCase().trim()
       localStorage.setItem('name', $.toUpperCase().trim())
     }
-    if(e.target === formLastname) {
-      profName.lastChild.textContent = $.toUpperCase().trim()
-      menuName.textContent = $.toUpperCase().trim()
+    if(e.target === obj.formLastname) {
+      obj.profName.lastChild.textContent = $.toUpperCase().trim()
+      obj.menuName.textContent = $.toUpperCase().trim()
       localStorage.setItem('lastname', $.toUpperCase().trim())
     }
-    if(e.target === formProfession) {
+    if(e.target === obj.formProfession) {
       let profession = $.toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
-      profProfession.textContent = profession.trim()
+      obj.profProfession.textContent = profession.trim()
       localStorage.setItem('profession', profession.trim())
     }
   })
@@ -27,17 +27,17 @@ export default function homeValidations(profName, profProfession, formName, form
           savedLastname = localStorage.getItem('lastname'),
           savedProfession = localStorage.getItem('profession')
     if(savedName) {
-      profName.firstChild.textContent = savedName
-      formName.placeholder = savedName
+      obj.profName.firstChild.textContent = savedName
+      obj.formName.placeholder = savedName
     }
     if(savedLastname) {
-      profName.lastChild.textContent = savedLastname
-      menuName.textContent = savedLastname
-      formLastname.placeholder = savedLastname
+      obj.profName.lastChild.textContent = savedLastname
+      obj.menuName.textContent = savedLastname
+      obj.formLastname.placeholder = savedLastname
     }
     if(savedProfession) {
-      profProfession.textContent = savedProfession
-      formProfession.placeholder = savedProfession
+      obj.profProfession.textContent = savedProfession
+      obj.formProfession.placeholder = savedProfession
     }
   })
   

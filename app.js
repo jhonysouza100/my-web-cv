@@ -57,31 +57,37 @@ D.addEventListener("DOMContentLoaded", (e) => {
 /*==================== CREATE SECTIONS ====================*/
 createSections($contactSection)
 
-// ============ PROFILE USER DATA =============
-const $profileName = D.querySelector('[user-name]'),
-$profileProfession = D.querySelector('[user-profession]'),
-$menuName = D.querySelector('[menu-name]'),
-// ============ PROFILE FORM DATA =============
-$formUserName = D.querySelector('[form-name]'),
-$formUserLastname = D.querySelector('[form-lastname]'),
-$formUserProfession = D.querySelector('[form-profession]'),
+const profile = {
+  // ============ PROFILE USER DATA =============
+  profName: D.querySelector('[user-name]'),
+  profProfession: D.querySelector('[user-profession]'),
+  menuName: D.querySelector('[menu-name]'),
+  // ============ PROFILE FORM DATA =============
+  formName:D.querySelector('[form-name]'),
+  formLastname: D.querySelector('[form-lastname]'),
+  formProfession: D.querySelector('[form-profession]') 
+}
+
+const contacts = {
 // ============ USER CONTACTS =============
-$profileEmail = D.querySelector('[user-email]'),
-$profilePhone = D.querySelector('[user-phone]'),
-$profileLinkedin = D.querySelector('[user-linkedin]'),
-$profileGithub = D.querySelector('[user-github]'),
-$profileWebsite = D.querySelector('[user-website]'),
-// ============ FORM CONTACTS =============
-$formEmail = D.querySelector('[form-email]'),
-$formPhone = D.querySelector('[form-phone]'),
-$formLinkedin = D.querySelector('[form-linkedin]'),
-$formGithub = D.querySelector('[form-github]'),
-$formWebsite = D.querySelector('[form-website]')
+  profEmail: D.querySelector('[user-email]'),
+  profPhone: D.querySelector('[user-phone]'),
+  profLinkedin: D.querySelector('[user-linkedin]'),
+  profGithub: D.querySelector('[user-github]'),
+  profWebsite: D.querySelector('[user-website]'),
+  // ============ FORM CONTACTS =============
+  formEmail: D.querySelector('[form-email]'),
+  formPhone: D.querySelector('[form-phone]'),
+  formLinkedin: D.querySelector('[form-linkedin]'),
+  formGithub: D.querySelector('[form-github]'),
+  formWebsite: D.querySelector('[form-website]')
+}
 
 /*==================== HOME VALIDATIONS ====================*/
-homeValidations($profileName, $profileProfession, $formUserName, $formUserLastname, $formUserProfession, $menuName)
+homeValidations(profile)
 /*==================== CONTACTS VALIDATIONS ====================*/
-contactsValidations($profileEmail, $profilePhone, $profileLinkedin, $profileGithub, $profileWebsite, $formEmail, $formPhone, $formLinkedin, $formGithub, $formWebsite)
+// contactsValidations($profileEmail, $profilePhone, $profileLinkedin, $profileGithub, $profileWebsite, $formEmail, $formPhone, $formLinkedin, $formGithub, $formWebsite)
+contactsValidations(contacts)
 
 async function asincroFunction() {
   // Espera a que el documento se cargue completamente

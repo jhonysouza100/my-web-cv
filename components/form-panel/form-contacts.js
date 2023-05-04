@@ -1,29 +1,41 @@
 const d = document
-export default function contactsValidations(profEmail, profPhone, proflinkedin, profGithub, profWebsite, formEmail, formPhone, formLinkedin, formGithub, formWwebsite) {
+export default function contactsValidations(obj) {
+
   d.addEventListener('keyup', e => {
-    let $ = e.target.value.toLowerCase().trim()
-    console.log($)
-    if(e.target === formEmail) {
-      profEmail.lastChild.data = $
-      localStorage.setItem('email', $)
+    let $ = e.target.value.toLowerCase().trim() || e.target.value.trim()
+
+    if(e.target === obj.formEmail) {
+      const mensajeError = document.createElement("span");
+      mensajeError.textContent = "Por favor ingrese un correo electrónico válido";
+      mensajeError.classList.add("mensaje-error-email");
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if(emailRegex.test(e.target.value)) {
+        obj.profEmail.lastChild.data = $
+        document.parentNode.insertBefore(mensajeError, obj.formEmail);
+        localStorage.setItem('email', $)
+      } else { 
+        console.error('Email inválido');
+        mensajeError.remove();
+      }
     } 
     
-    if(e.target === formPhone) {
-      profPhone.lastChild.data = e.target.value.trim()
+    if(e.target === obj.formPhone) {
+      obj.profPhone.lastChild.data = e.target.value.trim()
       localStorage.setItem('phone', e.target.value.trim())
-    } 
+    }
       
-    if(e.target === formLinkedin) {
-      proflinkedin.lastChild.data = $
+    if(e.target === obj.formLinkedin) {
+      obj.profLinkedin.lastChild.data = $
       localStorage.setItem('linkedin', $)
     }
       
-    if(e.target === formGithub) {
-      profGithub.lastChild.data = e.target.value.trim()
+    if(e.target === obj.formGithub) {
+      obj.profGithub.lastChild.data = e.target.value.trim()
       localStorage.setItem('github', e.target.value.trim())
     }
 
-    if(e.target === formWwebsite) {
+    if(e.target === obj.formWebsite) {
       localStorage.setItem('website', $)
     }
   
@@ -36,32 +48,32 @@ export default function contactsValidations(profEmail, profPhone, proflinkedin, 
           savedGithub = localStorage.getItem('github'),
           savedWebsite = localStorage.getItem('website')
     if(savedEmail) {
-      profEmail.lastChild.data = savedEmail
-      profEmail.href = `mailto:${savedEmail}`
-      formEmail.placeholder = savedEmail
+      obj.profEmail.lastChild.data = savedEmail
+      obj.profEmail.href = `mailto:${savedEmail}`
+      obj.formEmail.placeholder = savedEmail
     } 
     
     if(savedPhone) {
-      profPhone.lastChild.data = savedPhone
-      profPhone.href = `https://api.whatsapp.com/send?phone=${savedPhone}&text=Hello`
-      formPhone.placeholder = savedPhone
+      obj.profPhone.lastChild.data = savedPhone
+      obj.profPhone.href = `https://api.whatsapp.com/send?phone=${savedPhone}&text=Hello`
+      obj.formPhone.placeholder = savedPhone
     }  
 
     if(savedLinkedin) {
-      proflinkedin.lastChild.data = savedLinkedin
-      proflinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
-      formLinkedin.placeholder = savedLinkedin
+      obj.profLinkedin.lastChild.data = savedLinkedin
+      obj.profLinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
+      obj.formLinkedin.placeholder = savedLinkedin
     }
 
     if(savedGithub) {
-      profGithub.lastChild.data = savedGithub
-      profGithub.href = `https://github.com/${savedGithub}`
-      formGithub.placeholder = savedGithub
+      obj.profGithub.lastChild.data = savedGithub
+      obj.profGithub.href = `https://github.com/${savedGithub}`
+      obj.formGithub.placeholder = savedGithub
     }
 
     if(savedWebsite) {
-      profWebsite.href = savedWebsite
-      formWwebsite.placeholder = savedWebsite
+      obj.profWebsite.href = savedWebsite
+      obj.formWebsite.placeholder = savedWebsite
     }
   })
   
