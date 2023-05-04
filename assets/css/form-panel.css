@@ -387,7 +387,8 @@ input[form-github] {
   right: 5%;
   width: 40%;
   font-size: 80%;
-  background-color: rgba(255, 0, 0, .5);
+  /* background-color: rgba(255, 0, 0, .5); */
+  background-color: rgb(255, 0, 0);
   color: var(--body-color);
   backdrop-filter: blur(5px);
   text-align: center;
@@ -397,7 +398,7 @@ input[form-github] {
 
 .span_error.is-active {
   display: block;
-  animation: show-message 1.5s normal 0s ease-out both;
+  animation: show-message 1s normal 0s ease-out both;
 }
 
 @keyframes show-message {
