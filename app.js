@@ -2,9 +2,11 @@ import createSections from "./components/create-sections/createSections.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
 import contactsValidations from "./components/form-panel/form-contacts.js";
+import educationValidations from "./components/form-panel/form-education.js";
 import homeValidations from "./components/form-panel/form-home.js";
 import formInputMaxLenght from "./components/form-panel/form-input-max-lenght.js";
 import formInputSpan from "./components/form-panel/form-input-span.js";
+import profileValidations from "./components/form-panel/form-profile.js";
 import generatePdf from "./components/generate-pdf/generate-pdf.js";
 import hideMenu from "./components/hide-menu/hide-menu.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
@@ -59,30 +61,51 @@ D.addEventListener("DOMContentLoaded", (e) => {
 /*==================== CREATE SECTIONS ====================*/
 createSections($contactSection)
 
-const profile = {
-  // ============ PROFILE USER DATA =============
-  profName: D.querySelector('[user-name]'),
-  profProfession: D.querySelector('[user-profession]'),
+const home = {
+  // ============ HOME USER DATA =============
+  userName: D.querySelector('[user-name]'),
+  userProfession: D.querySelector('[user-profession]'),
   menuName: D.querySelector('[menu-name]'),
-  // ============ PROFILE FORM DATA =============
-  formName:D.querySelector('[form-name]'),
-  formLastname: D.querySelector('[form-lastname]'),
-  formProfession: D.querySelector('[form-profession]') 
+  // ============ HOME FORM DATA =============
+  inputName:D.querySelector('[input-name]'),
+  inputLastname: D.querySelector('[input-lastname]'),
+  inputProfession: D.querySelector('[input-profession]') 
 }
 
 const contacts = {
-// ============ USER CONTACTS =============
-profEmail: D.querySelector('[user-email]'),
-profPhone: D.querySelector('[user-phone]'),
-  profLinkedin: D.querySelector('[user-linkedin]'),
-  profGithub: D.querySelector('[user-github]'),
-  profWebsite: D.querySelector('[user-website]'),
+  // ============ USER CONTACTS =============
+  userEmail: D.querySelector('[user-email]'),
+  userPhone: D.querySelector('[user-phone]'),
+  userLinkedin: D.querySelector('[user-linkedin]'),
+  userGithub: D.querySelector('[user-github]'),
+  userWebsite: D.querySelector('[user-website]'),
   // ============ FORM CONTACTS =============
-  formEmail: D.querySelector('[form-email]'),
-  formPhone: D.querySelector('[form-phone]'),
-  formLinkedin: D.querySelector('[form-linkedin]'),
-  formGithub: D.querySelector('[form-github]'),
-  formWebsite: D.querySelector('[form-website]')
+  inputEmail: D.querySelector('[input-email]'),
+  inputPhone: D.querySelector('[input-phone]'),
+  inputLinkedin: D.querySelector('[input-linkedin]'),
+  inputGithub: D.querySelector('[input-github]'),
+  inputWebsite: D.querySelector('[input-website]')
+}
+
+const profile = {
+  // ============ USER PROFILE =============
+  userProfile: D.querySelector('[user-profile]'),
+  // ============ FORM PROFILE =============
+  textProfile: D.querySelector('[text-profile]')
+}
+
+const education = {
+  // ============ USER EDUCATION =============
+  userTitle: D.querySelector('[user-title]'),
+  userInstitute: D.querySelector('[user-institute]'),
+  userYear: D.querySelector('[user-year]'),
+  // ============ FORM EDUCATION =============
+  inputTitle: D.querySelector('[input-title]'),
+  inputInstitute: D.querySelector('[input-institute]'),
+  inputYear: D.querySelector('[input-year]'),
+  // ============ EDUCATION ELEMENT =============
+  container: D.querySelector('[education-container]'),
+  item:  D.querySelector('[education-item]')
 }
 
 /*==================== FORM INPUT MAX-LENGHT ====================*/
@@ -91,9 +114,13 @@ formInputMaxLenght($inputs)
 /*==================== FORM INPUT SPAN ====================*/
 formInputSpan(contacts)
 /*==================== HOME VALIDATIONS ====================*/
-homeValidations(profile)
+homeValidations(home)
 /*==================== CONTACTS VALIDATIONS ====================*/
 contactsValidations(contacts)
+/*==================== PROFILE VALIDATIONS ====================*/
+profileValidations(profile)
+/*==================== EDUCATION VALIDATIONS ====================*/
+educationValidations(education)
 
 async function asincroFunction() {
   // Espera a que el documento se cargue completamente

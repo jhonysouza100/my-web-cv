@@ -33,6 +33,77 @@
         <div class="nav_toggle" id="nav-toggle" data-toggle-btn><i class="bx bx-grid-alt"></i></div>
       </nav>
     </header>
+    
+    <!-- ============ FORM PANEL ============ -->
+    <div class="background_panel" data-bg-panel>
+      <!-- BACKGROUND BLUR -->
+      <!-- <div class="color_panel"></div>
+      <div class="color_panel"></div>
+      <div class="color_panel"></div> -->
+    </div>
+    <aside class="panel_container" data-form-panel>
+
+      <div class="panel" data-section-panel>
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:4;"></div>
+        <!-- FORM CONTAINER -->
+        <div class="form_container swiper mySwiper">
+          <div class="wrapper swiper-wrapper">
+            <div class="form swiper-slide">
+              <h2>I'M</h2>
+              <form action="" form-home>
+                <div class="input_box"><input type="text" placeholder="Your name" input-name></div>
+                <div class="input_box"><input type="text" placeholder="Your last name" input-lastname></div>
+                <div class="input_box"><input type="text" placeholder="Your profession" input-profession></div>
+                <div class="input_box"><input type="submit" value="OK" form-submit></div>
+              </form>
+            </div>
+            <div class="form swiper-slide">
+              <h2>CONTACTS</h2>
+              <form action="" form-contacts>
+                <div class="input_box"><input type="text" placeholder="Your email" input-email span="email"></div>              
+                <div class="input_box"><div class="input_label">+</div><input type="text" placeholder="Your phone" input-phone span="phone"></div>
+                <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your GitHub" input-github span="github"></div>
+                <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your Linkedin" input-linkedin span="linkedin"></div>
+                <div class="input_box"><input type="text" placeholder="Your website" input-website span="website"></div>
+                <div class="input_box"><input type="submit" value="OK" form-submit></div>
+              </form>
+            </div>
+            <div class="form swiper-slide">
+              <h2>PROFILE</h2>
+              <form action="" form-profile>
+                <div class="input_box"><textarea type="text" maxlength="250" placeholder="Add a description of yourself" text-profile></textarea></div>
+                <div class="input_box"><input type="submit" value="OK" form-submit></div>
+              </form>
+            </div>
+            <div class="form swiper-slide">
+              <h2>EDUCATION</h2>
+              <form action="" form-education>
+                <div class="input_box"><input type="text" placeholder="Your title" input-title></div>
+                <div class="input_box"><input type="text" placeholder="Institute studies" input-institute></div>
+                <div class="input_box"><input type="text" placeholder="year" input-year></div>
+                <div class="input_box"><input type="submit" value="OK" form-submit></div>
+              </form>
+            </div>
+            <div class="form swiper-slide">
+              <h2>SKILLS</h2>
+              <form action="" form-skills>
+                <div class="input_box"><input type="text" placeholder="skill" input-skill></div>
+                <div class="input_box"><input type="text" placeholder="skill" input-skill></div>
+                <div class="input_box"><input type="text" placeholder="skill" input-skill></div>
+                <div class="input_box"><input type="submit" value="OK" form-submit></div>
+              </form>
+            </div>
+            
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </aside>
+
     <main class="main bd-container">
       <!-- All elements within this div, is generated in PDF -->
       <div class="resume" id="area-cv" data-area-cv>
@@ -62,76 +133,6 @@
           <!-- Form menu button -->
           <i class="bx bx-chevron-left form-button" data-form-btn></i>
 
-           <!-- ============ FORM PANEL ============ -->
-          <div class="background_panel" data-bg-panel>
-            <!-- BACKGROUND BLUR -->
-            <!-- <div class="color_panel"></div>
-            <div class="color_panel"></div>
-            <div class="color_panel"></div> -->
-          </div>
-          <aside class="panel_container" data-form-panel>
-
-            <div class="panel" data-section-panel>
-              <div class="square" style="--i:0;"></div>
-              <div class="square" style="--i:1;"></div>
-              <div class="square" style="--i:2;"></div>
-              <div class="square" style="--i:3;"></div>
-              <div class="square" style="--i:4;"></div>
-              <!-- FORM CONTAINER -->
-              <div class="form_container swiper mySwiper">
-                <div class="wrapper swiper-wrapper">
-                  <div class="form swiper-slide">
-                    <h2>MY WEB CV</h2>
-                    <form action="" form-home>
-                      <div class="input_box"><input type="text" placeholder="Your name" form-name></div>
-                      <div class="input_box"><input type="text" placeholder="Your last name" form-lastname></div>
-                      <div class="input_box"><input type="text" placeholder="Your profession" form-profession></div>
-                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                    </form>
-                  </div>
-                  <div class="form swiper-slide">
-                    <h2>CONTACTS</h2>
-                    <form action="" form-contacts>
-                      <div class="input_box"><input type="text" placeholder="Your email" form-email span="email"></div>              
-                      <div class="input_box"><div class="input_label">+</div><input type="text" placeholder="Your phone" form-phone span="phone"></div>
-                      <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your Linkedin" form-linkedin span="linkedin"></div>
-                      <div class="input_box"><div class="input_label">/</div><input type="text" placeholder="Your GitHub" form-github span="github"></div>
-                      <div class="input_box"><input type="text" placeholder="Your website" form-website span="website"></div>
-                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                    </form>
-                  </div>
-                  <div class="form swiper-slide">
-                    <h2>PROFILE</h2>
-                    <form action="" form-profile>
-                      <div class="input_box"><textarea type="text" maxlength="250" placeholder="Add a description of yourself" form-profile></textarea></div>
-                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                    </form>
-                  </div>
-                  <div class="form swiper-slide">
-                    <h2>EDUCATION</h2>
-                    <form action="" form-education>
-                      <div class="input_box"><input type="text" placeholder="Your title" form-name></div>
-                      <div class="input_box"><input type="text" placeholder="Institute studies" form-lastname></div>
-                      <div class="input_box"><input type="text" placeholder="year" form-profession></div>
-                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                    </form>
-                  </div>
-                  <div class="form swiper-slide">
-                    <h2>SKILLS</h2>
-                    <form action="" form-skills>
-                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
-                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
-                      <div class="input_box"><input type="text" placeholder="skill" form-skill></div>
-                      <div class="input_box"><input type="submit" value="OK" form-submit></div>
-                    </form>
-                  </div>
-                  
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </aside>
-
           <!--========== SOCIAL ==========-->
           <section class="social section" social>
             <h2 class="section-title">SOCIAL</h2>
@@ -144,22 +145,22 @@
           <!--========== PROFILE ==========-->
           <section class="profile section" id="profile" data-section-id profile>
             <h2 class="section-title">Profile</h2>
-            <p class="profile_description">I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.</p>
+            <p class="profile_description" user-profile>I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.</p>
           </section>
 
           <!--========== EDUCATION ==========-->
           <section class="education section" id="education" data-section-id education>
             <h2 class="section-title">Education</h2>
-            <div class="education_container bd-grid">
-              <div class="education_content">
+            <div class="education_container bd-grid" education-container>
+              <div class="education_content" education-item>
                 <div class="education_time">
                   <span class="education_rounder"></span>
-                  <span class="education_line"></span>
+                  <span class="education_line" line></span>
                 </div>
                 <div class="education_data bd-grid">
-                  <h3 class="education_title">MASTER OF DESIGN</h3>
-                  <span class="education_studies">University od Studies</span>
-                  <span class="education_year">2010 - 2015</span>
+                  <h3 class="education_title" user-title>MASTER OF DESIGN</h3>
+                  <span class="education_studies" user-institute>University od Studies</span>
+                  <span class="education_year" user-year>2010 - 2015</span>
                 </div>
               </div>
               <div class="education_content">

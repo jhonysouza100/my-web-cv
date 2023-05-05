@@ -15,9 +15,9 @@ export default function contactsValidations(obj) {
     // Guarda las teclas pulsadas y las pasa a minuscula || sino, solo las teclas pulsadas
     let $ = e.target.value.toLowerCase().trim() || e.target.value.trim()
       
-      if(e.target === obj.formEmail) {
+      if(e.target === obj.inputEmail) {
         if(emailRegex.test(e.target.value)) {
-          obj.profEmail.lastChild.data = $
+          obj.userEmail.lastChild.data = $
           localStorage.setItem('email', $)
           $spanEmail.classList.remove('is-active')
         } else {
@@ -25,9 +25,9 @@ export default function contactsValidations(obj) {
         }
       } 
       
-      if(e.target === obj.formPhone) {
+      if(e.target === obj.inputPhone) {
         if(phoneRegex.test(e.target.value)) {
-          obj.profPhone.lastChild.data = e.target.value.trim()
+          obj.userPhone.lastChild.data = e.target.value.trim()
           localStorage.setItem('phone', e.target.value.trim())
           $spanPhone.classList.remove('is-active')
         } else {
@@ -35,17 +35,17 @@ export default function contactsValidations(obj) {
         }
       }
         
-      if(e.target === obj.formLinkedin) {
-        obj.profLinkedin.lastChild.data = $
+      if(e.target === obj.inputLinkedin) {
+        obj.userLinkedin.lastChild.data = $
         localStorage.setItem('linkedin', $)
       }
         
-      if(e.target === obj.formGithub) {
-        obj.profGithub.lastChild.data = e.target.value.trim()
+      if(e.target === obj.inputGithub) {
+        obj.userGithub.lastChild.data = e.target.value.trim()
         localStorage.setItem('github', e.target.value.trim())
       }
   
-      if(e.target === obj.formWebsite) {
+      if(e.target === obj.inputWebsite) {
         localStorage.setItem('website', $)
       }
   
@@ -58,32 +58,32 @@ export default function contactsValidations(obj) {
           savedGithub = localStorage.getItem('github'),
           savedWebsite = localStorage.getItem('website')
     if(savedEmail) {
-      obj.profEmail.lastChild.data = savedEmail
-      obj.profEmail.href = `mailto:${savedEmail}`
-      obj.formEmail.placeholder = savedEmail
+      obj.userEmail.lastChild.data = savedEmail
+      obj.userEmail.href = `mailto:${savedEmail}`
+      obj.inputEmail.placeholder = savedEmail
     } 
     
     if(savedPhone) {
-      obj.profPhone.lastChild.data = savedPhone
-      obj.profPhone.href = `https://api.whatsapp.com/send?phone=${savedPhone}&text=Hello`
-      obj.formPhone.placeholder = savedPhone
+      obj.userPhone.lastChild.data = savedPhone
+      obj.userPhone.href = `https://api.whatsapp.com/send?phone=${savedPhone}&text=Hello`
+      obj.inputPhone.placeholder = savedPhone
     }  
 
     if(savedLinkedin) {
-      obj.profLinkedin.lastChild.data = savedLinkedin
-      obj.profLinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
-      obj.formLinkedin.placeholder = savedLinkedin
+      obj.userLinkedin.lastChild.data = savedLinkedin
+      obj.userLinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
+      obj.inputLinkedin.placeholder = savedLinkedin
     }
 
     if(savedGithub) {
-      obj.profGithub.lastChild.data = savedGithub
-      obj.profGithub.href = `https://github.com/${savedGithub}`
-      obj.formGithub.placeholder = savedGithub
+      obj.userGithub.lastChild.data = savedGithub
+      obj.userGithub.href = `https://github.com/${savedGithub}`
+      obj.inputGithub.placeholder = savedGithub
     }
 
     if(savedWebsite) {
-      obj.profWebsite.href = savedWebsite
-      obj.formWebsite.placeholder = savedWebsite
+      obj.userWebsite.href = savedWebsite
+      obj.inputWebsite.placeholder = savedWebsite
     }
   })
   

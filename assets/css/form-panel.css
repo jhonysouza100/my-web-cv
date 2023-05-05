@@ -270,12 +270,12 @@ form[form-profile] .input_box textarea::placeholder {
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, .5);
   border-right: none;
-} input[form-phone]::placeholder,
-input[form-linkedin]::placeholder,
-input[form-github]::placeholder,
-input[form-phone],
-input[form-linkedin],
-input[form-github] {
+} input[input-phone]::placeholder,
+input[input-linkedin]::placeholder,
+input[input-github]::placeholder,
+input[input-phone],
+input[input-linkedin],
+input[input-github] {
   text-indent: 15px;
 } 
 

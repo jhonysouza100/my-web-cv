@@ -3,21 +3,21 @@ export default function homeValidations(obj) {
   
   d.addEventListener('keyup', e => {
     let $ = e.target.value
-    if(e.target === obj.formName) {
-      obj.profName.firstChild.textContent = $.toUpperCase().trim()
+    if(e.target === obj.inputName) {
+      obj.userName.firstChild.textContent = $.toUpperCase().trim()
       localStorage.setItem('name', $.toUpperCase().trim())
     }
-    if(e.target === obj.formLastname) {
-      obj.profName.lastChild.textContent = $.toUpperCase().trim()
+    if(e.target === obj.inputLastname) {
+      obj.userName.lastChild.textContent = $.toUpperCase().trim()
       obj.menuName.textContent = $.toUpperCase().trim()
       localStorage.setItem('lastname', $.toUpperCase().trim())
     }
-    if(e.target === obj.formProfession) {
+    if(e.target === obj.inputProfession) {
       let profession = $.toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-      obj.profProfession.textContent = profession.trim()
+      .join(' ')
+      obj.userProfession.textContent = profession.trim()
       localStorage.setItem('profession', profession.trim())
     }
   })
@@ -27,17 +27,17 @@ export default function homeValidations(obj) {
           savedLastname = localStorage.getItem('lastname'),
           savedProfession = localStorage.getItem('profession')
     if(savedName) {
-      obj.profName.firstChild.textContent = savedName
-      obj.formName.placeholder = savedName
+      obj.userName.firstChild.textContent = savedName
+      obj.inputName.placeholder = savedName
     }
     if(savedLastname) {
-      obj.profName.lastChild.textContent = savedLastname
+      obj.userName.lastChild.textContent = savedLastname
       obj.menuName.textContent = savedLastname
-      obj.formLastname.placeholder = savedLastname
+      obj.inputLastname.placeholder = savedLastname
     }
     if(savedProfession) {
-      obj.profProfession.textContent = savedProfession
-      obj.formProfession.placeholder = savedProfession
+      obj.userProfession.textContent = savedProfession
+      obj.inputProfession.placeholder = savedProfession
     }
   })
   
