@@ -48,8 +48,41 @@ export default function contactsValidations(obj) {
       if(e.target === obj.inputWebsite) {
         localStorage.setItem('website', $)
       }
+      
+    })
+    
+  const labelDisable = document.querySelector('.label_disable')
+  const checkIcon = labelDisable.querySelector('.bx-check')
+  const xIcon = labelDisable.querySelector('.bx-x')
   
-  })
+  labelDisable.addEventListener('click', () => {
+    if (checkIcon.classList.contains('none')) {
+      checkIcon.classList.remove('none')
+      xIcon.classList.add('none')
+      localStorage.setItem('iconStatus', 'checked')
+      obj.userLinkedin.style.display = 'none'
+      console.log('none')
+    } else {
+      checkIcon.classList.add('none')
+      xIcon.classList.remove('none')
+      obj.userLinkedin.classList.remove('none')
+      localStorage.setItem('iconStatus', 'unchecked')
+      console.log('block')
+    }
+  });
+  
+  // Recuperar el estado del icono del localStorage al cargar la página
+  window.onload = () => {
+    const iconStatus = localStorage.getItem('iconStatus')
+    if (iconStatus === 'checked') {
+      checkIcon.classList.remove('none')
+      xIcon.classList.add('none');
+    } else {
+      checkIcon.classList.add('none')
+      xIcon.classList.remove('none')
+    }
+  }
+    
   
   d.addEventListener('DOMContentLoaded', () => {
     const savedEmail = localStorage.getItem('email'),

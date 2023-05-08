@@ -84,7 +84,15 @@ const contacts = {
   inputPhone: D.querySelector('[input-phone]'),
   inputLinkedin: D.querySelector('[input-linkedin]'),
   inputGithub: D.querySelector('[input-github]'),
-  inputWebsite: D.querySelector('[input-website]')
+  inputWebsite: D.querySelector('[input-website]'),
+  // ============ DISABLE CONTACTS =============
+  disableLinkedin:{
+    input:D.querySelector('[disable-linkedin]'),
+    bxy: D.querySelector('.bx-check'),
+    bxx: D.querySelector('.bx-x')
+  },
+  disableGithub: D.querySelector('[disable-github]'),
+  disableWebsite: D.querySelector('[disable-website]')
 }
 
 const profile = {
