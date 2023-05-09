@@ -10,7 +10,7 @@
   font-weight: var(--font-semi-bold);
   cursor: pointer;
   background-color: var(--container-color-alt);
-  padding: 60px 0 60px 0;
+  padding: 120px 0 120px 0;
   border-radius: 10px 0 0 10px;
   z-index: 1001;
   user-select: none;
@@ -263,8 +263,8 @@ form[form-profile] .input_box textarea::placeholder {
   color: var(--text-color);
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
-  border-radius: 20px 0 0 20px;
   background-color: var(--body-color);
+  border-radius: 20px 0 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -388,10 +388,6 @@ input[input-github] {
 .none 
 {
   display: none;
-}
-
-.disabled {
-  background: red;
 }
 
 /*========== Swiper Pagination ==========*/
