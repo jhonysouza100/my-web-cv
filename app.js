@@ -86,14 +86,6 @@ const contacts = {
   inputLinkedin: D.querySelector('[input-linkedin]'),
   inputGithub: D.querySelector('[input-github]'),
   inputWebsite: D.querySelector('[input-website]'),
-  // ============ DISABLE CONTACTS =============
-  disableLinkedin:{
-    input:D.querySelector('[disable-linkedin]'),
-    bxy: D.querySelector('.bx-check'),
-    bxx: D.querySelector('.bx-x')
-  },
-  disableGithub: D.querySelector('[disable-github]'),
-  disableWebsite: D.querySelector('[disable-website]')
 }
 
 const profile = {
@@ -130,14 +122,16 @@ contactsValidations(contacts)
 profileValidations(profile)
 /*==================== EDUCATION VALIDATIONS ====================*/
 educationValidations(education)
-/*==================== DISABLE INPUTS  ====================*/
-const input = {
-  label: D.queryselectorAll('.label_disable'),
-  enable: D.queryselectorAll('.bx-check'),
-  disable: D.querySelectorAll('.bx-x')
+/*==================== DISABLE FIELDS ====================*/
+const disables = {
+  label: D.querySelectorAll('.label_disable'),
+  enable: D.querySelectorAll('.bx-check'),
+  disable: D.querySelectorAll('.bx-x'),
+  input: D.querySelectorAll('.input_disable'),
+  user: D.querySelectorAll('.info_disable')
 }
-disable(contacts, input)
 
+disable(disables)
 
 async function asincroFunction() {
   // Espera a que el documento se cargue completamente

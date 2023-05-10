@@ -39,7 +39,7 @@ export default function createSections(section) {
       const newLink = document.createElement("a")
       
       // Establece las propiedades del elemento <a>
-      newLink.classList.add("home_information")
+      newLink.classList.add("home_information", "info_disable")
       newLink.href = `${contacts[el].href}`
       newLink.target = "_blank"
       newLink.setAttribute(`user-${contacts[el].type}`, '')    

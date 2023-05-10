@@ -64,15 +64,27 @@
             <div class="form swiper-slide">
               <h2>CONTACTS</h2>
               <form action="" form-contacts>
-                <div class="input_box"><input type="text" placeholder="Your email" input-email span="email"></div>              
-                <div class="input_box"><div class="input_label">+</div><input type="text" placeholder="Your phone" input-phone span="phone"></div>
+                <div class="input_box">
+                  <div class="label_disable" disable-github>
+                    <i class='bx bx-check none'></i>
+                    <i class='bx bx-x'></i>
+                  </div>
+                  <input class="input_disable" type="text" placeholder="Your email" input-email span="email">
+                </div>              
+                <div class="input_box"><div class="input_label">+</div>
+                  <div class="label_disable" disable-github>
+                    <i class='bx bx-check none'></i>
+                    <i class='bx bx-x'></i>
+                  </div>
+                  <input class="input_disable" type="text" placeholder="Your phone" input-phone span="phone">
+                </div>
                 <div class="input_box">
                   <div class="input_label">/</div>
                   <div class="label_disable" disable-linkedin>
                     <i class='bx bx-check none'></i>
                     <i class='bx bx-x'></i>
                   </div>
-                  <input type="text" placeholder="Your Linkedin" input-linkedin span="linkedin">
+                  <input class="input_disable" type="text" placeholder="Your Linkedin" input-linkedin span="linkedin">
                 </div>
                 <div class="input_box">
                   <div class="input_label">/</div>
@@ -80,14 +92,14 @@
                     <i class='bx bx-check none'></i>
                     <i class='bx bx-x'></i>
                   </div>
-                  <input type="text" placeholder="Your GitHub" input-github span="github">
+                  <input class="input_disable" type="text" placeholder="Your GitHub" input-github span="github">
                 </div>
                 <div class="input_box">
                   <div class="label_disable" disable-website>
                     <i class='bx bx-check none'></i>
                     <i class='bx bx-x'></i>
                   </div>
-                  <input type="text" placeholder="Your website" input-website span="website">
+                  <input class="input_disable" type="text" placeholder="Your website" input-website span="website">
                 </div>
                 <div class="input_box"><input type="submit" value="OK" form-submit></div>
               </form>
