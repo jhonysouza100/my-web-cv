@@ -72,7 +72,7 @@ export default function contactsValidations(obj) {
     
     if(savedLinkedin) {
       obj.userLinkedin.lastChild.data = savedLinkedin
-      obj.userLinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
+      obj.userLinkedin.href = `https://linkedin.com/in/${savedLinkedin}`
       obj.inputLinkedin.placeholder = savedLinkedin
     }
 

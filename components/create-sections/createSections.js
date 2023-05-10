@@ -15,7 +15,7 @@ export default function createSections(section) {
       text: '54 999 777 666'      
     },
     linkedin: {
-      href: 'https://linkedian.com/in/jhonatan-leon-souza-meza/',
+      href: 'https://linkedin.com/in/jhonatan-leon-souza-meza/',
       type: 'linkedin',
       icon: 'bxl-linkedin-square',
       text: 'jhon-smith'      
