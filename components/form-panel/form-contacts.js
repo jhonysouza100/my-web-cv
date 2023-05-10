@@ -50,36 +50,32 @@ export default function contactsValidations(obj) {
       }
       
     })
-    
+  
   const inputDisable = document.querySelector('[input-linkedin]')
   const labelDisable = document.querySelector('.label_disable')
   const checkIcon = labelDisable.querySelector('.bx-check')
   const xIcon = labelDisable.querySelector('.bx-x')
-  
   labelDisable.addEventListener('click', () => {
-    
     if (checkIcon.classList.contains('none')) {
       checkIcon.classList.remove('none')
       xIcon.classList.add('none')
-      localStorage.setItem('iconStatus', 'checked')
-      obj.userLinkedin.style.display = 'none'
-      
-      inputDisable.disabled = true
-      inputDisable.style.caretColor = "transparent"
-      inputDisable.placeholder = ''
-    } else {
-      checkIcon.classList.add('none')
-      xIcon.classList.remove('none')
-      obj.userLinkedin.classList.remove('none')
-      localStorage.setItem('iconStatus', 'unchecked')
-      obj.userLinkedin.style.display = 'block'
-
-      inputDisable.disabled = false
-      inputDisable.style.caretColor = "#fff"
-      inputDisable.placeholder = localStorage.getItem('linkedin') || 'Your Linkedin'
-    }
-  });
-  
+        localStorage.setItem('iconStatus', 'checked')
+        obj.userLinkedin.style.display = 'none'  
+        inputDisable.disabled = true
+        inputDisable.style.caretColor = "transparent"
+        inputDisable.placeholder = ''
+      } else {
+        checkIcon.classList.add('none')
+        xIcon.classList.remove('none')
+        localStorage.setItem('iconStatus', 'unchecked')
+        obj.userLinkedin.classList.remove('none')
+        obj.userLinkedin.style.display = 'block'
+        inputDisable.disabled = false
+        inputDisable.style.caretColor = "#fff"
+        inputDisable.placeholder = localStorage.getItem('linkedin') || 'Your Linkedin'
+      }
+    });
+  }
   // Recuperar el estado del icono del localStorage al cargar la página
   window.onload = () => {
     const iconStatus = localStorage.getItem('iconStatus')
@@ -87,10 +83,16 @@ export default function contactsValidations(obj) {
       checkIcon.classList.remove('none')
       xIcon.classList.add('none');
       obj.userLinkedin.style.display = 'none'
+      inputDisable.disabled = true
+      inputDisable.style.caretColor = "transparent"
+      inputDisable.placeholder = ''
     } else {
       checkIcon.classList.add('none')
       xIcon.classList.remove('none')
       obj.userLinkedin.style.display = 'block'
+      inputDisable.disabled = false
+      inputDisable.style.caretColor = "#fff"
+      inputDisable.placeholder = localStorage.getItem('linkedin') || 'Your Linkedin'
     }
   }
     
@@ -112,7 +114,7 @@ export default function contactsValidations(obj) {
       obj.userPhone.href = `https://api.whatsapp.com/send?phone=${savedPhone}&text=Hello`
       obj.inputPhone.placeholder = savedPhone
     }  
-
+    
     if(savedLinkedin) {
       obj.userLinkedin.lastChild.data = savedLinkedin
       obj.userLinkedin.href = `https://linkedian.com/in/${savedLinkedin}`
@@ -130,5 +132,3 @@ export default function contactsValidations(obj) {
       obj.inputWebsite.placeholder = savedWebsite
     }
   })
-  
-}

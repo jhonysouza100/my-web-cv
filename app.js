@@ -1,6 +1,7 @@
 import createSections from "./components/create-sections/createSections.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
 import formBtn from "./components/form-button/form-button.js";
+import disable from "./components/form-panel/disable-input.js";
 import contactsValidations from "./components/form-panel/form-contacts.js";
 import educationValidations from "./components/form-panel/form-education.js";
 import homeValidations from "./components/form-panel/form-home.js";
@@ -129,6 +130,14 @@ contactsValidations(contacts)
 profileValidations(profile)
 /*==================== EDUCATION VALIDATIONS ====================*/
 educationValidations(education)
+/*==================== DISABLE INPUTS  ====================*/
+const input = {
+  label: D.queryselectorAll('.label_disable'),
+  enable: D.queryselectorAll('.bx-check'),
+  disable: D.querySelectorAll('.bx-x')
+}
+disable(contacts, input)
+
 
 async function asincroFunction() {
   // Espera a que el documento se cargue completamente
