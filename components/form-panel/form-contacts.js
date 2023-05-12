@@ -15,6 +15,11 @@ export default function contactsValidations(obj) {
     // Guarda las teclas pulsadas y las pasa a minuscula || sino, solo las teclas pulsadas
     let $ = e.target.value.toLowerCase().trim() || e.target.value.trim()
       
+      if(e.target === obj.inputLocation) {
+        obj.userLocation.lastChild.data = e.target.value.trim()
+        localStorage.setItem('location', e.target.value.trim())
+      }
+
       if(e.target === obj.inputEmail) {
         if(emailRegex.test(e.target.value)) {
           obj.userEmail.lastChild.data = $
@@ -57,7 +62,14 @@ export default function contactsValidations(obj) {
           savedPhone = localStorage.getItem('phone'),
           savedLinkedin = localStorage.getItem('linkedin'),
           savedGithub = localStorage.getItem('github'),
-          savedWebsite = localStorage.getItem('website')
+          savedWebsite = localStorage.getItem('website'),
+          savedLocation = localStorage.getItem('location')
+
+    if(savedLocation) {
+      obj.userLocation.lastChild.data = savedLocation
+      obj.inputLocation.placeholder = savedLocation
+    }
+
     if(savedEmail) {
       obj.userEmail.lastChild.data = savedEmail
       obj.userEmail.href = `mailto:${savedEmail}`

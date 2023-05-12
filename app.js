@@ -1,5 +1,6 @@
 import createSections from "./components/create-sections/createSections.js";
 import darkTheme from "./components/dark-theme/dark-theme.js";
+import downloadResume from "./components/download-resume/download-resume.js";
 import formBtn from "./components/form-button/form-button.js";
 import disable from "./components/form-panel/disable-input.js";
 import contactsValidations from "./components/form-panel/form-contacts.js";
@@ -26,6 +27,7 @@ $profileImg = D.querySelector(`[user-img]`),
 $scrolltop = D.querySelector(`[data-scrolltop-btn]`),
 $themeBtn = D.querySelector('[data-theme-btn]'),
 $resumeBtn = D.querySelector('[data-resume-btn]'),
+$downloadBtn = D.querySelector('[data-download-btn]'),
 $areaCv = D.querySelector('[data-area-cv]'),
 $formBtn = D.querySelector('[data-form-btn]'),
 $formPanel = D.querySelector('[data-form-panel]'),
@@ -51,6 +53,8 @@ D.addEventListener("DOMContentLoaded", (e) => {
   darkTheme($themeBtn)
   /*==================== GENERATE PDF ====================*/
   generatePdf($resumeBtn, $areaCv)
+  /*==================== DOWNLOAD RESUME MOBILE ====================*/
+  downloadResume($downloadBtn, $areaCv)
   /*==================== GENERATE PDF ====================*/
   swiper()
   /*==================== FORM BUTTON ====================*/
@@ -75,17 +79,19 @@ const home = {
 
 const contacts = {
   // ============ USER CONTACTS =============
+  userLocation: D.querySelector('[user-location]'),
   userEmail: D.querySelector('[user-email]'),
   userPhone: D.querySelector('[user-phone]'),
   userLinkedin: D.querySelector('[user-linkedin]'),
   userGithub: D.querySelector('[user-github]'),
   userWebsite: D.querySelector('[user-website]'),
   // ============ FORM CONTACTS =============
+  inputLocation: D.querySelector('[input-location]'),
   inputEmail: D.querySelector('[input-email]'),
   inputPhone: D.querySelector('[input-phone]'),
   inputLinkedin: D.querySelector('[input-linkedin]'),
   inputGithub: D.querySelector('[input-github]'),
-  inputWebsite: D.querySelector('[input-website]'),
+  inputWebsite: D.querySelector('[input-website]')
 }
 
 const profile = {

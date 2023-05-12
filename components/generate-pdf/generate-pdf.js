@@ -14,10 +14,12 @@ export default function generatePdf(resumeBtn, areaCv) {
     html2pdf(areaCv, opt)
   }
   /*==================== GENERATE PDF ====================*/
+  let savedName = `${localStorage.getItem('name').toLocaleLowerCase()}` || 'jhon',
+      savedLastName = `${localStorage.getItem('lastname').toLocaleLowerCase()}` || 'smith'
   // Html2pdf options
   let opt = {
     margin: 0,
-    filename: 'Jhon-Smith-CV.pdf',
+    filename: `${savedName}-${savedLastName}-resume.pdf`,
     image: { type: 'jpeg', quality: 1 },
     html2canvas: { scale: 4 },
     jsPDF: { format: 'A4', orientation: 'portrait' }

@@ -253,6 +253,31 @@ form[form-profile] .input_box textarea::placeholder {
   margin-top: 20px;
 }
 
+/* INPUT DISABLE */
+.label_disable {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 30px;
+  color: #fff;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.none 
+{
+  display: none;
+}
+
 /* FORM CONTACTS */
 .input_label {
   position: absolute;
@@ -277,6 +302,12 @@ input[input-phone],
 input[input-linkedin],
 input[input-github] {
   text-indent: 15px;
+}
+
+input[input-phone]::placeholder,
+input[input-linkedin]::placeholder,
+input[input-github]::placeholder {
+  width: 95%;
 }
 
 .form .input_box input {
@@ -364,30 +395,6 @@ input[input-github] {
     width: 400px;
     min-height: 400px;
   }
-}
-
-/* INPUT DISABLE */
-.label_disable {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 50px;
-  width: 50px;
-  /* color: var(--text-color); */
-  color: #fff;
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-medium);
-  border-radius: 50%;
-  /* background-color: var(--body-color); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.none 
-{
-  display: none;
 }
 
 /*========== Swiper Pagination ==========*/

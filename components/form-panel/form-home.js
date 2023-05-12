@@ -40,7 +40,4 @@ export default function homeValidations(obj) {
       obj.inputProfession.placeholder = savedProfession
     }
   })
-  
-  // if(e.key === 'Escape') {} // restaura cundo se presiona esc
-  // Falta agregar validaciones de length y demas campos del documento...
 }

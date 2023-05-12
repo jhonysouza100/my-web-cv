@@ -2,6 +2,11 @@ export default function createSections(section) {
   // Limpiar el contenido del elemento
   section.innerHTML = ``
   const contacts = {
+    location: {
+      type: 'location',
+      icon: 'bx-map',
+      text: 'Miami - California'
+    },
     email: {
       href: 'mailto:user@gmail.com',
       type: 'email',
@@ -18,31 +23,50 @@ export default function createSections(section) {
       href: 'https://linkedin.com/in/jhonatan-leon-souza-meza/',
       type: 'linkedin',
       icon: 'bxl-linkedin-square',
-      text: 'jhon-smith'      
+      text: 'jhon-smith',
+      disable: true     
     },
     github: {
       href: 'https://github.com/WarDog1000/my-web-cv',
       type: 'github',
       icon: 'bxl-github',
-      text: 'JhonSmith'      
+      text: 'JhonSmith',
+      disable: true  
     },
     web: {
       href: 'https://jhony-souza-portfolio.netlify.app/',
       type: 'website',
       icon: 'bxs-folder-open',
-      text: 'My portfolio'
+      text: 'My portfolio',
+      disable: true
     }
   }
   const createContacts = () => {
     for(let el in contacts) {
-      // Crea un nuevo elemento <a>
-      const newLink = document.createElement("a")
-      
-      // Establece las propiedades del elemento <a>
-      newLink.classList.add("home_information", "info_disable")
-      newLink.href = `${contacts[el].href}`
-      newLink.target = "_blank"
-      newLink.setAttribute(`user-${contacts[el].type}`, '')    
+      let element
+      if(contacts[el].type === 'location') {
+        element = 'span'
+      } else {
+        element = 'a'
+      }
+      // Crea un nuevo elemento
+      const newLink = document.createElement(`${element}`)
+      // Establece las propiedades del elemento
+      if(contacts[el].type === 'location') {
+        newLink.setAttribute(`user-${contacts[el].type}`, '') 
+        newLink.classList.add("home_information")
+      } else if(contacts[el].disable === true) {
+        newLink.classList.add("home_information", "info_disable")
+        newLink.href = `${contacts[el].href}`
+        newLink.target = "_blank"
+        newLink.setAttribute(`user-${contacts[el].type}`, '')
+      } else {
+        newLink.classList.add("home_information")
+        newLink.href = `${contacts[el].href}`
+        newLink.target = "_blank"
+        newLink.setAttribute(`user-${contacts[el].type}`, '')
+        
+      }
       
       // Crea el elemento <i> y establecer sus clases
       const newIcon = document.createElement("i")
@@ -72,5 +96,4 @@ export default function createSections(section) {
   }
   
   createContacts()
-  
 }
