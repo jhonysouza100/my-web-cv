@@ -11,19 +11,19 @@ export default function generatePdf(resumeBtn, areaCv) {
 
   // Función para llamar a las opciones areaCv y Html2Pdf
   function generateResume() {
+    let savedName = `${localStorage.getItem('name').toLocaleLowerCase()}` || 'jhon',
+    savedLastName = `${localStorage.getItem('lastname').toLocaleLowerCase()}` || 'smith'
+    // Html2pdf options
+    let opt = {
+      margin: 0,
+      filename: `${savedName}-${savedLastName}-resume.pdf`,
+      image: { type: 'jpeg', quality: 1 },
+      html2canvas: { scale: 4 },
+      jsPDF: { format: 'A4', orientation: 'portrait' }
+    }
     html2pdf(areaCv, opt)
   }
   /*==================== GENERATE PDF ====================*/
-  let savedName = `${localStorage.getItem('name').toLocaleLowerCase()}` || 'jhon',
-      savedLastName = `${localStorage.getItem('lastname').toLocaleLowerCase()}` || 'smith'
-  // Html2pdf options
-  let opt = {
-    margin: 0,
-    filename: `${savedName}-${savedLastName}-resume.pdf`,
-    image: { type: 'jpeg', quality: 1 },
-    html2canvas: { scale: 4 },
-    jsPDF: { format: 'A4', orientation: 'portrait' }
-  }
   // When the button is clicked, it executes the three functions
   document.addEventListener('click', (e) => {
     if(e.target === resumeBtn) {
@@ -36,5 +36,4 @@ export default function generatePdf(resumeBtn, areaCv) {
     }
 
   })
-  
 }
