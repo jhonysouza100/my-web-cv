@@ -1,3 +1,5 @@
+import hideLastLine from "../time-line/hide-last-line.js"
+
 export default function addEducationItem(education) {
   education.add.addEventListener('click', e => {
     const educationItem = document.createElement('div')
@@ -15,5 +17,6 @@ export default function addEducationItem(education) {
       </div>
       </div>`
     education.container.prepend(educationItem)
+    hideLastLine(education.container.querySelectorAll('[education-item]'))
   })
 }

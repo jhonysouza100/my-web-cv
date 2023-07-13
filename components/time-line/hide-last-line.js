@@ -1,4 +1,5 @@
 export default function hideLastLine(...items) {
+  // console.log(items)
   items.forEach( el => {
     el.forEach( (item, index) => {
       index === el.length -1

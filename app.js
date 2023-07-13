@@ -151,8 +151,6 @@ createInputSpanMessage(contacts)
 actionInputDisable(disables)
 /*==================== SECTIONS SIZE ====================*/
 // sectionsSize(educationItems)
-/*==================== HIDE TIME LINES ====================*/
-hideLastLine(educationItems, experienceItems)
 
 /*==================== HOME VALIDATIONS ====================*/
 homeValidations(home)
@@ -161,5 +159,8 @@ contactsValidations(contacts)
 /*==================== PROFILE VALIDATIONS ====================*/
 profileValidations(profile)
 /*==================== EDUCATION VALIDATIONS ====================*/
-// educationValidations(education)
 addEducationItem(education)
+// educationValidations(education)
+
+/*==================== HIDE TIME LINES ====================*/
+hideLastLine(educationItems, experienceItems)
