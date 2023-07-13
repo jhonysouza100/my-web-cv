@@ -167,27 +167,23 @@ body.scale-cv {
   gap: 1rem;
 }
 
-.scale-cv .education_tiem,
-.scale-cv .experience_time {
+.scale-cv .time_line {
   padding-right: .5rem;
 }
 
-.scale-cv .education_rounder,
-.scale-cv .experience_rounder {
+.scale-cv .rounder {
   width: 11px;
   height: 11px;
   margin-top: .22rem;
 }
 
-.scale-cv .education_line,
-.scale-cv .experience_line {
+.scale-cv .line {
   width: 1px;
   height: 110%;
   transform: translate(5px, 0);
 }
 
-.scale-cv .education_data,
-.scale-cv .experience_data {
+.scale-cv .item_data {
   gap: .25rem;
 }
 
@@ -446,18 +442,15 @@ img {
 }
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
-.education_content,
-.experience_content {
+.item_content {
   display: flex;
 }
 
-.education_time,
-.experience_time {
+.time_line {
   padding-right: 1rem;
 }
 
-.education_rounder,
-.experience_rounder {
+.rounder {
   position: relative;
   display: block;
   width: 16px;
@@ -467,8 +460,7 @@ img {
   margin-top: .25rem;
 }
 
-.education_line,
-.experience_line {
+.line {
   display: block;
   width: 2px;
   height: 110%;
@@ -476,18 +468,15 @@ img {
   transform: translate(7px, 0);
 }
 
-.education_data,
-.experience_data {
+.item_data {
   gap: .5rem;
 }
 
-.education_title,
-.experience_title {
+.item_title {
   font-size: var(--h3-font-size);
 }
 
-.education_studies,
-.experience_company {
+.item_institute {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
@@ -513,8 +502,7 @@ img {
   margin-bottom: var(--mb-3);
 }
 
-.skills_circle,
-.languages_circle {
+.circle {
   display: inline-block;
   width: 5px;
   height: 5px;

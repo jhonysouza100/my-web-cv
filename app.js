@@ -1,23 +1,34 @@
-import createSections from "./components/create-sections/createSections.js";
-import darkTheme from "./components/dark-theme/dark-theme.js";
-import downloadResume from "./components/download-resume/download-resume.js";
-import formBtn from "./components/form-button/form-button.js";
-import disable from "./components/form-panel/disable-input.js";
-import contactsValidations from "./components/form-panel/form-contacts.js";
-import educationValidations from "./components/form-panel/form-education.js";
-import homeValidations from "./components/form-panel/form-home.js";
-import formInputMaxLenght from "./components/form-panel/form-input-max-lenght.js";
-import formInputSpan from "./components/form-panel/form-input-span.js";
-import profileValidations from "./components/form-panel/form-profile.js";
-import generatePdf from "./components/generate-pdf/generate-pdf.js";
-import hideMenu from "./components/hide-menu/hide-menu.js";
-import hideSections from "./components/hide-sections/hide-sections.js";
-import scrollActive from "./components/scroll-active/scroll-active.js";
-import scrollTop from "./components/scroll-top/scroll-top.js";
-import setImage from "./components/set-image/set-image.js";
-import showMenu from "./components/show-menu/show-menu.js";
-import swiper from "./components/swiper-js/swiper.js";
+// IMPORTACIONES
 
+// ============ ACTIVAS DEL FORMULARIO ============
+import actionInputDisable from "./components/form-panel/action-input-disable.js";
+import actionFormButtonClick from "./components/action-form-button-click/action-form-button-click.js";
+// ============ PASIVAS DEL FORMULARIO ============
+import createInputSpanMessage from "./components/form-panel/create-input-span-message.js";
+import setInputOptions from "./components/form-panel/set-input-options.js";
+import swiperOptions from "./components/swiper-options/swiper-options.js";
+// ============ VALIDACIONES DEL FORMULARIO ============
+import contactsValidations from "./components/form-panel/validations-form-contacts.js";
+import educationValidations from "./components/form-panel/validations-form-education.js";
+import homeValidations from "./components/form-panel/validations-form-home.js";
+import profileValidations from "./components/form-panel/validations-form-profile.js";
+// ============ FUNCIONES MOBILE ============
+import actionMobDownload from "./components/action-mob-download/action-mob-download.js";
+import {actionHideMenu, actionShowMenu} from "./components/action-menu-click/action-menu-click.js";
+import scrollActiveLinks from "./components/scroll-active-links/scroll-active-links.js";
+// ============ ACTIVAS DEL DOCUMENTO HTML ============
+import actionSetImage from "./components/action-set-image/action-set-image.js";
+import actionSetTheme from "./components/action-set-theme/action-set-theme.js";
+import actionDeskdownload from "./components/action-desk-download/action-desk-download.js";
+import showScrollTop from "./components/show-scroll-top/show-scroll-top.js";
+// ============ PASIVAS DEL DOCUMENTO HTML ============
+import createSections from "./components/create-sections/createSections.js";
+import hideSections from "./components/hide-sections/hide-sections.js";
+import hideLastLine from "./components/time-line/hide-last-line.js";
+import sectionsSize from "./components/sections-size/sections-size.js";
+import addEducationItem from "./components/form-panel/add-education-item.js";
+
+// ============ REFERENCIAS A LOS ELEMENTOS HTML ============
 const D = document,
 $nav = D.querySelector('[data-nav-menu]'),
 $toggle = D.querySelector(`[data-toggle-btn] *`),
@@ -29,43 +40,19 @@ $themeBtn = D.querySelector('[data-theme-btn]'),
 $resumeBtn = D.querySelector('[data-resume-btn]'),
 $downloadBtn = D.querySelector('[data-download-btn]'),
 $areaCv = D.querySelector('[data-area-cv]'),
-$formBtn = D.querySelector('[data-form-btn]'),
-$formPanel = D.querySelector('[data-form-panel]'),
-$bgPanel = D.querySelector('[data-bg-panel]'),
+$inputs = D.querySelectorAll('input'),
 // ============ SECTIONS =============
 $socialSection = D.querySelector('[social]'),
 $referencesSection = D.querySelectorAll('[references]'),
-$contactSection = D.querySelector('[contact]')
+$contactSection = D.querySelector('[contact]'),
+// ============ ITEMS =============
+educationItems =  D.querySelectorAll('[education-item]'),
+experienceItems =  D.querySelectorAll('[experience-item]')
 
-
-D.addEventListener("DOMContentLoaded", (e) => {
-  /*==================== SHOW MENU ON CLICK ====================*/
-  showMenu($nav, $toggle)
-  /*==================== REMOVE MENU ON CLICK ====================*/
-  hideMenu($nav, $navLinks)
-  /*==================== SCROLL ACTIVE SECTIONS ====================*/
-  scrollActive($sections, $nav)
-  /*==================== SET PROFILE IMAGE ====================*/
-  setImage($profileImg)
-  /*==================== SHOW SCROLL TOP ====================*/
-  scrollTop($scrolltop)
-  /*==================== DARK LIGHT THEME ====================*/
-  darkTheme($themeBtn)
-  /*==================== GENERATE PDF ====================*/
-  generatePdf($resumeBtn, $areaCv)
-  /*==================== DOWNLOAD RESUME MOBILE ====================*/
-  downloadResume($downloadBtn, $areaCv)
-  /*==================== GENERATE PDF ====================*/
-  swiper()
-  /*==================== FORM BUTTON ====================*/
-  formBtn($formBtn, $formPanel, $bgPanel)
-  /*==================== HIDE SECTIONS ====================*/
-  hideSections($socialSection, ...$referencesSection)
-});
-
-/*==================== CREATE SECTIONS ====================*/
+/*==================== CREATE SECTIONS(contacts) ====================*/
 createSections($contactSection)
 
+/*==================== OBJETOS CON REFERENCIAS DE GRUPOS HTML QUE INTERACTUAN CON EL FORMULARIO ====================*/
 const home = {
   // ============ HOME USER DATA =============
   userName: D.querySelector('[user-name]'),
@@ -107,19 +94,66 @@ const education = {
   userInstitute: D.querySelector('[user-institute]'),
   userYear: D.querySelector('[user-year]'),
   // ============ FORM EDUCATION =============
-  inputTitle: D.querySelector('[input-title]'),
-  inputInstitute: D.querySelector('[input-institute]'),
-  inputYear: D.querySelector('[input-year]'),
+  title: D.querySelector('[input-title]'),
+  institute: D.querySelector('[input-institute]'),
+  year: D.querySelector('[input-year]'),
   // ============ EDUCATION ELEMENT =============
   container: D.querySelector('[education-container]'),
-  item:  D.querySelector('[education-item]')
+  add: D.querySelector('[add-education]')
 }
 
-/*==================== FORM INPUT MAX-LENGHT ====================*/
-const $inputs = D.querySelectorAll('input')
-formInputMaxLenght($inputs)
-/*==================== FORM INPUT SPAN ====================*/
-formInputSpan(contacts)
+/*==================== FORM ELEMENTS ====================*/
+const form = {
+  btn: D.querySelector('[data-form-btn]'),
+  panel: D.querySelector('[data-form-panel]'),
+  bg: D.querySelector('[data-bg-panel]'),
+}
+
+/*==================== DISABLE FIELDS ====================*/
+const disables = {
+  label: D.querySelectorAll('.label_disable'),
+  enable: D.querySelectorAll('.bx-undo'),
+  disable: D.querySelectorAll('.bx-trash-alt'),
+  input: D.querySelectorAll('.input_disable'),
+  user: D.querySelectorAll('.info_disable')
+}
+
+D.addEventListener("DOMContentLoaded", (e) => {
+  /*==================== SHOW MENU ON CLICK ====================*/
+  actionShowMenu($nav, $toggle)
+  /*==================== REMOVE MENU ON CLICK ====================*/
+  actionHideMenu($nav, $navLinks)
+  /*==================== SCROLL ACTIVE SECTIONS ====================*/
+  scrollActiveLinks($sections, $nav)
+  /*==================== SET PROFILE IMAGE ====================*/
+  actionSetImage($profileImg)
+  /*==================== SHOW SCROLL TOP ====================*/
+  showScrollTop($scrolltop)
+  /*==================== DARK LIGHT THEME ====================*/
+  actionSetTheme($themeBtn)
+  /*==================== GENERATE PDF ====================*/
+  actionDeskdownload($resumeBtn, $areaCv)
+  /*==================== DOWNLOAD RESUME MOBILE ====================*/
+  actionMobDownload($downloadBtn, $areaCv)
+  /*==================== GENERATE PDF ====================*/
+  swiperOptions()
+  /*==================== FORM BUTTON ====================*/
+  actionFormButtonClick(form)
+  /*==================== HIDE SECTIONS ====================*/
+  hideSections($socialSection, ...$referencesSection)
+});
+
+/*==================== FORM INPUT OPTIONS ====================*/
+setInputOptions($inputs)
+/*==================== FORM INPUT SPAN MESSAGES ====================*/
+createInputSpanMessage(contacts)
+/*==================== DISABLE INPUT FIELDS ====================*/
+actionInputDisable(disables)
+/*==================== SECTIONS SIZE ====================*/
+// sectionsSize(educationItems)
+/*==================== HIDE TIME LINES ====================*/
+hideLastLine(educationItems, experienceItems)
+
 /*==================== HOME VALIDATIONS ====================*/
 homeValidations(home)
 /*==================== CONTACTS VALIDATIONS ====================*/
@@ -127,29 +161,5 @@ contactsValidations(contacts)
 /*==================== PROFILE VALIDATIONS ====================*/
 profileValidations(profile)
 /*==================== EDUCATION VALIDATIONS ====================*/
-educationValidations(education)
-/*==================== DISABLE FIELDS ====================*/
-const disables = {
-  label: D.querySelectorAll('.label_disable'),
-  enable: D.querySelectorAll('.bx-check'),
-  disable: D.querySelectorAll('.bx-x'),
-  input: D.querySelectorAll('.input_disable'),
-  user: D.querySelectorAll('.info_disable')
-}
-
-disable(disables)
-
-async function asincroFunction() {
-  // Espera a que el documento se cargue completamente
-  await new Promise(resolve => {
-    if (document.readyState === 'complete') {
-      resolve();
-    } else {
-      window.addEventListener('load', resolve);
-    }
-  });
-
-  console.log('El documento se ha cargado completamente.')
-}
-// Llama a la función
-asincroFunction();
+// educationValidations(education)
+addEducationItem(education)

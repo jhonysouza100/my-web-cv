@@ -44,11 +44,11 @@
     <aside class="panel_container" data-form-panel>
 
       <div class="panel" data-section-panel>
-        <div class="square" style="--i:0;"></div>
+        <!-- <div class="square" style="--i:0;"></div>
         <div class="square" style="--i:1;"></div>
         <div class="square" style="--i:2;"></div>
         <div class="square" style="--i:3;"></div>
-        <div class="square" style="--i:4;"></div>
+        <div class="square" style="--i:4;"></div> -->
         <!-- FORM CONTAINER -->
         <div class="form_container swiper mySwiper">
           <div class="wrapper swiper-wrapper">
@@ -77,23 +77,23 @@
                 <div class="input_box">
                   <div class="input_label">/</div>
                   <div class="label_disable" disable-linkedin>
-                    <i class='bx bx-check none'></i>
-                    <i class='bx bx-x'></i>
+                    <i class='bx bx-undo none'></i>
+                    <i class='bx bx-trash-alt'></i>
                   </div>
                   <input class="input_disable" type="text" placeholder="Your linkedin" input-linkedin span="linkedin">
                 </div>
                 <div class="input_box">
                   <div class="input_label">/</div>
                   <div class="label_disable" disable-github>
-                    <i class='bx bx-check none'></i>
-                    <i class='bx bx-x'></i>
+                    <i class='bx bx-undo none'></i>
+                    <i class='bx bx-trash-alt'></i>
                   </div>
                   <input class="input_disable" type="text" placeholder="Your gitHub" input-github span="github">
                 </div>
                 <div class="input_box">
                   <div class="label_disable" disable-website>
-                    <i class='bx bx-check none'></i>
-                    <i class='bx bx-x'></i>
+                    <i class='bx bx-undo none'></i>
+                    <i class='bx bx-trash-alt'></i>
                   </div>
                   <input class="input_disable" type="text" placeholder="Your website" input-website span="website">
                 </div>
@@ -113,6 +113,7 @@
                 <div class="input_box"><input type="text" placeholder="Your title" input-title></div>
                 <div class="input_box"><input type="text" placeholder="Institute studies" input-institute></div>
                 <div class="input_box"><input type="text" placeholder="year" input-year></div>
+                <button class="add-education" add-education>+</button>
                 <div class="input_box"><input type="submit" value="OK" form-submit></div>
               </form>
             </div>
@@ -180,36 +181,36 @@
           <section class="education section" id="education" data-section-id education>
             <h2 class="section-title">Education</h2>
             <div class="education_container bd-grid" education-container>
-              <div class="education_content" education-item>
-                <div class="education_time">
-                  <span class="education_rounder"></span>
-                  <span class="education_line" line></span>
+              <div class="item_content" education-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line" line></span>
                 </div>
-                <div class="education_data bd-grid">
-                  <h3 class="education_title" user-title>MASTER OF DESIGN</h3>
-                  <span class="education_studies" user-institute>University od Studies</span>
+                <div class="item_data bd-grid">
+                  <h3 class="item_title" user-title>MASTER OF DESIGN</h3>
+                  <span class="item_institute" user-institute>University od Studies</span>
                   <span class="education_year" user-year>2010 - 2015</span>
                 </div>
               </div>
-              <div class="education_content">
-                <div class="education_time">
-                  <span class="education_rounder"></span>
-                  <span class="education_line"></span>
+              <div class="item_content" education-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line"></span>
                 </div>
-                <div class="education_data bd-grid">
-                  <h3 class="education_title">WEB DEVELOPER</h3>
-                  <span class="education_studies">Institute Studies</span>
+                <div class="item_data bd-grid">
+                  <h3 class="item_title">WEB DEVELOPER</h3>
+                  <span class="item_institute">Institute Studies</span>
                   <span class="education_year">2016 - 2019</span>
                 </div>
               </div>
-              <div class="education_content">
-                <div class="education_time">
-                  <span class="education_rounder"></span>
-                  <!-- <span class="education_line"></span> -->
+              <div class="item_content" education-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line"></span>
                 </div>
-                <div class="education_data bd-grid">
-                  <h3 class="education_title">MASTER IN UI/UX</h3>
-                  <span class="education_studies">Institute Studies</span>
+                <div class="item_data bd-grid">
+                  <h3 class="item_title">MASTER IN UI/UX</h3>
+                  <span class="item_institute">Institute Studies</span>
                   <span class="education_year">2019 - 2021</span>
                 </div>
               </div>
@@ -220,15 +221,15 @@
             <h2 class="section-title">Skills</h2>
             <div class="skills_content bd-grid">
               <ul class="skills_data">
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>HTML</li>
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>CSS</li>
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Sass</li>
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>JavaScript</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>HTML</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>CSS</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>Sass</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>JavaScript</li>
               </ul>
               <ul class="skills_data">
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Angular</li>
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>Firebase</li>
-                <li class="skills_name"><span class="skills_circle"></span><space>&nbsp</space>React</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>Angular</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>Firebase</li>
+                <li class="skills_name"><span class="circle"></span><space>&nbsp</space>React</li>
               </ul>
             </div>
           </section>
@@ -238,36 +239,36 @@
           <section class="experience section" id="experience" data-section-id experience>
             <h2 class="section-title">Experience</h2>
             <div class="experience_container bd-grid">
-              <div class="experience_content">
-                <div class="experience_time">
-                  <span class="experience_rounder"></span>
-                  <span class="experience_line"></span>
+              <div class="item_content" experience-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line"></span>
                 </div>
-                <div class="experience_data bd-grid">
+                <div class="item_data bd-grid">
                   <h3 class="experience_title">MASTER OF DESIGN</h3>
-                  <span class="experience_company">From 2013 to 2015 | Tech Soft</span>
+                  <span class="item_institute">From 2013 to 2015 | Tech Soft</span>
                   <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
                 </div>
               </div>
-              <div class="experience_content">
-                <div class="experience_time">
-                  <span class="experience_rounder"></span>
-                  <span class="experience_line"></span>
+              <div class="item_content" experience-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line"></span>
                 </div>
-                <div class="experience_data bd-grid">
+                <div class="item_data bd-grid">
                   <h3 class="experience_title">UI/UX DESIGN AREA</h3>
-                  <span class="experience_company">From 2017 to 2019 | Adobe Inc</span>
+                  <span class="item_institute">From 2017 to 2019 | Adobe Inc</span>
                   <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
                 </div>
               </div>
-              <div class="experience_content">
-                <div class="experience_time">
-                  <span class="experience_rounder"></span>
-                  <!-- <span class="experience_line"></span> -->
+              <div class="item_content" experience-item>
+                <div class="time_line">
+                  <span class="rounder"></span>
+                  <span class="line"></span>
                 </div>
-                <div class="experience_data bd-grid">
+                <div class="item_data bd-grid">
                   <h3 class="experience_title">MOBILE APPLICATION DEVELOPER</h3>
-                  <span class="experience_company">From 2019 to 20121 | App Tech</span>
+                  <span class="item_institute">From 2019 to 20121 | App Tech</span>
                   <p class="experience_description">Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity.</p>
                 </div>
               </div>
@@ -319,9 +320,9 @@
             <h2 class="section-title">Languages</h2>
             <div class="languages_container">
               <ul class="languages_content bd-grid">
-                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>Spanish</li>
-                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>English</li>
-                <li class="languages_name"><span class="languages_circle"></span><space>&nbsp</space>Portuguese</li>
+                <li class="languages_name"><span class="circle"></span><space>&nbsp</space>Spanish</li>
+                <li class="languages_name"><span class="circle"></span><space>&nbsp</space>English</li>
+                <li class="languages_name"><span class="circle"></span><space>&nbsp</space>Portuguese</li>
               </ul>
             </div>
           </section>
@@ -360,6 +361,6 @@
     <!--========== SWIPER JS ==========-->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!--========== MAIN JS ==========-->
-    <script src="app.js" type="module"></script>
+    <script src="App.js" type="module"></script>
   </body>
 </html>

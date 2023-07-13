@@ -1,3 +1,3 @@
-export default function hideSections(...e) {
-  e.forEach((el) => (el.style.display = "none"))
+export default function hideSections(...sections) {
+  sections.forEach((el) => (el.style.display = "none"))
 }

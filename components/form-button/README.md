@@ -1,3 +1,0 @@
-# formBtn()
-
-Cuando se hace clic en el botón, se activa una serie de acciones: el panel especificado en el argumento panel se activa o desactiva, se cambia la clase `is-active` en el `botón`, en el `panel` y en el `fondo` especificado en el argumento bg. Además, si el botón estaba activo, cambia la clase del icono de "flecha izquierda" a "flecha derecha" y viceversa. En resumen, esta función se utiliza para crear un botón que muestra u oculta un panel y cambia su apariencia visual según su estado.
