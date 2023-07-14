@@ -25,7 +25,6 @@ import showScrollTop from "./components/show-scroll-top/show-scroll-top.js";
 import createSections from "./components/create-sections/createSections.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
 import hideLastLine from "./components/time-line/hide-last-line.js";
-import sectionsSize from "./components/sections-size/sections-size.js";
 import addEducationItem from "./components/form-panel/add-education-item.js";
 
 // ============ REFERENCIAS A LOS ELEMENTOS HTML ============
