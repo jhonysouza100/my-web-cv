@@ -22,34 +22,34 @@ import actionSetTheme from "./components/action-set-theme/action-set-theme.js";
 import actionDeskdownload from "./components/action-desk-download/action-desk-download.js";
 import showScrollTop from "./components/show-scroll-top/show-scroll-top.js";
 // ============ PASIVAS DEL DOCUMENTO HTML ============
-import createSections from "./components/create-sections/createSections.js";
+import createSections from "./components/create-sections/create-sections.js";
 import hideSections from "./components/hide-sections/hide-sections.js";
 import hideLastLine from "./components/time-line/hide-last-line.js";
 import addEducationItem from "./components/form-panel/add-education-item.js";
 
 // ============ REFERENCIAS A LOS ELEMENTOS HTML ============
-const D = document,
-$nav = D.querySelector('[data-nav-menu]'),
-$toggle = D.querySelector(`[data-toggle-btn] *`),
-$navLinks = D.querySelectorAll(`[data-nav-link] *`),
-$sections = D.querySelectorAll(`[data-section-id][id]`),
-$profileImg = D.querySelector(`[user-img]`),
-$scrolltop = D.querySelector(`[data-scrolltop-btn]`),
-$themeBtn = D.querySelector('[data-theme-btn]'),
-$resumeBtn = D.querySelector('[data-resume-btn]'),
-$downloadBtn = D.querySelector('[data-download-btn]'),
-$areaCv = D.querySelector('[data-area-cv]'),
-$inputs = D.querySelectorAll('input'),
-// ============ SECTIONS =============
-$socialSection = D.querySelector('[social]'),
-$referencesSection = D.querySelectorAll('[references]'),
-$contactSection = D.querySelector('[contact]'),
-// ============ ITEMS =============
-educationItems =  D.querySelectorAll('[education-item]'),
-experienceItems =  D.querySelectorAll('[experience-item]')
+// const D = document,
+// $nav = D.querySelector('[data-nav-menu]'),
+// $toggle = D.querySelector(`[data-toggle-btn] *`),
+// $navLinks = D.querySelectorAll(`[data-nav-link] *`),
+// $sections = D.querySelectorAll(`[data-section-id][id]`),
+// $profileImg = D.querySelector(`[user-img]`),
+// $scrolltop = D.querySelector(`[data-scrolltop-btn]`),
+// $themeBtn = D.querySelector('[data-theme-btn]'),
+// $resumeBtn = D.querySelector('[data-resume-btn]'),
+// $downloadBtn = D.querySelector('[data-download-btn]'),
+// $areaCv = D.querySelector('[data-area-cv]'),
+// $inputs = D.querySelectorAll('input'),
+// // ============ SECTIONS =============
+// $socialSection = D.querySelector('[social]'),
+// $referencesSection = D.querySelectorAll('[references]'),
+// $contactSection = D.querySelector('[contact]'),
+// // ============ ITEMS =============
+// educationItems =  D.querySelectorAll('[education-item]'),
+// experienceItems =  D.querySelectorAll('[experience-item]')
 
 /*==================== CREATE SECTIONS(contacts) ====================*/
-createSections($contactSection)
+// createSections($contactSection)
 
 /*==================== OBJETOS CON REFERENCIAS DE GRUPOS HTML QUE INTERACTUAN CON EL FORMULARIO ====================*/
 const home = {
@@ -102,11 +102,11 @@ const education = {
 }
 
 /*==================== FORM ELEMENTS ====================*/
-const form = {
-  btn: D.querySelector('[data-form-btn]'),
-  panel: D.querySelector('[data-form-panel]'),
-  bg: D.querySelector('[data-bg-panel]'),
-}
+// const form = {
+//   btn: D.querySelector('[data-form-btn]'),
+//   panel: D.querySelector('[data-form-panel]'),
+//   bg: D.querySelector('[data-bg-panel]'),
+// }
 
 /*==================== DISABLE FIELDS ====================*/
 const disables = {
@@ -117,33 +117,33 @@ const disables = {
   user: D.querySelectorAll('.info_disable')
 }
 
-D.addEventListener("DOMContentLoaded", (e) => {
-  /*==================== SHOW MENU ON CLICK ====================*/
-  actionShowMenu($nav, $toggle)
-  /*==================== REMOVE MENU ON CLICK ====================*/
-  actionHideMenu($nav, $navLinks)
-  /*==================== SCROLL ACTIVE SECTIONS ====================*/
-  scrollActiveLinks($sections, $nav)
-  /*==================== SET PROFILE IMAGE ====================*/
-  actionSetImage($profileImg)
-  /*==================== SHOW SCROLL TOP ====================*/
-  showScrollTop($scrolltop)
-  /*==================== DARK LIGHT THEME ====================*/
-  actionSetTheme($themeBtn)
-  /*==================== GENERATE PDF ====================*/
-  actionDeskdownload($resumeBtn, $areaCv)
-  /*==================== DOWNLOAD RESUME MOBILE ====================*/
-  actionMobDownload($downloadBtn, $areaCv)
-  /*==================== GENERATE PDF ====================*/
-  swiperOptions()
-  /*==================== FORM BUTTON ====================*/
-  actionFormButtonClick(form)
-  /*==================== HIDE SECTIONS ====================*/
-  hideSections($socialSection, ...$referencesSection)
-});
+// D.addEventListener("DOMContentLoaded", (e) => {
+//   /*==================== SHOW MENU ON CLICK ====================*/
+//   // actionShowMenu($nav, $toggle)
+//   // /*==================== REMOVE MENU ON CLICK ====================*/
+//   // actionHideMenu($nav, $navLinks)
+//   /*==================== SCROLL ACTIVE SECTIONS ====================*/
+//   // scrollActiveLinks($sections, $nav)
+//   /*==================== SET PROFILE IMAGE ====================*/
+//   // actionSetImage($profileImg)
+//   /*==================== SHOW SCROLL TOP ====================*/
+//   // showScrollTop($scrolltop)
+//   /*==================== DARK LIGHT THEME ====================*/
+//   // actionSetTheme($themeBtn)
+//   /*==================== GENERATE PDF ====================*/
+//   // actionDeskdownload($resumeBtn, $areaCv)
+//   /*==================== DOWNLOAD RESUME MOBILE ====================*/
+//   // actionMobDownload($downloadBtn, $areaCv)
+//   /*==================== GENERATE PDF ====================*/
+//   // swiperOptions()
+//   /*==================== FORM BUTTON ====================*/
+//   // actionFormButtonClick(form)
+//   /*==================== HIDE SECTIONS ====================*/
+//   // hideSections($socialSection, ...$referencesSection)
+// });
 
 /*==================== FORM INPUT OPTIONS ====================*/
-setInputOptions($inputs)
+// setInputOptions($inputs)
 /*==================== FORM INPUT SPAN MESSAGES ====================*/
 createInputSpanMessage(contacts)
 /*==================== DISABLE INPUT FIELDS ====================*/
@@ -151,15 +151,15 @@ actionInputDisable(disables)
 /*==================== SECTIONS SIZE ====================*/
 // sectionsSize(educationItems)
 
-/*==================== HOME VALIDATIONS ====================*/
+/*==================== ADD HOME ====================*/
 homeValidations(home)
-/*==================== CONTACTS VALIDATIONS ====================*/
+/*==================== ADD CONTACTS ====================*/
 contactsValidations(contacts)
-/*==================== PROFILE VALIDATIONS ====================*/
+/*==================== ADD PROFILE ====================*/
 profileValidations(profile)
-/*==================== EDUCATION VALIDATIONS ====================*/
+/*==================== ADD EDUCATION ====================*/
 addEducationItem(education)
 // educationValidations(education)
 
 /*==================== HIDE TIME LINES ====================*/
-hideLastLine(educationItems, experienceItems)
+// hideLastLine(educationItems, experienceItems)

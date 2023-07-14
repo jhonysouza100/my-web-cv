@@ -10,4 +10,4 @@
 
 💙 Go to my website to see more projects like this. Johny Souza 💙 [WarDog1000](https://jhony-souza-portfolio.netlify.app)
 
-[![preview img](/preview.png)](https://jhony-souza-portfolio.netlify.app)
+[![preview img](app/public/img/preview.png)](https://jhony-souza-portfolio.netlify.app)
