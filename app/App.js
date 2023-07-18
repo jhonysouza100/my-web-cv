@@ -1,3 +1,10 @@
+// API DOM References
+import { html, sections, form, items, home, profile, education } from "../../api/api.js"
+import actionInputDisable from "./functions/action-input-disable.js";
+
+// Async API DOM References
+import { getContacts, getDisables } from "../../api/api.js";
+
 // Functions
 import { hideMenu, showMenu } from "./functions/action-menu-click.js";
 import actionSetImage from "./functions/action-set-image.js";
@@ -10,25 +17,32 @@ import scrollActiveLinks from "./helpers/scroll-active-links.js";
 import showScrollTop from "./helpers/show-scroll-top.js";
 import hideSections from "./helpers/hide-sections.js";
 import swiperOptions from "./helpers/swiper-options.js";
-import createSections from "./helpers/create-sections.js";
 import hideLastTimeline from "./helpers/hide-last-timeline.js";
 import inputOptions from "./helpers/input-options.js";
 
-// API DOM References
-import { html, sections, form, items, contacts } from "../../api/api.js"
+// Components
+import { createContacts } from "./components/create-sections.js";
+import createInputAlertMessage from "./components/create-input-alert-message.js";
+import addHome from "./components/add-home.js";
+import addContacts from "./components/add-contacts.js";
+import addProfile from "./components/add-profile.js";
+import addEducationItem from "../components/form-panel/add-education-item.js";
+
 
 // Desestructuracion de la DOM
 const { nav, toggle, navLinks, allSections, profileImg, scrolltop, themeBtn, areaCv, deskDownloadBtn, mobDownloadBtn, inputs } = html
 const { socialSection, contactSection, referencesSection } = sections
 const { educationItems, experienceItems } = items
-const { userLinkedin } = contacts
 
-export function App() {
+export async function App() {
   
   /*==================== CREATE SECTIONS(contacts) ====================*/
-  createSections(contactSection)
-  console.log(userLinkedin)
-  
+  await createContacts(contactSection)
+  const contacts = await getContacts()
+  const disables = await getDisables()
+  /*==================== FORM INPUT SPAN MESSAGES ====================*/
+  await createInputAlertMessage(contacts)
+
   document.addEventListener('DOMContentLoaded', e => {
     /*==================== SHOW MENU ON CLICK ====================*/
     showMenu(nav, toggle)
@@ -54,8 +68,19 @@ export function App() {
     actionToggleForm(form)
     /*==================== HIDE SECTIONS ====================*/
     hideSections(socialSection, ...referencesSection)
+    /*==================== HIDE TIME LINES ====================*/
+    hideLastTimeline(educationItems, experienceItems)
   })
 
-  /*==================== HIDE TIME LINES ====================*/
-  hideLastTimeline(educationItems, experienceItems)
+  /*==================== DISABLE INPUT FIELDS ====================*/
+  actionInputDisable(disables)
+  /*==================== ADD HOME ====================*/
+  addHome(home)
+  /*==================== ADD CONTACTS ====================*/
+  addContacts(contacts)
+  /*==================== ADD PROFILE ====================*/
+  addProfile(profile)
+  /*==================== ADD EDUCATION ====================*/
+  addEducationItem(education)
+  
 }
