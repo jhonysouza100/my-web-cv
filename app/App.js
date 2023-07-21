@@ -19,6 +19,7 @@ import hideSections from "./helpers/hide-sections.js";
 import swiperOptions from "./helpers/swiper-options.js";
 import hideLastTimeline from "./helpers/hide-last-timeline.js";
 import inputOptions from "./helpers/input-options.js";
+import loadSections from "./helpers/load-sections.js";
 
 // Components
 import { createContacts } from "./components/create-sections.js";
@@ -26,7 +27,7 @@ import createInputAlertMessage from "./components/create-input-alert-message.js"
 import addHome from "./components/add-home.js";
 import addContacts from "./components/add-contacts.js";
 import addProfile from "./components/add-profile.js";
-import addEducationItem from "../components/form-panel/add-education-item.js";
+import addEducation from "./components/add-education.js";
 
 
 // Desestructuracion de la DOM
@@ -38,6 +39,7 @@ export async function App() {
   
   /*==================== CREATE SECTIONS(contacts) ====================*/
   await createContacts(contactSection)
+  await loadSections(education)
   const contacts = await getContacts()
   const disables = await getDisables()
   /*==================== FORM INPUT SPAN MESSAGES ====================*/
@@ -81,6 +83,6 @@ export async function App() {
   /*==================== ADD PROFILE ====================*/
   addProfile(profile)
   /*==================== ADD EDUCATION ====================*/
-  addEducationItem(education)
+  addEducation(education)
   
 }

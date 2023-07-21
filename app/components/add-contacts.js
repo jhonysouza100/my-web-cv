@@ -9,7 +9,6 @@ export default function addContacts(obj) {
   // SPAN ELEMENTS
   const $spanEmail = d.querySelector('[email]'),
         $spanPhone = d.querySelector('[phone]')
-        console.log($spanEmail)
         
   d.addEventListener('keyup', e => {
     

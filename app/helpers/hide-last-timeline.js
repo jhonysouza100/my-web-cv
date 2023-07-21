@@ -1,4 +1,4 @@
-export default function hideLastLine(...items) {
+export default function hideLastTimeline(...items) {
   // console.log(items)
   items.forEach( el => {
     el.forEach( (item, index) => {
