@@ -13,7 +13,8 @@ export default function addContacts(obj) {
   d.addEventListener('keyup', e => {
     
     // Guarda las teclas pulsadas y las pasa a minuscula || sino, solo las teclas pulsadas
-    let $ = e.target.value.toLowerCase().trim() || e.target.value.trim()
+    // let $ = e.target.value.toLowerCase().trim() || e.target.value.trim()
+    let $ = e.target.value
       
       if(e.target === obj.inputLocation) {
         obj.userLocation.lastChild.data = e.target.value.trim()

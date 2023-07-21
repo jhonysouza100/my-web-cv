@@ -89,9 +89,9 @@ import addEducationItem from "../components/form-panel/add-education-item.js";
 
 // const education = {
 //   // ============ USER EDUCATION =============
-//   userTitle: D.querySelector('[user-title]'),
-//   userInstitute: D.querySelector('[user-institute]'),
-//   userYear: D.querySelector('[user-year]'),
+//   userTitle: D.querySelector('[education-title]'),
+//   userInstitute: D.querySelector('[education-institute]'),
+//   userYear: D.querySelector('[education-year]'),
 //   // ============ FORM EDUCATION =============
 //   title: D.querySelector('[input-title]'),
 //   institute: D.querySelector('[input-institute]'),

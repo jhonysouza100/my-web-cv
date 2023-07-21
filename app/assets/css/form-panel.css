@@ -338,6 +338,20 @@ input[input-github]::placeholder {
   display: none;
 }
 
+i.form_button {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  margin: .5rem;
+}
+i.form_button:hover {
+  cursor: pointer
+}
+
 
 @media screen and (min-width: 968px) {
 

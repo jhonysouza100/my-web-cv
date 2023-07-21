@@ -1,9 +1,9 @@
 // API DOM References
-import { html, sections, form, items, home, profile, education } from "../../api/api.js"
+import { html, sections, form, home, profile } from "../../api/api.js"
 import actionInputDisable from "./functions/action-input-disable.js";
 
 // Async API DOM References
-import { getContacts, getDisables } from "../../api/api.js";
+import { getContacts, getDisables, getItems, getEducation, getExperience } from "../../api/api.js";
 
 // Functions
 import { hideMenu, showMenu } from "./functions/action-menu-click.js";
@@ -32,17 +32,17 @@ import addEducation from "./components/add-education.js";
 
 // Desestructuracion de la DOM
 const { nav, toggle, navLinks, allSections, profileImg, scrolltop, themeBtn, areaCv, deskDownloadBtn, mobDownloadBtn, inputs } = html
-const { socialSection, contactSection, referencesSection } = sections
-const { educationItems, experienceItems } = items
+const { socialSection, contactSection, educationSection, experienceSection, referencesSection } = sections
 
 export async function App() {
   
-  /*==================== CREATE SECTIONS(contacts) ====================*/
   await createContacts(contactSection)
-  await loadSections(education)
+  await loadSections(educationSection)
+  const education = await getEducation()
+  const experience = await getExperience()
+  const {educationItems, experienceItems} = await getItems()
   const contacts = await getContacts()
   const disables = await getDisables()
-  /*==================== FORM INPUT SPAN MESSAGES ====================*/
   await createInputAlertMessage(contacts)
 
   document.addEventListener('DOMContentLoaded', e => {
@@ -73,7 +73,7 @@ export async function App() {
     /*==================== HIDE TIME LINES ====================*/
     hideLastTimeline(educationItems, experienceItems)
   })
-
+  
   /*==================== DISABLE INPUT FIELDS ====================*/
   actionInputDisable(disables)
   /*==================== ADD HOME ====================*/
@@ -85,4 +85,7 @@ export async function App() {
   /*==================== ADD EDUCATION ====================*/
   addEducation(education)
   
+
+  
 }
+

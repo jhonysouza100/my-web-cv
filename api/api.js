@@ -17,19 +17,27 @@ export const sections = {
   homesection: d.querySelector('[home]'),
   socialSection: d.querySelector('[social]'),
   contactSection: d.querySelector('[contact]'),
-  profileSection: d.querySelector('[profile]'),
-  educationSection: d.querySelector('[education]'),
-  skillsSection: d.querySelector('[skills]'),
-  experienceSection: d.querySelector('[experience]'),
-  certificatesSection: d.querySelector('[certificates]'),
+  profileSection: d.querySelectorAll('[profile]'),
+  educationSection: d.querySelectorAll('[education]'),
+  skillsSection: d.querySelectorAll('[skills]'),
+  experienceSection: d.querySelectorAll('[experience]'),
+  certificatesSection: d.querySelectorAll('[certificates]'),
   referencesSection: d.querySelectorAll('[references]'),
   languagesSection: d.querySelectorAll('[languages]'),
   interestsSection: d.querySelectorAll('[interests]')
 }
 
-export const items = {
-  educationItems: d.querySelectorAll('[education-item]'),
-  experienceItems: d.querySelectorAll('[experience-item]')
+export function getItems() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        educationItems: d.querySelectorAll('[education-item]'),
+        experienceItems: d.querySelectorAll('[experience-item]')
+      }
+      return obj
+    }
+    resolve( get() )
+  })
 }
 
 export const form = {
@@ -90,26 +98,59 @@ export const home = {
   // ============ HOME FORM DATA =============
   inputName: d.querySelector('[input-name]'),
   inputLastname: d.querySelector('[input-lastname]'),
-  inputProfession: d.querySelector('[input-profession]') 
+  inputProfession: d.querySelector('[input-profession]')
 }
 
 export const profile = {
   // ============ USER PROFILE =============
   userProfile: d.querySelector('[user-profile]'),
   // ============ FORM PROFILE =============
-  textProfile: d.querySelector('[text-profile]')
+  textProfile: d.querySelector('[text-profile]'),
+  addProfile: d.querySelector('[add-profile]')
 }
 
-export const education = {
-  // ============ USER EDUCATION =============
-  userTitle: d.querySelector('[user-title]'),
-  userInstitute: d.querySelector('[user-institute]'),
-  userYear: d.querySelector('[user-year]'),
-  // ============ FORM EDUCATION =============
-  title: d.querySelector('[input-title]'),
-  institute: d.querySelector('[input-institute]'),
-  year: d.querySelector('[input-year]'),
-  // ============ EDUCATION ELEMENT =============
-  container: d.querySelector('[education-container]'),
-  add: d.querySelector('[add-education]')
+export function getEducation() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        // ============ USER EDUCATION =============
+        userTitle: d.querySelector('[education-title]'),
+        userInstitute: d.querySelector('[education-institute]'),
+        userYear: d.querySelector('[education-year]'),
+        // ============ FORM EDUCATION =============
+        title: d.querySelector('[input-title]'),
+        institute: d.querySelector('[input-institute]'),
+        year: d.querySelector('[input-year]'),
+        // ============ EDUCATION ELEMENT =============
+        container: d.querySelector('[education-container]'),
+        add: d.querySelector('[add-education]'),
+        undo: d.querySelector('[undo-education]')
+      }
+      return obj
+    }
+    resolve ( get() )
+  })
+}
+
+export function getExperience() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        // ============ USER EXPERIENCE =============
+        userTitle: d.querySelector('[experience-title]'),
+        userInstitute: d.querySelector('[experience-year]'),
+        userYear: d.querySelector('[experience-description]'),
+        // ============ FORM EXPERIENCE =============
+        title: d.querySelector('[input-title]'),
+        institute: d.querySelector('[input-institute]'),
+        year: d.querySelector('[input-description]'),
+        // ============ EXPERIENCE ELEMENT =============
+        container: d.querySelector('[experience-container]'),
+        add: d.querySelector('[add-experience]'),
+        undo: d.querySelector('[undo-experience]')
+      }
+      return obj
+    }
+    resolve ( get() )
+  })
 }

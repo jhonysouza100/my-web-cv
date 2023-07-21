@@ -12,9 +12,9 @@ export default function addEducationItem(education) {
         <span class="line" line></span>
       </div>
       <div class="item_data bd-grid">
-        <h3 class="item_title" user-title>${education.title.value}</h3>
-        <span class="item_institute" user-institute>${education.institute.value}</span>
-        <span class="education_year" user-year>${education.year.value}</span>
+        <h3 class="item_title" education-title>${education.title.value}</h3>
+        <span class="item_institute" education-institute>${education.institute.value}</span>
+        <span class="education_year" education-year>${education.year.value}</span>
       </div>`
       // Agrega el item primero en la lista
     education.container.prepend(educationItem)

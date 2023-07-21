@@ -1,14 +1,24 @@
 export default function loadSections(arg) {
   return new Promise((resolve, reject) => {
     const load = () => {
-      const fragment = document.createDocumentFragment()
-      for(let i = 0; i < 4; i++) {
-        // fragment.appendChild(localStorage.getItem(`educationItem-${i}`))
-        console.log(localStorage.getItem(`educationItem-${i}`))
+      const savedContainer = localStorage.getItem('educationContainer')
+      if (savedContainer) {
+        const savedContainerObject = JSON.parse(savedContainer)
+        // console.log(savedContainerObject)
+        // console.log(arg[1].children[1])
+        // Create a temporary container element
+        const tempContainer = document.createElement('div')
+        // Set the innerHTML of the temporary container with the given text
+        tempContainer.innerHTML = savedContainerObject
+        // The temporary container now contains the parsed DOM elements
+        // Access the first child of the temporary container (the root element) to get the entire DOM structure
+        const domElement = tempContainer.firstElementChild
+        arg[1].children[1].replaceWith(domElement)
       }
-      arg.container.innerHTML = ''
-      arg.container.appendChild(fragment)
     }
-    resolve( load() )
+
+  resolve( load() )
+
   })
+
 }
