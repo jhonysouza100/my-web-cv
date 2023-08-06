@@ -22,3 +22,9 @@ export default function loadSections(arg) {
   })
 
 }
+
+const load = arg => {
+  if(arg) {
+    
+  }
+}

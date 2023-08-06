@@ -113,14 +113,10 @@ export function getEducation() {
   return new Promise((resolve, reject) => {
     const get = () => {
       const obj = {
-        // ============ USER EDUCATION =============
-        userTitle: d.querySelector('[education-title]'),
-        userInstitute: d.querySelector('[education-institute]'),
-        userYear: d.querySelector('[education-year]'),
         // ============ FORM EDUCATION =============
-        title: d.querySelector('[input-title]'),
-        institute: d.querySelector('[input-institute]'),
-        year: d.querySelector('[input-year]'),
+        title: d.querySelector('[education-title]'),
+        institute: d.querySelector('[education-institute]'),
+        year: d.querySelector('[education-year]'),
         // ============ EDUCATION ELEMENT =============
         container: d.querySelector('[education-container]'),
         add: d.querySelector('[add-education]'),
@@ -136,18 +132,66 @@ export function getExperience() {
   return new Promise((resolve, reject) => {
     const get = () => {
       const obj = {
-        // ============ USER EXPERIENCE =============
-        userTitle: d.querySelector('[experience-title]'),
-        userInstitute: d.querySelector('[experience-year]'),
-        userYear: d.querySelector('[experience-description]'),
         // ============ FORM EXPERIENCE =============
-        title: d.querySelector('[input-title]'),
-        institute: d.querySelector('[input-institute]'),
-        year: d.querySelector('[input-description]'),
+        title: d.querySelector('[experience-title]'),
+        institute: d.querySelector('[experience-institute]'),
+        description: d.querySelector('[experience-description]'),
         // ============ EXPERIENCE ELEMENT =============
         container: d.querySelector('[experience-container]'),
         add: d.querySelector('[add-experience]'),
         undo: d.querySelector('[undo-experience]')
+      }
+      return obj
+    }
+    resolve ( get() )
+  })
+}
+
+export function getCertificates() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        // ============ FORM EXPERIENCE =============
+        title: d.querySelector('[certificate-title]'),
+        description: d.querySelector('[certificate-description]'),
+        // ============ EXPERIENCE ELEMENT =============
+        container: d.querySelector('[certificate-container]'),
+        add: d.querySelector('[add-certificate]'),
+        undo: d.querySelector('[undo-certificate]')
+      }
+      return obj
+    }
+    resolve ( get() )
+  })
+}
+
+export function getLanguages() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        // ============ FORM EXPERIENCE =============
+        name: d.querySelector('[language-name]'),
+        // ============ EXPERIENCE ELEMENT =============
+        container: d.querySelector('[languages-container]'),
+        add: d.querySelector('[add-language]'),
+        undo: d.querySelector('[undo-language]')
+      }
+      return obj
+    }
+    resolve ( get() )
+  })
+}
+
+export function getSkills() {
+  return new Promise((resolve, reject) => {
+    const get = () => {
+      const obj = {
+        // ============ FORM EXPERIENCE =============
+        name: d.querySelector('[skill-name]'),
+        // ============ EXPERIENCE ELEMENT =============
+        container: d.querySelector('[skills-container]'),
+        add: d.querySelector('[add-skill]'),
+        undo: d.querySelector('[undo-skill]')
       }
       return obj
     }

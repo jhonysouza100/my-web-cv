@@ -28,9 +28,9 @@ const add = (education) => {
       <span class="line" line></span>
     </div>
     <div class="item_data bd-grid">
-      <h3 class="item_title" education-title>${education.title.value}</h3>
-      <span class="item_institute" education-institute>${education.institute.value}</span>
-      <span class="education_year" education-year>${education.year.value}</span>
+      <h3 class="item_title">${education.title.value}</h3>
+      <span class="item_institute">${education.institute.value}</span>
+      <span class="education_year">${education.year.value}</span>
     </div>`
   const container = education.container
     // Agrega el item primero en la lista
@@ -61,38 +61,38 @@ const undo = (education) => {
   if(educationItems.length === 0) {
     container.innerHTML = `
     <div class="item_content" education-item>
-                <div class="time_line">
-                  <span class="rounder"></span>
-                  <span class="line" line></span>
-                </div>
-                <div class="item_data bd-grid">
-                  <h3 class="item_title" education-title>MASTER OF DESIGN</h3>
-                  <span class="item_institute" education-institute>University od Studies</span>
-                  <span class="education_year" education-year>2010 - 2015</span>
-                </div>
-              </div>
-              <div class="item_content" education-item>
-                <div class="time_line">
-                  <span class="rounder"></span>
-                  <span class="line"></span>
-                </div>
-                <div class="item_data bd-grid">
-                  <h3 class="item_title">WEB DEVELOPER</h3>
-                  <span class="item_institute">Institute Studies</span>
-                  <span class="education_year">2016 - 2019</span>
-                </div>
-              </div>
-              <div class="item_content" education-item>
-                <div class="time_line">
-                  <span class="rounder"></span>
-                  <span class="line"></span>
-                </div>
-                <div class="item_data bd-grid">
-                  <h3 class="item_title">MASTER IN UI/UX</h3>
-                  <span class="item_institute">Institute Studies</span>
-                  <span class="education_year">2019 - 2021</span>
-                </div>
-              </div>
+      <div class="time_line">
+        <span class="rounder"></span>
+        <span class="line" line></span>
+      </div>
+      <div class="item_data bd-grid">
+        <h3 class="item_title">MASTER OF DESIGN</h3>
+        <span class="item_institute">University od Studies</span>
+        <span class="education_year">2010 - 2015</span>
+      </div>
+    </div>
+    <div class="item_content" education-item>
+      <div class="time_line">
+        <span class="rounder"></span>
+        <span class="line"></span>
+      </div>
+      <div class="item_data bd-grid">
+        <h3 class="item_title">WEB DEVELOPER</h3>
+        <span class="item_institute">Institute Studies</span>
+        <span class="education_year">2016 - 2019</span>
+      </div>
+    </div>
+    <div class="item_content" education-item>
+      <div class="time_line">
+        <span class="rounder"></span>
+        <span class="line"></span>
+      </div>
+      <div class="item_data bd-grid">
+        <h3 class="item_title">MASTER IN UI/UX</h3>
+        <span class="item_institute">Institute Studies</span>
+        <span class="education_year">2019 - 2021</span>
+      </div>
+    </div>
     `
   }
   

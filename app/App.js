@@ -3,7 +3,7 @@ import { html, sections, form, home, profile } from "../../api/api.js"
 import actionInputDisable from "./functions/action-input-disable.js";
 
 // Async API DOM References
-import { getContacts, getDisables, getItems, getEducation, getExperience } from "../../api/api.js";
+import { getContacts, getDisables, getItems, getEducation, getExperience, getCertificates, getLanguages, getSkills } from "../../api/api.js";
 
 // Functions
 import { hideMenu, showMenu } from "./functions/action-menu-click.js";
@@ -28,6 +28,10 @@ import addHome from "./components/add-home.js";
 import addContacts from "./components/add-contacts.js";
 import addProfile from "./components/add-profile.js";
 import addEducation from "./components/add-education.js";
+import addExperience from "./components/add-experince.js";
+import addCertificates from "./components/add-certificates.js";
+import addLanguages from "./components/add-languages.js";
+import addSkills from "./components/add-skills.js";
 
 
 // Desestructuracion de la DOM
@@ -37,9 +41,13 @@ const { socialSection, contactSection, educationSection, experienceSection, refe
 export async function App() {
   
   await createContacts(contactSection)
+  // El loadSections se encarga de renderizar el DOM original y cargar los datos almacenados en el local storage
   await loadSections(educationSection)
   const education = await getEducation()
   const experience = await getExperience()
+  const certificates = await getCertificates()
+  const languages = await getLanguages()
+  const skills = await getSkills()
   const {educationItems, experienceItems} = await getItems()
   const contacts = await getContacts()
   const disables = await getDisables()
@@ -84,8 +92,13 @@ export async function App() {
   addProfile(profile)
   /*==================== ADD EDUCATION ====================*/
   addEducation(education)
-  
-
-  
+  /*==================== ADD EXPERIENCE ====================*/
+  addExperience(experience)
+  /*==================== ADD CERTIFICATES ====================*/
+  addCertificates(certificates)
+  /*==================== ADD LANGUAGES ====================*/
+  addLanguages(languages)
+  /*==================== ADD SKILLS ====================*/
+  addSkills(skills)
 }
 
